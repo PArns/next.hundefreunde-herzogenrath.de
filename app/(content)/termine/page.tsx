@@ -2,6 +2,14 @@ import Calendar from "@/components/calendar";
 import ContentBox from "@/components/layout/default-box";
 import Kurse from "@/sections/kurse";
 
+export function generateMetadata() {
+  return {
+    title: "Termine",
+    Description:
+      "Der Trainingsbetrieb findet grundsätzlich jeden Samstag statt. Die Entsprechenden Zeiten, sowie Veranstaltungen und Schließzeiten könnt ihr hier einsehen.",
+  };
+}
+
 export default function Termine() {
   return (
     <>

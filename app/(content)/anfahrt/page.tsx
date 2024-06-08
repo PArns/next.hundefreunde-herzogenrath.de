@@ -3,6 +3,13 @@ import Anfahrt from "@/sections/anfahrt";
 import Kurse from "@/sections/kurse";
 import Link from "next/link";
 
+export function generateMetadata() {
+  return {
+    title: "Anfahrt & Kontakt",
+    Description: "So findet ihr uns!",
+  };
+}
+
 export default function Anfart() {
   return (
     <>
