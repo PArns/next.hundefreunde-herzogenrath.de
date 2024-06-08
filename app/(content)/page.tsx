@@ -1,13 +1,15 @@
 import ContentBox from "@/components/layout/default-box";
 import DynamicMap from "@/components/map/dynamic-map";
+import Anfahrt from "@/sections/anfahrt";
 import Kurse from "@/sections/kurse";
 import Image from "next/image";
+import Link from "next/link";
 
 export function generateMetadata() {
   return {
     title: "Über uns",
     Description:
-      "Die Hundefreunde Herzogenrath sind die Hundeschule im Kreis Aachen - Besucht uns doch einmal für eine kostenlose Probestunde!",
+      "Die Hundefreunde Herzogenrath sind die Hundeschule in der StädteRegion Aachen - Besucht uns doch einmal für eine kostenlose Probestunde!",
   };
 }
 
@@ -16,29 +18,26 @@ export default function Home() {
     <>
       <ContentBox>
         <h2>Willkommen bei den Hundefreunden Herzogenrath e.V.</h2>
-        <h3>Der Hundeschule im Kreis Heinsberg</h3>
+        <h3>Die Hundeschule in der StädteRegion Aachen</h3>
         <p className="pt-2">
           Herzlich willkommen auf der offiziellen Webseite der Hundefreunde
-          Herzogenrath e.V.! <br />
-          Wir sind ein engagierter Verein für Hundesport, Ausbildung und
-          gemeinsames Erleben in Herzogenrath und Umgebung. Bei uns steht die
-          Beziehung zwischen Mensch und Hund im Mittelpunkt. Informiere dich
-          über unsere Angebote, Veranstaltungen und Trainingsmöglichkeiten.
+          Herzogenrath e.V.{" "}
         </p>
         <div className="flex flex-col md:flex-row">
           <div>
             <h3 className="pt-6">Die Hundefreunde Herzogenrath</h3>
-            <p className="my-2">
-              gibt es seit 1996. Wir blicken damit auf eine lange Geschichte und
-              viel Erfahrung zurück.
+            <p>
+              sind seit 1996 ein eingetragener Verein. Wir blicken damit auf
+              eine lange Geschichte und viel Erfahrung zurück.
             </p>
             <p className="my-4">
               Unsere ehrenamtlichen Trainer geben Euch hier, in einfachen
-              Schritten, nachvollziehbare und effektive Trainingseinheiten.
+              Schritten, nachvollziehbare und effektive Trainingseinheiten,
+              gepaart mit viel Spaß und Humor.
             </p>
             <p className="my-4">
               Ganz klassisch bieten wir in verschiedenen Gruppen das Training
-              und die Erziehung des Hundes, vorallem aber auch die des
+              und die Erziehung des Hundes, vor allem aber auch die des
               Hundeführers an. Hierbei unterteilen wir die Ausbildung und das
               Training in verschiedene Gruppen, je nach Wissensstand und Alter
               der Hunde.
@@ -46,9 +45,29 @@ export default function Home() {
             <ul className="ml-10 list-disc">
               <li>Welpen - Für Hunde bis 6 Monate</li>
               <li>Anfänger - Einsteigerkurs</li>
-              <li>BGVP - Begleit- Gehorsam- &amp; Verkehrs-Prüfung</li>
+              <li>BGVP - Begleit- Gehorsams- &amp; Verkehrs-Prüfung</li>
               <li>Leistung (mit Abzeichen Bronze, Silber & Gold)</li>
             </ul>
+            <p className="my-4">
+              Abgerundet werden die jeweils 6 Monate dauernden Kurse mit einer
+              entsprechenden Leistungsabfrage bzw. Prüfung. Aber keine Sorge,
+              wir arbeiten zusammen mit Euch auf das Semesterende hin!
+            </p>
+            <p className="my-4">
+              Beachtet bitte, aufgrund dessen, das wir ein Verein sind und alle
+              unsere{" "}
+              <Link href="/team" className="text-sky-700">
+                Trainer und Helfer
+              </Link>{" "}
+              ehrenamtlich auf dem Platz stehen, der Trainingsbetrieb{" "}
+              <b>ausschließlich Samstags</b> statt findet! Auch bieten wir
+              leider keinen Einzelunterricht an.
+            </p>
+            <p className="mt-4">
+              <Link href="/anfahrt" className="text-sky-700">
+                Besucht uns doch einfach einmal zu einer Probestunde!
+              </Link>
+            </p>
           </div>
           <div>
             <Image
@@ -63,21 +82,7 @@ export default function Home() {
       </ContentBox>
 
       <Kurse />
-
-      <ContentBox>
-        <div className="pb-4">
-          <h2>Hundefreunde Herzogenrath e.V.</h2>
-          <h3>Grenzstr. 9</h3>
-          <h3>52134 Herzogenrath</h3>
-        </div>
-        <div className="h-[500px]">
-          <DynamicMap position={[50.880173, 6.087774]}>
-            <b>Hundefreunde Herzogenrath e.V.</b>
-            <br />
-            Grenzstr. 9 - 52134 Herzogenrath
-          </DynamicMap>
-        </div>
-      </ContentBox>
+      <Anfahrt />
     </>
   );
 }

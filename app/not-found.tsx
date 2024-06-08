@@ -1,8 +1,8 @@
 import React from "react";
-import Link from "next/link";
 import Image from "next/image";
 
 import Dog from "@/public/theme/dog-forfoot.svg";
+import Button from "@/components/button";
 
 export default function NotFoundPage() {
   return (
@@ -23,12 +23,7 @@ export default function NotFoundPage() {
           <br />
           Vielleicht hat einer unserer Hunde sie gefressen - bestimmt ein Welpe
         </p>
-        <Link
-          href="/"
-          className="rounded bg-blue-500 px-4 py-2 text-white transition-colors duration-300 hover:bg-blue-600"
-        >
-          Zurück zur Startseite
-        </Link>
+        <Button href="/">Zurück zur Startseite</Button>
       </div>
     </div>
   );

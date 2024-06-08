@@ -46,7 +46,7 @@ export default function Header({ menuItems }: { menuItems: HeaderItem[] }) {
             <Bars3Icon className="h-8 w-8" aria-hidden="true" />
           </button>
         </div>
-        <div className="hidden lg:flex lg:gap-x-10 xl:gap-x-12">
+        <div className="hidden lg:flex lg:gap-x-4 xl:gap-x-10">
           {menuItems.map((item) => (
             <Link
               key={item.name}
