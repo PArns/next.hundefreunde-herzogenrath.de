@@ -1,0 +1,8 @@
+body {
+  background-image: url("/theme/footer-withcity.svg"), url("/theme/bgtop.jpg");
+  background-position:
+    center bottom,
+    center top;
+  background-repeat: repeat-x;
+  background-color: #d9f2f7;
+}
