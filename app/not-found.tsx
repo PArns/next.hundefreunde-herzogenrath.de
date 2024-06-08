@@ -6,7 +6,7 @@ import Button from "@/components/button";
 
 export default function NotFoundPage() {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center">
+    <div className="absolute top-0 flex h-screen w-screen flex-col items-center justify-center">
       <div className="rounded-xl bg-white px-10 py-8 text-center shadow-lg">
         <Image
           src={Dog}

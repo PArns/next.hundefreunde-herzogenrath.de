@@ -39,7 +39,7 @@ export default function RootLayout({
         {children}
         <Footer>
           <div className="flex gap-4">
-            <Link href={"/kontakt"}>Anfahrt & Kontakt</Link>
+            <Link href={"/anfahrt"}>Anfahrt & Kontakt</Link>
             <Link href={"/impressum"}>Impressum</Link>
           </div>
         </Footer>
