@@ -7,7 +7,7 @@ export default function Anfart() {
       <div>
         <h2>Hundefreunde Herzogenrath e.V.</h2>
         <h3>Grenzstr. 9</h3>
-        <h3 className="pb-2">52134 Herzogenrath</h3>
+        <h3>52134 Herzogenrath</h3>
         Ihr findet uns direkt im unteren Bereich der Grenzstraße - Wir verfügen
         über eigene Parkplätze sowie natürlich über Sanitäre Anlagen!
       </div>

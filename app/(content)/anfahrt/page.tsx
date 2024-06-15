@@ -14,7 +14,7 @@ export default function Anfart() {
   return (
     <>
       <ContentBox>
-        <h3 className="pb-2">
+        <h3>
           Ihr findet das Trainingsgelände direkt an der niederländischen Grenze
           in Herzogenrath
         </h3>
@@ -29,7 +29,7 @@ export default function Anfart() {
         <Link href="/kurse" className="text-sky-600">
           HIER
         </Link>
-        <p className="pt-2">
+        <p>
           Solltet ihr weitere Fragen zu den einzelnen Kursen haben, so meldet
           euch gerne direkt bei einem unserer{" "}
           <Link href="/kurse" className="text-sky-600">
@@ -37,7 +37,7 @@ export default function Anfart() {
           </Link>{" "}
           oder samstags direkt auf dem Platz!
         </p>
-        <p className="pt-2">
+        <p>
           Beachtet bitte, das das <b>Training ausschließlich samstags</b> statt
           findet. Eine detailierte Terminübersicht findet ihr aber auch noch
           einmal{" "}
