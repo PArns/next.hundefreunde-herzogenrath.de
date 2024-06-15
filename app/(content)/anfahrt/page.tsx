@@ -32,7 +32,7 @@ export default function Anfart() {
         <p>
           Solltet ihr weitere Fragen zu den einzelnen Kursen haben, so meldet
           euch gerne direkt bei einem unserer{" "}
-          <Link href="/kurse" className="text-sky-600">
+          <Link href="/team" className="text-sky-600">
             Trainer per E-Mail
           </Link>{" "}
           oder samstags direkt auf dem Platz!
