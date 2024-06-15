@@ -5,29 +5,43 @@
 h1 {
   @apply text-4xl font-bold;
   @apply text-sky-900;
+  @apply pb-2;
 }
 
 h2 {
   @apply text-3xl font-semibold;
   @apply text-sky-900;
+  @apply pb-2;
 }
 
 h3 {
   @apply text-2xl font-medium;
   @apply text-sky-900;
+  @apply pb-2;
 }
 
 h4 {
   @apply text-xl font-medium;
   @apply text-sky-900;
+  @apply pb-2;
 }
 
 h5 {
   @apply text-lg font-normal;
   @apply text-sky-900;
+  @apply pb-2;
 }
 
 h6 {
   @apply text-base font-normal;
   @apply text-sky-900;
+  @apply pb-2;
+}
+
+p {
+  @apply pb-1.5;
+}
+
+p:last-child {
+  @apply pb-0;
 }
