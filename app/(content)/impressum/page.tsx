@@ -3,7 +3,7 @@ import ContentBox from "@/components/layout/default-box";
 export function generateMetadata() {
   return {
     title: "Impressum",
-    Description: "Unsere Adresse, Rechtliches und mehr",
+    description: "Unsere Adresse, Rechtliches und mehr",
   };
 }
 

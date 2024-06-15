@@ -8,7 +8,7 @@ import Link from "next/link";
 export function generateMetadata() {
   return {
     title: "Über uns",
-    Description:
+    description:
       "Die Hundefreunde Herzogenrath sind die Hundeschule in der StädteRegion Aachen - Besucht uns doch einmal für eine kostenlose Probestunde!",
   };
 }

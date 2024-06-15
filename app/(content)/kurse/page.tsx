@@ -7,7 +7,7 @@ import { kursData } from "@/configuration/kursData";
 export function generateMetadata() {
   return {
     title: "Kurse",
-    Description:
+    description:
       "Unsere Kurse sind auf eine Dauer von jeweis 1/2 Jahr ausgelegt und starten im April und Oktober. Ein Einstieg in die Welpen- bzw. Anfängergruppen ist aber jederzeit, auch unabhängig vom Kursbeginn möglich. Alle weiterführenden Kurse setzen den erfolgreichen Abschluss des jeweiligen Vorkurses voraus.",
   };
 }

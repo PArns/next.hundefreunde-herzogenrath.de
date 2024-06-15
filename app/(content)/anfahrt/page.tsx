@@ -6,7 +6,7 @@ import Link from "next/link";
 export function generateMetadata() {
   return {
     title: "Anfahrt & Kontakt",
-    Description: "So findet ihr uns!",
+    description: "So findet ihr uns!",
   };
 }
 

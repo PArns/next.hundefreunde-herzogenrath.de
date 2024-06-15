@@ -5,7 +5,7 @@ import Kurse from "@/sections/kurse";
 export function generateMetadata() {
   return {
     title: "Termine",
-    Description:
+    description:
       "Der Trainingsbetrieb findet grundsätzlich jeden Samstag statt. Die Entsprechenden Zeiten, sowie Veranstaltungen und Schließzeiten könnt ihr hier einsehen.",
   };
 }

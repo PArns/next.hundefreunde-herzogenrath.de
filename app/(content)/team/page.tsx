@@ -5,7 +5,7 @@ import Age from "@/components/age";
 export function generateMetadata() {
   return {
     title: "Unser Team",
-    Description:
+    description:
       "Unsere Trainer haben alle jahrelange Erfahrung in der Hundeerziehung und -Ausbildung und freuen sich, auf jeden neuen Vierbeiner in unseren Stunden. Selbstverständlich stehen sie auch mit Rat und Tat nach den jeweiligen Kursen zur Verfügung.",
   };
 }
