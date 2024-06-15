@@ -12,45 +12,46 @@ export default function Impressum() {
     <ContentBox>
       <h2>Hundefreunde Herzogenrath e.V.</h2>
       <p>Vereinsregister Aachen VR 3387</p>
-      <h3>Übungsgelände:</h3>
+      <h3 className="pt-4">Übungsgelände:</h3>
       Grenzstraße
       <br />
       52134 Herzogenrath
-      <h3>Kontakt:</h3>
+      <h3 className="pt-4">Kontakt:</h3>
       Jürgen Essler
       <br />
       Lid. van Deysselstraat 43
       <br />
       NL 6464cv Kerkrade
       <br />
-      E-Mail:&nbsp;info@hundefreunde-herzogenrath.de
       <br />
-      Internet: http://www.hundefreunde-herzogenrath.de
-      <h3>Verantwortlich für den Inhalt:</h3>
+      E-Mail: info@hundefreunde-herzogenrath.de
+      <br />
+      Internet: https://www.hundefreunde-herzogenrath.de
+      <h3 className="pt-4">Verantwortlich für den Inhalt:</h3>
       <p>Hundefreunde Herzogenrath e.V. – Der Vorstand</p>
-      <h3>Pflege &amp; technische Betreuung:</h3>
+      <h3 className="pt-4">Pflege &amp; technische Betreuung:</h3>
       <p>Patrick Arns</p>
-      <h3>Bildmaterial:</h3>
+      <h3 className="pt-4">Bildmaterial:</h3>
       <p>
         Patrick Arns –{" "}
         <a
-          href="http://www.patrick-arns.de"
+          href="https://patrick-arns.de"
           target="_blank"
           className="text-sky-600"
         >
-          http://www.patrick-arns.de
+          https://patrick-arns.de
         </a>
         <br />
         Marcelo Rabelo – &nbsp;
         <a
-          href="http://www.seumelhorclick.com.br"
+          href="https://www.seumelhorclick.com.br"
           target="_blank"
           className="text-sky-600"
         >
-          http://www.seumelhorclick.com.br
+          https://www.seumelhorclick.com.br
         </a>
       </p>
-      <h3>Disclaimer:</h3>
+      <h3 className="pt-4">Disclaimer:</h3>
       <p>
         <strong>1. Haftungsbeschränkung</strong>
         <br />
@@ -69,7 +70,7 @@ export default function Impressum() {
         konkreten Rechtsverletzung. Eine Haftung ist erst ab dem Zeitpunkt der
         Kenntniserlangung möglich.
       </p>
-      <p>
+      <p className="pt-2">
         <strong>2. Externe Links</strong>
         <br />
         Die Webseite enthält sog. „externe Links“ (Verlinkungen) zu anderen
@@ -83,7 +84,7 @@ export default function Impressum() {
         Bekanntwerden einer solchen Rechtsverletzung wird der Link umgehend
         entfernen.
       </p>
-      <p>
+      <p className="pt-2">
         <strong>3. Urheberrecht/Leistungsschutzrecht</strong>
         <br />
         Die auf dieser Webseite veröffentlichten Inhalte, Werke und
@@ -95,7 +96,7 @@ export default function Impressum() {
         bereitgestellten Informationen auf diesen Webseiten ist nicht gestattet
         und strafbar.
       </p>
-      <p>
+      <p className="pt-2">
         <strong>4. Datenschutz</strong>
         <br />
         Durch den Besuch des Internetauftritts können Informationen (Datum,
