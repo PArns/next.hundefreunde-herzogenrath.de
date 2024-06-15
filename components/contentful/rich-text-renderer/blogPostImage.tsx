@@ -2,7 +2,7 @@
 
 import clsx from 'clsx';
 import ContentfulImageAsset, { getImageSource } from "../image-asset";
-import { showLightBoxImage } from "@/components/os/lightbox";
+//import { showLightBoxImage } from "@/components/os/lightbox";
 
 export default function BlogPostImage({ imageData }: { imageData: any }) {
   let {
@@ -68,10 +68,10 @@ export default function BlogPostImage({ imageData }: { imageData: any }) {
         style={styleObject}
         onClick={() => {
           if (useLightBox) {
-            showLightBoxImage({
+            /*showLightBoxImage({
               src: getImageSource(image, 1200),
               title: name,
-            });
+            });*/
           }
         }}
       />

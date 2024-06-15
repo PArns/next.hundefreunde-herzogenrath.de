@@ -1,6 +1,5 @@
 import { fetchGraphQL } from "@/data-provider/contentful/client";
 import { LocaleCode } from "contentful";
-import { isValidLocale } from "@/helper/localization";
 
 export interface ImageGalleries {
   galleries: ImageGallery[];
@@ -25,8 +24,6 @@ export async function GetGalleries(
   skip: number = 0,
   limit: number = 10,
 ): Promise<ImageGalleries | null> {
-  if (!isValidLocale(locale)) return null;
-
   const data = await fetchGraphQL(
     `query($limit: Int!, $skip: Int!, $locale: String!) {
       imageGalleryCollection(order: date_DESC, limit: $limit, skip: $skip, locale: $locale) {
@@ -74,8 +71,6 @@ export async function GetGalleryBySlug(
   slug: string,
   locale: string,
 ): Promise<ImageGallery | null> {
-  if (!isValidLocale(locale)) return null;
-
   const query = `query($slug: String!, $locale: String!) {
     imageGalleryCollection(where: {slug: $slug}, locale: $locale, limit: 1) {
         items {

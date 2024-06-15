@@ -1,7 +1,5 @@
 "use client";
 
-import Obfuscate from "react-obfuscate";
-
 export default function ObfuscateClientSide({
   email,
   className,
@@ -9,5 +7,9 @@ export default function ObfuscateClientSide({
   email: string;
   className: string;
 }) {
-  return <Obfuscate email={email} className={className} />;
+  return (
+    <a href={`mailto:${email}`} className={className}>
+      {email}
+    </a>
+  );
 }

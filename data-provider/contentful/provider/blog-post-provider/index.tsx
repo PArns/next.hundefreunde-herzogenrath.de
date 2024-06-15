@@ -1,6 +1,5 @@
 import { fetchGraphQL } from "@/data-provider/contentful/client";
 import { LocaleCode } from "contentful";
-import { isValidLocale } from "@/helper/localization";
 
 export interface BlogPosts {
   posts: BlogPost[];
@@ -28,8 +27,6 @@ export async function GetBlogPosts(
   limit: number = 10,
   tag: string | undefined = undefined,
 ): Promise<BlogPosts | null> {
-  if (!isValidLocale(locale)) return null;
-
   const query = `query($limit: Int!, $skip: Int!, $locale: String!) {
     blogPostCollection(
         order: publishedAt_DESC, 
@@ -180,8 +177,6 @@ export async function GetBlogPostBySlug(
   slug: string,
   locale: string,
 ): Promise<BlogPost | null> {
-  if (!isValidLocale(locale)) return null;
-
   const query = `query($slug: String!, $locale: String!) {
     blogPostCollection(where: {slug: $slug}, locale: $locale, limit: 1) {
         items {
@@ -219,8 +214,6 @@ export async function GetBlogPostById(
   postId: string,
   locale: string,
 ): Promise<BlogPost | null> {
-  if (!isValidLocale(locale)) return null;
-
   const query = `query($id: String!, $locale: String!) {
     blogPost(id: $id , locale: $locale) {
         ${BLOG_POST_DATA}

@@ -5,8 +5,8 @@ import { BLOCKS, INLINES } from "@contentful/rich-text-types";
 import Link from "next/link";
 import ContentfulImageAsset, { getImageSource } from "../image-asset";
 
-import PhotoGallery, { GalleryPhoto } from "@/components/photo-gallery";
-import DynamicReactPlayer from "@/components/dynamic/react-player";
+//import PhotoGallery, { GalleryPhoto } from "@/components/photo-gallery";
+//import DynamicReactPlayer from "@/components/dynamic/react-player";
 import BlogPostImage from "./blogPostImage";
 
 function renderOptions(links: any) {
@@ -37,7 +37,7 @@ function renderOptions(links: any) {
           case "BlogPostImage": {
             return <BlogPostImage imageData={entry} />;
           }
-          case "ImageGallery": {
+          /*case "ImageGallery": {
             let galleryImages: GalleryPhoto[] = [];
 
             entry.imagesCollection.items.map((image: any) => {
@@ -60,7 +60,7 @@ function renderOptions(links: any) {
                 {entry.title}
               </div>
             );
-          }
+          }*/
           default: {
             return (
               <b className="mr-2 bg-red-500">

@@ -69,7 +69,7 @@ const andrea: Member = {
       bestanden habe, wollte ich auch einmal die andere Seite der Medaillie
       kennen lernen und möchte nun Ausbilder werden. Solltet ihr nach einer
       unserer Stunden ebenfalls Lust und Laune verspüren, so macht mir dies doch
-      gerne "nach".
+      gerne &quot;nach&quot;.
     </>
   ),
 };
