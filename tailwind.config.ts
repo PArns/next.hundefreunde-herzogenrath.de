@@ -10,6 +10,7 @@ const config: Config = {
   theme: {
     h1: ["text-xl"],
   },
+  darkMode: "selector",
   plugins: [require("@tailwindcss/typography")],
 };
 export default config;
