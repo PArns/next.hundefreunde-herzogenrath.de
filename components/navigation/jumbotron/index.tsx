@@ -1,5 +1,6 @@
 "use client";
 
+import { ReactElement } from "react";
 import { EmblaOptionsType } from "embla-carousel";
 import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel from "embla-carousel-react";
@@ -38,22 +39,26 @@ export function Slide({
   );
 }
 
+type SlideType = ReactElement<typeof Slide>;
+
 export default function Jumbotron({
   children,
 }: {
-  children: Array<React.ReactElement<typeof Slide>>;
+  children: SlideType | SlideType[];
 }) {
   const emblaOptions: EmblaOptionsType = { loop: true };
   const [emblaRef] = useEmblaCarousel(emblaOptions, [
     Autoplay({ delay: 5000 }),
   ]);
 
+  const slides = Array.isArray(children) ? children : [children];
+
   return (
     <div className="relative isolate pt-16">
       <section className="embla">
         <div className="embla__viewport h-96" ref={emblaRef}>
           <div className="embla__container">
-            {children.map((slide, index) => (
+            {slides.map((slide, index) => (
               <div className="embla__slide" key={index}>
                 {slide}
               </div>

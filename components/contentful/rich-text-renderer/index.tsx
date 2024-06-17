@@ -5,7 +5,7 @@ import { BLOCKS, INLINES } from "@contentful/rich-text-types";
 import Link from "next/link";
 import ContentfulImageAsset, { getImageSource } from "../image-asset";
 
-//import PhotoGallery, { GalleryPhoto } from "@/components/photo-gallery";
+import PhotoGallery, { GalleryPhoto } from "@/components/photo-gallery";
 //import DynamicReactPlayer from "@/components/dynamic/react-player";
 import BlogPostImage from "./blogPostImage";
 
@@ -13,16 +13,18 @@ function renderOptions(links: any) {
   const assetMap = new Map();
   const entryMap = new Map();
 
-  for (const asset of links.assets.block) {
-    assetMap.set(asset.sys.id, asset);
-  }
+  if (links) {
+    for (const asset of links.assets.block) {
+      assetMap.set(asset.sys.id, asset);
+    }
 
-  for (const entry of links.entries.block) {
-    entryMap.set(entry.sys.id, entry);
-  }
+    for (const entry of links.entries.block) {
+      entryMap.set(entry.sys.id, entry);
+    }
 
-  for (const entry of links.entries.inline) {
-    entryMap.set(entry.sys.id, entry);
+    for (const entry of links.entries.inline) {
+      entryMap.set(entry.sys.id, entry);
+    }
   }
 
   return {
@@ -37,7 +39,7 @@ function renderOptions(links: any) {
           case "BlogPostImage": {
             return <BlogPostImage imageData={entry} />;
           }
-          /*case "ImageGallery": {
+          case "ImageGallery": {
             let galleryImages: GalleryPhoto[] = [];
 
             entry.imagesCollection.items.map((image: any) => {
@@ -53,7 +55,7 @@ function renderOptions(links: any) {
 
             return <PhotoGallery photos={galleryImages} />;
           }
-          case "BlogPostVideo": {
+          /*case "BlogPostVideo": {
             return (
               <div className="flex w-auto flex-col items-center justify-center text-center">
                 <DynamicReactPlayer url={entry.videoUrl} />
@@ -91,42 +93,42 @@ function renderOptions(links: any) {
       },
       [BLOCKS.HEADING_1]: (node: any, children: any) => {
         return (
-          <h1 className="clear-both pb-2 text-4xl text-neutral-600 dark:text-neutral-400 md:text-6xl">
+          <h1 className="clear-both pb-2 text-4xl text-neutral-600 md:text-6xl dark:text-neutral-400">
             {children}
           </h1>
         );
       },
       [BLOCKS.HEADING_2]: (node: any, children: any) => {
         return (
-          <h2 className="clear-both pb-2 text-3xl text-neutral-600 dark:text-neutral-400 md:text-5xl">
+          <h2 className="clear-both pb-2 text-3xl text-neutral-600 md:text-5xl dark:text-neutral-400">
             {children}
           </h2>
         );
       },
       [BLOCKS.HEADING_3]: (node: any, children: any) => {
         return (
-          <h3 className="clear-both pb-2 text-2xl text-neutral-600 dark:text-neutral-400 md:text-4xl">
+          <h3 className="clear-both pb-2 text-2xl text-neutral-600 md:text-4xl dark:text-neutral-400">
             {children}
           </h3>
         );
       },
       [BLOCKS.HEADING_4]: (node: any, children: any) => {
         return (
-          <h4 className="clear-both pb-2 text-xl text-neutral-600 dark:text-neutral-400 md:text-3xl">
+          <h4 className="clear-both pb-2 text-xl text-neutral-600 md:text-3xl dark:text-neutral-400">
             {children}
           </h4>
         );
       },
       [BLOCKS.HEADING_5]: (node: any, children: any) => {
         return (
-          <h5 className="clear-both pb-2 text-lg text-neutral-600 dark:text-neutral-400 md:text-2xl">
+          <h5 className="clear-both pb-2 text-lg text-neutral-600 md:text-2xl dark:text-neutral-400">
             {children}
           </h5>
         );
       },
       [BLOCKS.HEADING_6]: (node: any, children: any) => {
         return (
-          <h6 className="text-md clear-both pb-2 text-neutral-600 dark:text-neutral-400 md:text-xl">
+          <h6 className="text-md clear-both pb-2 text-neutral-600 md:text-xl dark:text-neutral-400">
             {children}
           </h6>
         );

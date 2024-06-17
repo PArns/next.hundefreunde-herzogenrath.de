@@ -1,35 +1,23 @@
 import { fetchGraphQL } from "@/data-provider/contentful/client";
-import { LocaleCode } from "contentful";
 
 export interface ImageGalleries {
   galleries: ImageGallery[];
-  total: number;
-  skip: number;
-  limit: number;
 }
 
 export interface ImageGallery {
   name: string;
   slug: string;
-  alternativeSlugs?: any;
   date: Date;
   description: string;
-  locale: string;
   teaserImage: any;
   images: any[];
 }
 
-export async function GetGalleries(
-  locale: LocaleCode,
-  skip: number = 0,
-  limit: number = 10,
-): Promise<ImageGalleries | null> {
+export async function GetGalleries(): Promise<ImageGallery[]> {
   const data = await fetchGraphQL(
-    `query($limit: Int!, $skip: Int!, $locale: String!) {
-      imageGalleryCollection(order: date_DESC, limit: $limit, skip: $skip, locale: $locale) {
+    `query {
+      imageGalleryCollection(order: date_DESC) {
           total
-          skip
-          limit
           items {
             name
             slug
@@ -41,7 +29,6 @@ export async function GetGalleries(
           }
         }
       }`,
-    { limit: limit, skip: skip, locale: locale },
   );
 
   const collection = data.data.imageGalleryCollection;
@@ -53,31 +40,22 @@ export async function GetGalleries(
         slug: galleryEntry.slug,
         date: new Date(galleryEntry.date),
         description: galleryEntry.description,
-        locale: locale,
         teaserImage: galleryEntry.teaserImage,
       };
     },
   );
 
-  return {
-    total: collection.total,
-    skip: collection.skip,
-    limit: collection.limit,
-    galleries: galleries,
-  };
+  return galleries;
 }
 
 export async function GetGalleryBySlug(
   slug: string,
-  locale: string,
 ): Promise<ImageGallery | null> {
-  const query = `query($slug: String!, $locale: String!) {
-    imageGalleryCollection(where: {slug: $slug}, locale: $locale, limit: 1) {
+  const query = `query($slug: String!) {
+    imageGalleryCollection(where: {slug: $slug}, limit: 1) {
         items {
           name
           slug
-          slugDE: slug(locale: "de")
-          slugEN: slug(locale: "en")
           date
           description
           teaserImage {
@@ -96,7 +74,7 @@ export async function GetGalleryBySlug(
       }
     }`;
 
-  const variables = { slug: slug, locale: locale };
+  const variables = { slug: slug };
   const data = await fetchGraphQL(query, variables);
   const postData = data?.data?.imageGalleryCollection?.items[0];
 
@@ -107,13 +85,8 @@ export async function GetGalleryBySlug(
     slug: postData.slug,
     date: new Date(postData.date),
     description: postData.description,
-    locale: locale,
     teaserImage: postData.teaserImage,
     images: postData.imagesCollection.items,
-    alternativeSlugs: {
-      de: postData.slugDE,
-      en: postData.slugEN,
-    },
   };
 
   return gallery;
@@ -130,9 +103,7 @@ export async function GetAllGallerySlugs(): Promise<GallerySlug[]> {
     imageGalleryCollection(
         order: date_DESC) {
           items {
-            slugDE: slug(locale: "de")
-            slugEN: slug(locale: "en")
-            date
+            slug
           }
         }
     }`;
@@ -142,8 +113,7 @@ export async function GetAllGallerySlugs(): Promise<GallerySlug[]> {
 
   const posts: GallerySlug[] = collection.items.map((postEntry: any) => {
     return {
-      slugDE: postEntry.slugDE,
-      slugEN: postEntry.slugEN,
+      slug: postEntry.slug,
       publishedAt: new Date(postEntry.date),
     };
   });
