@@ -17,9 +17,20 @@ export function generateMetadata(): Readonly<Metadata> {
   return {
     title: {
       default: config.title,
-      template: `%s - Die Hundeschule im Kreis Aachen | Hundefreunde Herzogenrath e.V`,
+      template: `%s - Die Hundeschule in der StädteRegion Aachen | Hundefreunde Herzogenrath e.V`,
     },
     description: config.description,
+    keywords: [
+      "Hundefreunde Herzogenrath",
+      "Hundeschule",
+      "Hundetraining",
+      "Hundeverein",
+      "Hundesport",
+      "Agility",
+      "Welpen Erziehung",
+      "Hunde Erziehung",
+      "Hundeveranstaltungen Herzogenrath",
+    ],
     creator: config.creator,
     publisher: config.publisher,
     metadataBase: config.baseUrl,
