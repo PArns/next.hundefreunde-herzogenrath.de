@@ -93,8 +93,7 @@ export async function GetGalleryBySlug(
 }
 
 export interface GallerySlug {
-  slugDE: String;
-  slugEN: String;
+  slug: string;
   publishedAt: Date;
 }
 
