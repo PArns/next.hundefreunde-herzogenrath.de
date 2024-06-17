@@ -54,7 +54,7 @@ export default function Kurs({
           />
         </div>
         <div className="flex h-auto w-full flex-col">
-          <div className="pb-2">{children}</div>
+          <div className="pb-2 pt-2 lg:pt-0">{children}</div>
 
           <div className="mt-auto flex flex-col">
             <div>
