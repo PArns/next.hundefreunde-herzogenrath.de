@@ -1,4 +1,7 @@
 import ContentBox from "@/components/layout/default-box";
+import Image from "next/image";
+
+import DogImage from "@/public/theme/dog-forfoot.svg";
 
 export function generateMetadata() {
   return {
@@ -9,9 +12,16 @@ export function generateMetadata() {
 
 export default function Impressum() {
   return (
-    <ContentBox>
+    <ContentBox className="relative">
       <h2>Hundefreunde Herzogenrath e.V.</h2>
       <p>Vereinsregister Aachen VR 3387</p>
+      <Image
+        src={DogImage}
+        alt="Hund im Impressum"
+        width="500"
+        height="500"
+        className="absolute hidden lg:right-10 lg:block xl:right-20"
+      />
       <h3 className="pt-4">Übungsgelände:</h3>
       Grenzstraße
       <br />
