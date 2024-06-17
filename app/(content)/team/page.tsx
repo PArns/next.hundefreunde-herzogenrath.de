@@ -43,9 +43,10 @@ const marianne: Member = {
   desc: (
     <>
       Seit über 35 Jahren begleiten mich Tierschutzhunde, die keinen guten Start
-      in ihrem Leben hatten und seit 2004 bei den Hundefreunden Herzogenrath
-      aktiv. Die Arbeit mit den Hunden ist für mich eine große Bereicherung. Für
-      Problemhunde habe ich mich in Reiki und Telepathie schulen lassen.
+      in ihrem Leben hatten und seit 2004 bin ich bei den Hundefreunden
+      Herzogenrath aktiv. Die Arbeit mit den Hunden ist für mich eine große
+      Bereicherung. Für Problemhunde habe ich mich in Reiki und Telepathie
+      schulen lassen.
     </>
   ),
 };

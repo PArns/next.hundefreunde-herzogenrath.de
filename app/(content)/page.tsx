@@ -54,7 +54,7 @@ export default function Home() {
               wir arbeiten zusammen mit Euch auf das Semesterende hin!
             </p>
             <p>
-              Beachtet bitte, aufgrund dessen, das wir ein Verein sind und alle
+              Beachtet bitte, aufgrund dessen, dass wir ein Verein sind und alle
               unsere{" "}
               <Link href="/team" className="text-sky-700">
                 Trainer und Helfer
