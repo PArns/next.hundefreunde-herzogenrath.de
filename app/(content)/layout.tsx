@@ -22,10 +22,9 @@ export default function RootLayout({
       <div className="mx-auto max-w-screen-2xl px-6 pb-6 2xl:px-0">
         <Jumbotron>
           <Slide bgImage={"/jumbotron/hunde-wald.jpg"}>
-            <div className="font-bold text-7xl text-white drop-shadow-xl">Wir suchen Verstärkung</div>
-          </Slide>
-          <Slide bgImage={"/jumbotron/hunde-wald.jpg"}>
-            <div>Slide 2</div>
+            <div className="text-center text-3xl font-bold text-white drop-shadow-xl md:text-7xl">
+              Wir suchen Verstärkung
+            </div>
           </Slide>
         </Jumbotron>
 
