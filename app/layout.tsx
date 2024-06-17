@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import PageBaseConfiguration from "@/configuration";
 
 import Footer from "@/components/navigation/footer";
@@ -43,6 +44,7 @@ export default function RootLayout({
             <Link href={"/impressum"}>Impressum</Link>
           </div>
         </Footer>
+        <Analytics />
       </body>
     </html>
   );
