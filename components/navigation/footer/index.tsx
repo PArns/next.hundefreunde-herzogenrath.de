@@ -19,7 +19,7 @@ export default function Footer({ children }: { children: React.ReactNode }) {
             </div>
             <div className="grow"></div>
             <div>{children}</div>
-            <div>
+            <div className="hidden sm:block">
               <Link href="#top">
                 <Image
                   src={ImgTop}

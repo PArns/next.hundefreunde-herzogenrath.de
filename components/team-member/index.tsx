@@ -43,14 +43,14 @@ function Dogs({ dogs }: { dogs: Array<Dog> }) {
 export default function TeamMember({ member }: { member: Member }) {
   return (
     <div
-      className="flex h-full rounded-lg border border-neutral-300 shadow-lg"
+      className="flex h-full flex-col rounded-lg border border-neutral-300 shadow-lg lg:flex-row"
       id={member.name}
     >
-      <div className="relative h-full min-h-56 w-[400px]">
+      <div className="relative h-full min-h-56 lg:w-[400px]">
         <Image
           src={member.img}
           alt={member.name}
-          className="rounded-l-lg object-cover object-top"
+          className="rounded-t-lg object-cover object-top lg:rounded-l-lg lg:rounded-tr-none"
           fill
         />
       </div>
