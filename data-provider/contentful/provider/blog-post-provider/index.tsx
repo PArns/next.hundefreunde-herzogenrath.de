@@ -1,9 +1,7 @@
 import { fetchGraphQL } from "@/data-provider/contentful/client";
-import { LocaleCode } from "contentful";
 
 export interface BlogPosts {
   posts: BlogPost[];
-  tags: string[];
   total: number;
   skip: number;
   limit: number;
@@ -17,23 +15,18 @@ export interface BlogPost {
   body?: any;
   excerpt: string;
   image: any;
-  locale: string;
   publishedAt: Date;
 }
 
 export async function GetBlogPosts(
-  locale: LocaleCode,
   skip: number = 0,
   limit: number = 10,
-  tag: string | undefined = undefined,
 ): Promise<BlogPosts | null> {
-  const query = `query($limit: Int!, $skip: Int!, $locale: String!) {
+  const query = `query($limit: Int!, $skip: Int!) {
     blogPostCollection(
         order: publishedAt_DESC, 
-        where: { listEntry: true }, 
         limit: $limit, 
-        skip: $skip, 
-        locale: $locale) {
+        skip: $skip) {
           total
           skip
           limit
@@ -56,40 +49,23 @@ export async function GetBlogPosts(
         }
     }`;
 
-  const variables = { locale: locale, limit: tag ? 999 : limit, skip: skip };
+  const variables = { limit: limit, skip: skip };
   const data = await fetchGraphQL(query, variables);
   const collection = data.data.blogPostCollection;
 
-  const regex = /Blog: (.*)/gm;
-
-  const availableTags: string[] = [];
-
   const posts: BlogPost[] = collection.items.map((postEntry: any) => {
-    const tags = postEntry.contentfulMetadata.tags;
-
-    if (tags) {
-      tags.map((tagEntry: any) => {
-        const match = regex.exec(tagEntry.name);
-        if (match) {
-          availableTags.push(match[1]);
-        }
-      });
-
-      return {
-        title: postEntry.title,
-        subTitle: postEntry.subTitle,
-        slug: postEntry.slug,
-        excerpt: postEntry.excerpt,
-        image: postEntry.image,
-        locale: locale,
-        publishedAt: new Date(postEntry.publishedAt),
-      };
-    }
+    return {
+      title: postEntry.title,
+      subTitle: postEntry.subTitle,
+      slug: postEntry.slug,
+      excerpt: postEntry.excerpt,
+      image: postEntry.image,
+      publishedAt: new Date(postEntry.publishedAt),
+    };
   });
 
   return {
     posts: posts,
-    tags: Array.from(new Set(availableTags)),
     total: collection.total,
     skip: collection.skip,
     limit: collection.limit,
@@ -198,7 +174,6 @@ export async function GetBlogPostBySlug(
     slug: postEntry.slug,
     excerpt: postEntry.excerpt,
     image: postEntry.image,
-    locale: locale,
     body: postEntry.body,
     publishedAt: new Date(postEntry.publishedAt),
     alternativeSlugs: {
@@ -232,7 +207,6 @@ export async function GetBlogPostById(
     slug: postEntry.slug,
     excerpt: postEntry.excerpt,
     image: postEntry.image,
-    locale: locale,
     body: postEntry.body,
     publishedAt: new Date(postEntry.publishedAt),
     alternativeSlugs: {
