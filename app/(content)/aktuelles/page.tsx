@@ -3,6 +3,14 @@ import ContentBox from "@/components/layout/default-box";
 import PageBaseConfiguration from "@/configuration";
 import { GetBlogPosts } from "@/data-provider/contentful/provider/blog-post-provider";
 
+export function generateMetadata() {
+  return {
+    title: "Aktuelles rund um die Hundefreunde",
+    description:
+      "Hier findet ihr alle aktuellen Neuigkeiten rund um die Hundefreunde Herzogenrath e.V.",
+  };
+}
+
 export default async function Aktuelles({
   params,
 }: {

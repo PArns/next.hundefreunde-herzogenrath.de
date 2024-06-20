@@ -11,7 +11,6 @@ export interface BlogPost {
   title: string;
   subTitle: string;
   slug: string;
-  alternativeSlugs?: any;
   body?: any;
   excerpt: string;
   image: any;
@@ -75,8 +74,6 @@ export async function GetBlogPosts(
 const BLOG_POST_DATA = `title
 subTitle
 slug
-slugDE: slug(locale: "de")
-slugEN: slug(locale: "en")
 publishedAt
 excerpt
 body { 
@@ -96,7 +93,6 @@ body {
           imageClasses
           styles
           showSubtitle
-          useLightBox
           image {
             url
           }
@@ -112,10 +108,6 @@ body {
               title
             }
           }
-        }
-        ... on BlogPostVideo {
-          title
-          videoUrl
         }
       }
       block {
@@ -151,21 +143,19 @@ contentfulMetadata {
 
 export async function GetBlogPostBySlug(
   slug: string,
-  locale: string,
 ): Promise<BlogPost | null> {
-  const query = `query($slug: String!, $locale: String!) {
-    blogPostCollection(where: {slug: $slug}, locale: $locale, limit: 1) {
+  const query = `query($slug: String!) {
+    blogPostCollection(where: {slug: $slug}, limit: 1) {
         items {
           ${BLOG_POST_DATA}
         } 
       }
     }`;
 
-  const variables = { slug: slug, locale: locale };
+  const variables = { slug: slug };
   const data = await fetchGraphQL(query, variables);
 
   const postEntry = data?.data?.blogPostCollection?.items[0];
-
   if (!postEntry) return null;
 
   const post: BlogPost = {
@@ -176,62 +166,22 @@ export async function GetBlogPostBySlug(
     image: postEntry.image,
     body: postEntry.body,
     publishedAt: new Date(postEntry.publishedAt),
-    alternativeSlugs: {
-      de: postEntry.slugDE,
-      en: postEntry.slugEN,
-    },
-  };
-
-  return post;
-}
-
-export async function GetBlogPostById(
-  postId: string,
-  locale: string,
-): Promise<BlogPost | null> {
-  const query = `query($id: String!, $locale: String!) {
-    blogPost(id: $id , locale: $locale) {
-        ${BLOG_POST_DATA}
-      }
-    }`;
-
-  const variables = { id: postId, locale: locale };
-  const data = await fetchGraphQL(query, variables);
-  const postEntry = data?.data?.blogPost;
-
-  if (!postEntry) return null;
-
-  const post: BlogPost = {
-    title: postEntry.title,
-    subTitle: postEntry.subTitle,
-    slug: postEntry.slug,
-    excerpt: postEntry.excerpt,
-    image: postEntry.image,
-    body: postEntry.body,
-    publishedAt: new Date(postEntry.publishedAt),
-    alternativeSlugs: {
-      de: postEntry.slugDE,
-      en: postEntry.slugEN,
-    },
   };
 
   return post;
 }
 
 export interface BlogPostSlug {
-  slugDE: String;
-  slugEN: String;
+  slug: string;
   publishedAt: Date;
 }
 
 export async function GetAllBlogPostSlugs(): Promise<BlogPostSlug[]> {
   const query = `query {
     blogPostCollection(
-        order: publishedAt_DESC, 
-        where: { listEntry: true }) {
+        order: publishedAt_DESC) {
           items {
-            slugDE: slug(locale: "de")
-            slugEN: slug(locale: "en")
+            slug
             publishedAt
           }
         }
@@ -242,8 +192,7 @@ export async function GetAllBlogPostSlugs(): Promise<BlogPostSlug[]> {
 
   const posts: BlogPostSlug[] = collection.items.map((postEntry: any) => {
     return {
-      slugDE: postEntry.slugDE,
-      slugEN: postEntry.slugEN,
+      slug: postEntry.slug,
       publishedAt: new Date(postEntry.publishedAt),
     };
   });
