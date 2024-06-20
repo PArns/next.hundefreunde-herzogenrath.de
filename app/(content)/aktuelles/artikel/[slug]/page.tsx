@@ -4,6 +4,7 @@ import { getImageSource } from "@/components/contentful/image-asset";
 import RichTextRenderer from "@/components/contentful/rich-text-renderer";
 import DateRenderer from "@/components/date-renderer";
 import ContentBox from "@/components/layout/default-box";
+import Lightbox from "@/components/lightbox";
 import PageBaseConfiguration from "@/configuration";
 import {
   GetAllBlogPostSlugs,
@@ -72,13 +73,14 @@ export default async function BlogArticle({
         <h2>{article.title}</h2>
         <h3>{article.subTitle}</h3>
         <DateRenderer date={article.publishedAt} format="long" />
-        <div className="pt-4">
+        <div className="flex h-auto pt-4">
           <RichTextRenderer document={article.body} />
         </div>
         <div className="pb-2 pt-6">
           <Button href="/aktuelles">Zurück zur Übersicht</Button>
         </div>
       </ContentBox>
+      <Lightbox />
     </div>
   );
 }

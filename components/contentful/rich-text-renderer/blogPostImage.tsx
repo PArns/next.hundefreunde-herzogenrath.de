@@ -1,7 +1,8 @@
 "use client";
 
-import clsx from 'clsx';
+import clsx from "clsx";
 import ContentfulImageAsset, { getImageSource } from "../image-asset";
+import { showLightBoxImage } from "@/components/lightbox";
 //import { showLightBoxImage } from "@/components/os/lightbox";
 
 export default function BlogPostImage({ imageData }: { imageData: any }) {
@@ -18,7 +19,9 @@ export default function BlogPostImage({ imageData }: { imageData: any }) {
     name,
   } = imageData;
 
-  const styleObject = styles ? JSON.parse(styles.internal.content) : {};
+  const styleObject = styles?.internal?.content
+    ? JSON.parse(styles.internal.content)
+    : {};
 
   classes = classes || [];
   imageClasses = imageClasses || [];
@@ -68,15 +71,15 @@ export default function BlogPostImage({ imageData }: { imageData: any }) {
         style={styleObject}
         onClick={() => {
           if (useLightBox) {
-            /*showLightBoxImage({
+            showLightBoxImage({
               src: getImageSource(image, 1200),
               title: name,
-            });*/
+            });
           }
         }}
       />
       {showSubtitle && (
-        <p className="truncate text-xs text-neutral-500 dark:text-neutral-400 md:text-sm">
+        <p className="truncate text-xs text-neutral-500 md:text-sm dark:text-neutral-400">
           {name}
         </p>
       )}
