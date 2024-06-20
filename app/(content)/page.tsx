@@ -1,7 +1,7 @@
 import ContentBox from "@/components/layout/default-box";
-import DynamicMap from "@/components/map/dynamic-map";
 import Anfahrt from "@/sections/anfahrt";
 import Kurse from "@/sections/kurse";
+import News from "@/sections/neuigkeiten";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -81,6 +81,7 @@ export default function Home() {
         </div>
       </ContentBox>
 
+      <News />
       <Kurse />
       <Anfahrt />
     </>

@@ -8,7 +8,7 @@ export default function BlogCard({ post }: { post: BlogPost }) {
     <div className="@container/card flex w-full rounded-lg drop-shadow-lg">
       <article className="w-full">
         <Link href={`/aktuelles/artikel/${post.slug}`}>
-          <div className="@lg/card:p-24 relative overflow-hidden bg-cover bg-no-repeat p-20">
+          <div className="@lg/card:p-48 relative overflow-hidden bg-cover bg-no-repeat p-36">
             <ContentfulImageAsset
               asset={post.image}
               alt={post.title}
