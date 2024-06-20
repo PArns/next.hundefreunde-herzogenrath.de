@@ -73,7 +73,7 @@ export default async function BlogArticle({
         <h2>{article.title}</h2>
         <h3>{article.subTitle}</h3>
         <DateRenderer date={article.publishedAt} format="long" />
-        <div className="flex h-auto pt-4">
+        <div className="flex flex-col pt-4">
           <RichTextRenderer document={article.body} />
         </div>
         <div className="pb-2 pt-6">
