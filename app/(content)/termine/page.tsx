@@ -1,6 +1,7 @@
 import Calendar from "@/components/calendar";
 import ContentBox from "@/components/layout/default-box";
 import Kurse from "@/sections/kurse";
+import Motds from "@/sections/motd";
 
 export function generateMetadata() {
   return {
@@ -13,6 +14,8 @@ export function generateMetadata() {
 export default function Termine() {
   return (
     <>
+      <Motds />
+      
       <ContentBox>
         <h2 className="pb-1">Termine & Veranstaltungen</h2>
         Der Trainingsbetrieb findet grundsätzlich jeden Samstag statt. Die

@@ -2,6 +2,7 @@ import BlogCard from "@/components/blog/blog-card";
 import ContentBox from "@/components/layout/default-box";
 import PageBaseConfiguration from "@/configuration";
 import { GetBlogPosts } from "@/data-provider/contentful/provider/blog-post-provider";
+import Motds from "@/sections/motd";
 
 export function generateMetadata() {
   return {
@@ -21,6 +22,8 @@ export default async function Aktuelles({
 
   return (
     <>
+      <Motds />
+
       <ContentBox>
         <h2>Aktuelles rund um die Hundefreunde</h2>
         Hier findet ihr alle aktuellen Neuigkeiten rund um die Hundefreunde

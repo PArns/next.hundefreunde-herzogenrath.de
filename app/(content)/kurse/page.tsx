@@ -3,6 +3,7 @@ import Link from "next/link";
 import Kurs from "@/components/kurs";
 
 import { kursData } from "@/configuration/kursData";
+import Motds from "@/sections/motd";
 
 export function generateMetadata() {
   return {
@@ -17,6 +18,8 @@ export default function Kurse() {
 
   return (
     <>
+      <Motds />
+      
       <ContentBox>
         <h2>Kurse & Zeiten</h2>
         <p>
