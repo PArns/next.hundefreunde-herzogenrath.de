@@ -7,9 +7,6 @@ const config: Config = {
     "./sections/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  theme: {
-    h1: ["text-xl"],
-  },
   darkMode: "selector",
   plugins: [require("@tailwindcss/typography")],
 };

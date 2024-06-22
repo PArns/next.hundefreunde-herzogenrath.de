@@ -1,6 +1,7 @@
 import ContentBox from "@/components/layout/default-box";
 import Anfahrt from "@/sections/anfahrt";
 import Kurse from "@/sections/kurse";
+import Motds from "@/sections/motd";
 import News from "@/sections/neuigkeiten";
 import Image from "next/image";
 import Link from "next/link";
@@ -16,6 +17,8 @@ export function generateMetadata() {
 export default function Home() {
   return (
     <>
+      <Motds />
+
       <ContentBox>
         <h2>Willkommen bei den Hundefreunden Herzogenrath e.V.</h2>
         <h3>Die Hundeschule in der StädteRegion Aachen</h3>
