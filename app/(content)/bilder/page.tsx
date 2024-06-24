@@ -7,6 +7,8 @@ import {
 import Kurse from "@/sections/kurse";
 import Link from "next/link";
 
+export const dynamic = "force-static";
+
 export function generateMetadata() {
   return {
     title: "Bilder unserer Veranstaltungen",

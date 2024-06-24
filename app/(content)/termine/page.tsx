@@ -3,6 +3,8 @@ import ContentBox from "@/components/layout/default-box";
 import Kurse from "@/sections/kurse";
 import Motds from "@/sections/motd";
 
+export const dynamic = "force-static";
+
 export function generateMetadata() {
   return {
     title: "Termine",

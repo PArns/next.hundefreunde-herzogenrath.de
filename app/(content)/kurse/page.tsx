@@ -5,6 +5,8 @@ import Kurs from "@/components/kurs";
 import { kursData } from "@/configuration/kursData";
 import Motds from "@/sections/motd";
 
+export const dynamic = "force-static";
+
 export function generateMetadata() {
   return {
     title: "Kurse",
@@ -19,7 +21,7 @@ export default function Kurse() {
   return (
     <>
       <Motds />
-      
+
       <ContentBox>
         <h2>Kurse & Zeiten</h2>
         <p>

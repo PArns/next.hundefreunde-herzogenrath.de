@@ -4,6 +4,8 @@ import PageBaseConfiguration from "@/configuration";
 import { GetBlogPosts } from "@/data-provider/contentful/provider/blog-post-provider";
 import Motds from "@/sections/motd";
 
+export const dynamic = "force-static";
+
 export function generateMetadata() {
   return {
     title: "Aktuelles rund um die Hundefreunde",

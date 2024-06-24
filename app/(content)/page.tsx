@@ -6,6 +6,8 @@ import News from "@/sections/neuigkeiten";
 import Image from "next/image";
 import Link from "next/link";
 
+export const dynamic = "force-static";
+
 export function generateMetadata() {
   return {
     title: "Über uns",

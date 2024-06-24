@@ -49,13 +49,13 @@ export default function RootLayout({
         className={`${inter.className} relative min-h-screen overflow-x-hidden`}
       >
         {children}
+        <Analytics />
         <Footer>
           <div className="flex gap-4">
             <Link href={"/anfahrt"}>Anfahrt & Kontakt</Link>
             <Link href={"/impressum"}>Impressum</Link>
           </div>
         </Footer>
-        <Analytics />
       </body>
     </html>
   );
