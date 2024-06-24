@@ -52,13 +52,13 @@ export default function Impressum() {
           https://patrick-arns.de
         </a>
         <br />
-        Marcelo Rabelo – &nbsp;
+        Unsplash.com – &nbsp;
         <a
-          href="https://www.seumelhorclick.com.br"
+          href="https://unsplash.com"
           target="_blank"
           className="text-sky-600"
         >
-          https://www.seumelhorclick.com.br
+          https://unsplash.com
         </a>
       </p>
       <h3 className="pt-4">Disclaimer:</h3>
