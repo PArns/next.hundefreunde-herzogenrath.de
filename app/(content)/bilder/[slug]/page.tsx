@@ -11,6 +11,8 @@ import {
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
+export const dynamic = "force-static";
+
 interface GalleryParams {
   slug: string;
 }

@@ -17,6 +17,8 @@ interface PostParams {
   slug: string;
 }
 
+export const dynamic = "force-static";
+
 export async function generateStaticParams(): Promise<PostParams[]> {
   const config = PageBaseConfiguration();
   const entries: PostParams[] = [];
