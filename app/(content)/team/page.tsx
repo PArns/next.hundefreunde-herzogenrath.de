@@ -126,7 +126,14 @@ const patrick: Member = {
   trainerSince: "2020-10-17",
   kurs: ["Leistung"],
   email: "patrick@hundefreunde-herzogenrath.de",
-  desc: <>Leider muss ich noch einen Text schreiben!</>,
+  desc: (
+    <>
+      Nachdem ich mit meinem damals 10-jährigen Hund Sky zusammen die
+      Hundefreunde besucht habe, sind wir irgendwie hier geblieben. Mittlerweile
+      leider als einziger Ausbilder ohne Hund, dafür aber auf der anderen Seite
+      des Platzes - als Trainer.
+    </>
+  ),
 };
 
 // -----------------------------------------------------------------------------------
