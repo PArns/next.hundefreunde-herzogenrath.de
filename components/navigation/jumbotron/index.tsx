@@ -11,11 +11,15 @@ import "./embla.css";
 
 export function Slide({
   children,
+  className,
   bgImage,
 }: {
   children: React.ReactNode;
+  className?: string;
   bgImage?: string;
 }) {
+  if (!className) className = "";
+
   return (
     <div className="relative flex h-full w-full rounded-lg border-2">
       <div className="z-10 flex h-full w-full items-center justify-center">
@@ -28,10 +32,7 @@ export function Slide({
             src={bgImage}
             alt="Slide"
             fill
-            style={{
-              objectFit: "cover",
-            }}
-            className="rounded-lg"
+            className={`rounded-lg object-cover ${className}`.trim()}
           />
         )}
       </div>
