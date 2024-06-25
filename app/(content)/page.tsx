@@ -3,16 +3,17 @@ import Anfahrt from "@/sections/anfahrt";
 import Kurse from "@/sections/kurse";
 import Motds from "@/sections/motd";
 import News from "@/sections/neuigkeiten";
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
 export const dynamic = "force-static";
 
-export function generateMetadata() {
+export function generateMetadata(): Readonly<Metadata> {
   return {
     title: "Über uns",
     description:
-      "Die Hundefreunde Herzogenrath sind die Hundeschule in der StädteRegion Aachen - Besucht uns doch einmal für eine kostenlose Probestunde!",
+      "Die Hundefreunde Herzogenrath sind die freundliche Hundeschule in der Städteregion Aachen - Besucht uns doch einmal für eine kostenlose Probestunde!",
   };
 }
 

@@ -17,7 +17,7 @@ export function generateMetadata(): Readonly<Metadata> {
   return {
     title: {
       default: config.title,
-      template: `%s - Die Hundeschule in der StädteRegion Aachen | Hundefreunde Herzogenrath e.V`,
+      template: `%s - Die Hundeschule in der Städteregion Aachen | Hundefreunde Herzogenrath e.V`,
     },
     description: config.description,
     keywords: [
@@ -35,6 +35,15 @@ export function generateMetadata(): Readonly<Metadata> {
     publisher: config.publisher,
     metadataBase: config.baseUrl,
     robots: { index: true, follow: true },
+    openGraph: {
+      title: {
+        default: config.title,
+        template: `%s - Die Hundeschule in der Städteregion Aachen | Hundefreunde Herzogenrath e.V`,
+      },
+      description: config.description,
+      locale: "de-DE",
+      images: { url: "/jumbotron/gruppe.jpg", width: 800 },
+    },
   };
 }
 
