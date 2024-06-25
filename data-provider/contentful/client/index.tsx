@@ -22,7 +22,11 @@ export const fetchGraphQL = async function (
         }`,
       },
       body: JSON.stringify(requestBody),
-      cache: 'no-store'
+      cache: "force-cache",
+      next: {
+        revalidate: 10,
+        tags: ["contentful"],
+      },
     },
   ).then((response) => response.json());
 };
