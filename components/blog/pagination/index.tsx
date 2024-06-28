@@ -1,5 +1,5 @@
 import Link from "next/link";
-import clsx from 'clsx';
+import clsx from "clsx";
 
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/20/solid";
 
@@ -61,7 +61,7 @@ export default function Pagination({
   let previousLink: string = "";
   let nextLink: string = "";
 
-  const firstPage = currentPage == 1;
+  const firstPage = currentPage == 0;
   const lastPage = currentPage == pageCount;
 
   if (!firstPage) {
@@ -69,7 +69,11 @@ export default function Pagination({
   }
 
   if (!lastPage) {
-    nextLink = getLinkForPage(baseUrl, paginationSlug, currentPage + 1);
+    nextLink = getLinkForPage(
+      baseUrl,
+      paginationSlug,
+      currentPage == 0 ? 2 : currentPage + 1,
+    );
   }
 
   const pageLinks = [];
@@ -81,7 +85,7 @@ export default function Pagination({
         baseUrl={baseUrl}
         paginationSlug={paginationSlug}
         pageNumber={i}
-        current={currentPage == i}
+        current={currentPage == i || (currentPage == 0 && i == 1)}
       />,
     );
   }

@@ -13,11 +13,11 @@ import {
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
+export const dynamic = "force-static";
+
 interface PostParams {
   slug: string;
 }
-
-export const dynamic = "force-static";
 
 export async function generateStaticParams(): Promise<PostParams[]> {
   const entries: PostParams[] = [];
