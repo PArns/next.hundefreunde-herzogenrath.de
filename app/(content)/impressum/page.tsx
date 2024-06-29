@@ -29,7 +29,7 @@ export default function Impressum() {
       <h3 className="pt-4">Kontakt:</h3>
       Jürgen Essler
       <br />
-      Lid. van Deysselstraat 43
+      Lod. van Deysselstraat 43
       <br />
       NL 6464cv Kerkrade
       <br />

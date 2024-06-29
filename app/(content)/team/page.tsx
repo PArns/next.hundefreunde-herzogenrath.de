@@ -45,8 +45,8 @@ const marianne: Member = {
       Seit über 35 Jahren begleiten mich Tierschutzhunde, die keinen guten Start
       in ihrem Leben hatten und seit 2004 bin ich bei den Hundefreunden
       Herzogenrath aktiv. Die Arbeit mit den Hunden ist für mich eine große
-      Bereicherung. Für Problemhunde habe ich mich in Reiki und Telepathie
-      schulen lassen.
+      Bereicherung. Für Problemhunde habe ich mich in Reiki und
+      Tierkommunikation schulen lassen.
     </>
   ),
 };
@@ -60,7 +60,7 @@ const andrea: Member = {
   kurs: ["Anfänger"],
   email: "andrea@hundefreunde-herzogenrath.de",
   dogs: [
-    { name: "Louie", race: "Richback", birthDay: "2021-01-01" },
+    { name: "Louie", race: "Rhodesian Ridgeback", birthDay: "2021-01-01" },
     { name: "Chucho", race: "Maltheser Chizu Mix", birthDay: "2016-09-01" },
   ],
   desc: (
@@ -226,14 +226,6 @@ const juergenConstruction: Member = {
   ),
 };
 
-import imgMichael from "@/public/team/michael.jpg";
-
-const michaelConstruction: Member = {
-  name: "Michael",
-  img: imgMichael,
-  desc: <></>,
-};
-
 const udoConstruction: Member = {
   name: "Udo",
   img: imgUdo,
@@ -288,7 +280,6 @@ const catering: Array<Member> = [moni];
 const constructionTeam: Array<Member> = [
   heinzConstruction,
   juergenConstruction,
-  michaelConstruction,
   udoConstruction,
   thomasConstruction,
   joergConstruction,
