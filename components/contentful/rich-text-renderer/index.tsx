@@ -73,10 +73,14 @@ function renderOptions(links: any) {
         }
       },
       [INLINES.HYPERLINK]: (node: any) => {
-        const uri = node.data.uri;
+        const uri = node.data.uri as string;
         const content = node.content[0];
+
+        const external = uri.startsWith("https://");
+        const target = external ? "" : "_blank";
+
         return (
-          <Link href={uri} target="_blank" className="external">
+          <Link href={uri} target={target} className="external">
             {content.value}
           </Link>
         );

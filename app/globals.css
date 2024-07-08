@@ -45,3 +45,7 @@ p {
 p:last-child {
   @apply pb-0;
 }
+
+a.external {
+  @apply text-sky-700;
+}
