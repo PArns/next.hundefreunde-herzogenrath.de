@@ -77,7 +77,7 @@ function renderOptions(links: any) {
         const content = node.content[0];
 
         const external = uri.startsWith("https://");
-        const target = external ? "" : "_blank";
+        const target = external ? "_blank" : "";
 
         return (
           <Link href={uri} target={target} className="external">
