@@ -29,12 +29,14 @@ export default function Header({ menuItems }: { menuItems: HeaderItem[] }) {
         <div className="flex lg:flex-1">
           <div className="-m-1.5 p-1.5">
             <span className="sr-only">{pageConfig.title}</span>
-            <Image
-              className="h-10 w-auto"
-              src={Logo}
-              alt={pageConfig.title}
-              width={260}
-            />
+            <Link href="/">
+              <Image
+                className="h-10 w-auto"
+                src={Logo}
+                alt={pageConfig.title}
+                width={260}
+              />
+            </Link>
           </div>
         </div>
         <div className="flex lg:hidden">
