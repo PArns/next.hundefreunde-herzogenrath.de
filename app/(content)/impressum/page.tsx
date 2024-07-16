@@ -36,7 +36,7 @@ export default function Impressum() {
       <br />
       E-Mail: info@hundefreunde-herzogenrath.de
       <br />
-      Internet: https://www.hundefreunde-herzogenrath.de
+      Internet: https://hundefreunde-herzogenrath.de
       <h3 className="pt-4">Verantwortlich für den Inhalt:</h3>
       <p>Hundefreunde Herzogenrath e.V. – Der Vorstand</p>
       <h3 className="pt-4">Pflege &amp; technische Betreuung:</h3>
@@ -45,11 +45,11 @@ export default function Impressum() {
       <p>
         Patrick Arns –{" "}
         <a
-          href="https://patrick-arns.de"
+          href="https://arns.dev"
           target="_blank"
           className="text-sky-600"
         >
-          https://patrick-arns.de
+          https://arns.dev
         </a>
         <br />
         Unsplash.com – &nbsp;
