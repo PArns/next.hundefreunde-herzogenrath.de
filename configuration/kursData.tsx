@@ -20,7 +20,7 @@ export const kursData: Array<Kurs> = [
     name: "Welpen-Kurs",
     img: ImgWelpen,
     leiter: ["Elisabeth"],
-    startTime: "13:00",
+    startTime: "14:00",
     contentShort: (
       <>
         Der Welpenkurs ist für die Kleinsten unter unseren Vierbeinern gedacht
