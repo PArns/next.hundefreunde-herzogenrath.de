@@ -4,38 +4,44 @@
 
 h1 {
   @apply text-2xl font-bold md:text-4xl;
+  @apply text-ellipsis;
   @apply text-sky-900;
   @apply md:pb-2;
 }
 
 h2 {
   @apply text-xl font-semibold md:text-3xl;
+  @apply text-ellipsis;
   @apply text-sky-900;
   @apply md:pb-2;
 }
 
 h3 {
   @apply text-lg font-medium md:text-2xl;
+  @apply text-ellipsis;
   @apply text-sky-900;
   @apply md:pb-2;
 }
 
 h4 {
   @apply text-xl font-medium;
+  @apply text-ellipsis;
   @apply text-sky-900;
-  @apply pb-2;
+  @apply md:pb-2;
 }
 
 h5 {
   @apply text-lg font-normal;
+  @apply text-ellipsis;
   @apply text-sky-900;
-  @apply pb-2;
+  @apply md:pb-2;
 }
 
 h6 {
   @apply text-base font-normal;
+  @apply text-ellipsis;
   @apply text-sky-900;
-  @apply pb-2;
+  @apply md:pb-2;
 }
 
 p {
