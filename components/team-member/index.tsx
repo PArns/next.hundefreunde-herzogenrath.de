@@ -91,7 +91,7 @@ export default function TeamMember({ member }: { member: Member }) {
             </div>
           )}
           {member.email && (
-            <div>
+            <div className="hidden">
               E-Mail:{" "}
               <ObfuscateClientSide
                 email={member.email}
