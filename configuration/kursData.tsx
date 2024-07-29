@@ -23,9 +23,12 @@ export const kursData: Array<Kurs> = [
     startTime: "14:00",
     contentShort: (
       <>
-        Der Welpenkurs ist für die Kleinsten unter unseren Vierbeinern gedacht
-        und bietet für Hunde, bis 6 Monate, sowie Herrchen und Frauchen eine
-        Grundeinführung für die neue Fellnase an.
+        <p>
+          Der Welpenkurs ist für die Kleinsten unter unseren Vierbeinern gedacht
+          und bietet für Hunde, bis 6 Monate, sowie Herrchen und Frauchen eine
+          Grundeinführung für die neue Fellnase an.
+        </p>
+        <p className="font-bold">Derzeit keine Anmeldung!</p>
       </>
     ),
     contentLong: (
