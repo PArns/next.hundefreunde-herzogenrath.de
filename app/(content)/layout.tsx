@@ -48,7 +48,7 @@ export default function RootLayout({
             </div>
           </Slide>
         </Jumbotron>
-
+        
         <div id="top"></div>
 
         {children}
