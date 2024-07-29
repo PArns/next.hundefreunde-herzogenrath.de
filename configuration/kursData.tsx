@@ -44,6 +44,13 @@ export const kursData: Array<Kurs> = [
           „Fuß“-gehen, das Abrufen und die Ausführung der Ruhekommandos Sitz und
           Platz eingeführt.
         </p>
+        <p>
+          <b>
+            Der Welpenkurs wird leider nur noch bis ende September angeboten!
+            <br />
+            Derzeit keine Anmeldungen mehr!
+          </b>
+        </p>
       </>
     ),
   },
