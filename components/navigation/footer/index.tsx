@@ -11,15 +11,17 @@ export default function Footer({ children }: { children: React.ReactNode }) {
   return (
     <>
       <div className="pt-20" />
-      <div className="absolute bottom-0 mx-auto h-max w-screen">
-        <div className="mx-auto max-w-screen-2xl px-6 pb-6 2xl:px-0">
+      <div className="mx-auto h-max w-screen">
+        <div className="max-w-screen-2xl px-2 pb-8 md:px-6 md:pb-6 2xl:mx-auto 2xl:px-0">
           <div className="flex flex-row text-[#9B6347]">
             <div>
-              &copy; {pageConfig.title} <CurrentYear />
+              &copy; <span className="md:hidden">HfH e.V.</span>
+              <span className="hidden md:inline">{pageConfig.title}</span>{" "}
+              <CurrentYear />
             </div>
             <div className="grow"></div>
             <div>{children}</div>
-            <div className="hidden sm:block">
+            <div className="hidden shrink sm:block">
               <Link href="#top">
                 <Image
                   src={ImgTop}
