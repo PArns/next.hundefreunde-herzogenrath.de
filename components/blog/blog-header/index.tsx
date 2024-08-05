@@ -22,11 +22,11 @@ export default function BlogHeader({
       <div className="py-10 md:py-20 lg:py-48">
         <div className="flex h-full items-center justify-center">
           <div>
-            <h1 className="mb-2 text-4xl font-semibold text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] md:text-5xl lg:text-6xl">
+            <h1 className="mb-2 font-semibold text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
               {title}
             </h1>
             {subTitle && (
-              <h2 className="text-2xl font-semibold text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] md:text-3xl lg:text-4xl">
+              <h2 className="font-semibold text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
                 {subTitle}
               </h2>
             )}
