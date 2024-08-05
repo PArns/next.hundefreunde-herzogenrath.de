@@ -21,6 +21,7 @@ export interface Member {
   kurs?: Array<string>;
   dogs?: Array<Dog>;
   email?: string;
+  emailEnabled?: boolean,
 }
 
 function Kurse({ kurse }: { kurse: Array<string> }) {
@@ -90,8 +91,8 @@ export default function TeamMember({ member }: { member: Member }) {
               </div>
             </div>
           )}
-          {member.email && (
-            <div className="hidden">
+          {member.email && member.emailEnabled && (
+            <div>
               E-Mail:{" "}
               <ObfuscateClientSide
                 email={member.email}

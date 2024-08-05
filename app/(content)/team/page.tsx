@@ -59,6 +59,7 @@ const andrea: Member = {
   traineeSince: "2023-01-01",
   kurs: ["Anfänger"],
   email: "andrea@hundefreunde-herzogenrath.de",
+  emailEnabled: true,
   dogs: [
     { name: "Louie", race: "Rhodesian Ridgeback", birthDay: "2021-01-01" },
     { name: "Chucho", race: "Maltheser Chizu Mix", birthDay: "2016-09-01" },
@@ -126,6 +127,7 @@ const patrick: Member = {
   trainerSince: "2020-10-17",
   kurs: ["Leistung"],
   email: "patrick@hundefreunde-herzogenrath.de",
+  emailEnabled: true,
   desc: (
     <>
       Nachdem ich mit meinem damals 10-jährigen Hund Sky zusammen die
