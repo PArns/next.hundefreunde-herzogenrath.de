@@ -36,6 +36,7 @@ const marianne: Member = {
   trainerSince: "2009-01-01",
   kurs: ["Anfänger"],
   email: "marianne@hundefreunde-herzogenrath.de",
+  emailEnabled: true,
   dogs: [
     { name: "Arielle", race: "spanischer Mischling", birthDay: "2016-01-01" },
     { name: "Lui", race: "rumänischer Mischling", birthDay: "2021-06-01" },
@@ -84,6 +85,7 @@ const birgit: Member = {
   trainerSince: "2022-05-01",
   kurs: ["BGVP"],
   email: "birgit@hundefreunde-herzogenrath.de",
+  emailEnabled: true,
   dogs: [
     { name: "Alma", race: "Golden Retriever", birthDay: "2022-02-01" },
     { name: "Sam", race: "Golden Retriever", birthDay: "2012-09-01" },
@@ -105,6 +107,7 @@ const julia: Member = {
   trainerSince: "2016-11-01",
   kurs: ["Leistung"],
   email: "julia@hundefreunde-herzogenrath.de",
+  emailEnabled: true,
   dogs: [
     { name: "Chilli", race: "Labrador-Weimaraner", birthDay: "2014-11-01" },
   ],
