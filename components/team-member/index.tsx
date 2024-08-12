@@ -47,13 +47,13 @@ export default function TeamMember({ member }: { member: Member }) {
       className="flex h-full flex-col rounded-lg border border-neutral-300 shadow-lg lg:flex-row"
       id={member.name}
     >
-      <div className="relative h-full min-h-[450px] lg:w-[400px]">
+      <div className="relative h-full min-h-[450px] lg:w-[500px]">
         <Image
           src={member.img}
           alt={member.name}
           className="rounded-t-lg object-cover object-top lg:rounded-l-lg lg:rounded-tr-none"
           fill
-          sizes="(max-width: 800px) 50vw, (max-width: 300px) 100vw, 33vw"
+          sizes="850px, 400px, 250px"
         />
       </div>
       <div className="flex w-full flex-col p-2 text-sm">
