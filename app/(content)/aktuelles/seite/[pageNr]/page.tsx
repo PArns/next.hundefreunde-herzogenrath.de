@@ -66,9 +66,9 @@ export default async function Aktuelles({
         Herzogenrath e.V.
       </ContentBox>
 
-      <div className="flex flex-col gap-4">
+      <div className="grid grid-cols-1 gap-4 pb-4 md:grid-cols-2">
         {posts &&
-          posts?.posts.map((post) => <BlogCard post={post} key={post.slug} />)}
+          posts.posts.map((post) => <BlogCard post={post} key={post.slug} />)}
       </div>
 
       {pageCount > 1 && (

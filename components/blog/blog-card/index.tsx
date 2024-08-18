@@ -5,8 +5,7 @@ import DateRenderer from "@/components/date-renderer";
 
 export default function BlogCard({ post }: { post: BlogPost }) {
   return (
-    <div className="flex w-full rounded-lg drop-shadow-lg">
-      <article className="w-full">
+    <article className="flex flex-col w-full rounded-lg drop-shadow-lg h-full">
         <Link href={`/aktuelles/artikel/${post.slug}`}>
           <div className="relative overflow-hidden bg-cover bg-no-repeat p-36 lg:p-56">
             <ContentfulImageAsset
@@ -36,18 +35,19 @@ export default function BlogCard({ post }: { post: BlogPost }) {
           </div>
         </Link>
 
-        <div className="rounded-b-lg bg-white p-2 dark:bg-neutral-800">
-          {post.excerpt && <div>{post.excerpt}</div>}
+        <div className="rounded-b-lg bg-white h-full p-2 flex flex-col">
+          <div className="h-full">
+            {post.excerpt && <div>{post.excerpt}</div>}
+          </div>
           <div className="mr-1 mt-2 flex w-full flex-nowrap place-content-end text-neutral-800">
             <Link
               href={`/aktuelles/artikel/${post.slug}`}
-              className="rounded bg-sky-400 px-2 py-2 font-semibold text-white transition hover:bg-sky-700 lg:px-4 dark:bg-sky-600 dark:hover:bg-sky-700"
+              className="rounded bg-sky-400 px-2 py-2 font-semibold text-white transition hover:bg-sky-700 lg:px-4"
             >
               Mehr ...
             </Link>
           </div>
         </div>
-      </article>
-    </div>
+    </article>
   );
 }

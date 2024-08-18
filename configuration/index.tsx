@@ -5,6 +5,6 @@ export default function PageBaseConfiguration() {
     baseUrl: new URL("https://hundefreunde-herzogenrath.de"),
     publisher: "Patrick Arns",
     creator: "Patrick Arns",
-    blogPostsPerPage: 5,
+    blogPostsPerPage: 6,
   };
 }
