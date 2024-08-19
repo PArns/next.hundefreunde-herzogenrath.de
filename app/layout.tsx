@@ -3,9 +3,6 @@ import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import PageBaseConfiguration from "@/configuration";
 
-import Footer from "@/components/navigation/footer";
-import Link from "next/link";
-
 import "@/app/globals.css";
 import "@/app/body.css";
 
@@ -59,12 +56,6 @@ export default function RootLayout({
       >
         {children}
         <Analytics />
-        <Footer>
-          <div className="flex gap-4">
-            <Link href={"/anfahrt"}>Anfahrt & Kontakt</Link>
-            <Link href={"/impressum"}>Impressum</Link>
-          </div>
-        </Footer>
       </body>
     </html>
   );

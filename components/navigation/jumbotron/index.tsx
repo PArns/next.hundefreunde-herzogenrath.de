@@ -11,10 +11,12 @@ import "./embla.css";
 
 export function Slide({
   children,
+  imageAlt,
   className,
   bgImage,
 }: {
   children: React.ReactNode;
+  imageAlt: string;
   className?: string;
   bgImage?: string;
 }) {
@@ -30,7 +32,7 @@ export function Slide({
         {bgImage && (
           <Image
             src={bgImage}
-            alt="Slide"
+            alt={imageAlt}
             fill
             className={`rounded-lg object-cover ${className}`.trim()}
           />
