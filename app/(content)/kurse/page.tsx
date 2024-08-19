@@ -35,7 +35,8 @@ export default function Kurse() {
         <p>
           Solltest Du an einem Probetraining interessiert sein, so erscheine
           bitte mindestens <b>15 Minuten</b> vor Kursbeginn und melde dich
-          einfach bei einem der Kursleiter an.
+          einfach bei einem der Kursleiter an. Ein <b>Probetraining</b> ist
+          selbstverständlich <b>kostenlos und unverbindlich</b>!
         </p>
         <p>
           Unsere Kurse sind auf eine Dauer von jeweis 1/2 Jahr ausgelegt und
@@ -45,7 +46,37 @@ export default function Kurse() {
           des jeweiligen Vorkurses voraus.
         </p>
         <p>
-          Ein Probetraining ist selbstverständlich kostenlos und unverbindlich!
+          Unsere Übungsstunden dauern jeweils <b>60 Minuten</b>, beginnen immer
+          mit einer kurzen 5-minütigen Aufwärmphase und enden mit 5-10 Minuten
+          freiem Spiel mit den Hunden der Kursteilnehmer.
+        </p>
+        <p>
+          Wir bitten um Verständnis, dass wir deshalb{" "}
+          <b>5 Minuten nach Kursbeginn</b> leider keine Nachzügler mehr auf die
+          Wiese lassen können - seid also am besten bereits 10 Minuten vor
+          Trainingsbeginn am Gelände.
+        </p>
+        <p>
+          Rund um unser Trainingsgelände gibt es zudem genügend Möglichkeiten
+          für kurze oder lange Spaziergänge. Bitte nutzt diese Möglichkeit auch{" "}
+          <b>vor dem Training</b> und plant genügend Zeit ein. Schließlich
+          wollen wir gemeinsam entspannt in die Stunde starten.
+        </p>
+        <p>
+          Ebenso sind wir als Teilnehmer und Hundeführer natürlich vorbildlich
+          und räumen die Hinterlassenschaften unserer Hunde sowohl draußen, als
+          auch auf dem Trainingsgelände weg.
+        </p>
+        <h3 className="pt-4">Kursabschluss</h3>
+        <p>
+          Jeder unserer Kurse endet mit einer Leistungsabfrage bzw., ab der
+          BGVP, mit einer Prüfung, in der das Gelernte komprimiert in praktischen
+          Aufgaben abgefragt wird. Die BGVP-Prüfung besteht zusätzlich zur
+          Praxis aus einer schriftlichen Prüfung und einer Prüfung in der Stadt.
+        </p>
+        <p>
+          Um zur Prüfung zugelassen zu werden, besteht eine Anwesenheitspflicht
+          von <b>mindestens 50%</b> der angebotenen Übungsstunden.
         </p>
       </ContentBox>
 
