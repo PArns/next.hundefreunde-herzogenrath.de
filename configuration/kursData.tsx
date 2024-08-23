@@ -82,7 +82,7 @@ export const kursData: Array<Kurs> = [
           rundet diese Ausbildungsstufe ab.
         </p>
         <p>
-          Die Ausbildung wird mit einem Leistungsabfrage der Teilnehmer
+          Die Ausbildung wird mit einer Leistungsabfrage der Teilnehmer
           abgeschlossen.
         </p>
       </>
