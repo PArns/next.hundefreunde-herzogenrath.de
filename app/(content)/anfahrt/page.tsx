@@ -1,6 +1,7 @@
 import ContentBox from "@/components/layout/default-box";
 import Anfahrt from "@/sections/anfahrt";
 import Kurse from "@/sections/kurse";
+import Motds from "@/sections/motd";
 import Link from "next/link";
 
 export function generateMetadata() {
@@ -13,6 +14,8 @@ export function generateMetadata() {
 export default function Anfart() {
   return (
     <>
+      <Motds />
+      
       <ContentBox>
         <h3>
           Ihr findet das Trainingsgelände direkt an der niederländischen Grenze

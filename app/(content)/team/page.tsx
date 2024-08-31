@@ -260,6 +260,7 @@ const joergConstruction: Member = {
 };
 
 import imgRalf from "@/public/team/ralf.jpg";
+import Motds from "@/sections/motd";
 
 const ralfConstruction: Member = {
   name: "Ralf",
@@ -294,6 +295,8 @@ const constructionTeam: Array<Member> = [
 export default function Team() {
   return (
     <>
+      <Motds />
+      
       <ContentBox>
         <h2>Unsere Trainer</h2>
 
