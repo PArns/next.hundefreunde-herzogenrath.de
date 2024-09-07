@@ -114,7 +114,16 @@ function renderOptions(links: any) {
         return <h6>{children}</h6>;
       },
       [BLOCKS.PARAGRAPH]: (node: any, children: any) => {
-        return <div className="[&:not(:last-child)]:pb-3">{children}</div>;
+        return <p className="[&:not(:last-child)]:pb-3">{children}</p>;
+      },
+      [BLOCKS.OL_LIST]: (node: any, children: any) => {
+        return <ol className="ml-6 list-decimal pb-2">{children}</ol>;
+      },
+      [BLOCKS.UL_LIST]: (node: any, children: any) => {
+        return <ul className="ml-6 list-disc pb-2">{children}</ul>;
+      },
+      [BLOCKS.HR]: (node: any, children: any) => {
+        return <hr className="pb-3" />;
       },
     },
   };
