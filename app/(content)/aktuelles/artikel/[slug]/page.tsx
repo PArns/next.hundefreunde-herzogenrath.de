@@ -69,7 +69,7 @@ export default async function BlogArticle({
 
   return (
     <div className="pt-4">
-      <BlogHeader title={article.title} backgroundImage={article.image} />
+      <BlogHeader title={article.title} subTitle={article.subTitle} backgroundImage={article.image} />
       <ContentBox>
         <h2>{article.title}</h2>
         <h3>{article.subTitle}</h3>
