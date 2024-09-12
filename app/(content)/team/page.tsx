@@ -2,6 +2,8 @@ import ContentBox from "@/components/layout/default-box";
 import TeamMember, { Member } from "@/components/team-member";
 import Age from "@/components/age";
 
+export const dynamic = "force-static";
+
 export function generateMetadata() {
   return {
     title: "Unser Team",

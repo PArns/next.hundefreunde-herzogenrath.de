@@ -4,6 +4,8 @@ import Kurse from "@/sections/kurse";
 import Motds from "@/sections/motd";
 import Link from "next/link";
 
+export const dynamic = "force-static";
+
 export function generateMetadata() {
   return {
     title: "Anfahrt & Kontakt",
