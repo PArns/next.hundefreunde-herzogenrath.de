@@ -65,7 +65,6 @@ const andrea: Member = {
   emailEnabled: true,
   dogs: [
     { name: "Louie", race: "Rhodesian Ridgeback", birthDay: "2021-01-01" },
-    { name: "Chucho", race: "Maltheser Chizu Mix", birthDay: "2016-09-01" },
   ],
   desc: (
     <>
