@@ -46,6 +46,7 @@ const andrea: Member = {
   email: "andrea@hundefreunde-herzogenrath.de",
   emailEnabled: true,
   dogs: [
+    { name: "Lilly", race: "Shih-Tzu Mix", birthDay: "2024-09-01" },
     { name: "Louie", race: "Rhodesian Ridgeback", birthDay: "2021-01-01" },
   ],
   desc: (
