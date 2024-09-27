@@ -11,7 +11,7 @@ const Age = ({
   single?: string;
   plural?: string;
 }) => {
-  const [yearsOld, setYearsOld] = useState(0);
+  const [yearsOld, setYearsOld] = useState(-1);
   const [pluralize, setPluralize] = useState("");
 
   if (!single) single = "Jahr";
@@ -37,7 +37,7 @@ const Age = ({
 
   return (
     <>
-      {yearsOld > 0 && (
+      {yearsOld >= 0 && (
         <>
           {yearsOld}&nbsp;
           {pluralize}
