@@ -12,24 +12,6 @@ export function generateMetadata() {
   };
 }
 
-import imgElisabeth from "@/public/team/elisabeth.jpg";
-
-const elisabeth: Member = {
-  name: "Elisabeth",
-  img: imgElisabeth,
-  trainerSince: "2013-01-01",
-  kurs: ["Welpen"],
-  dogs: [{ name: "Kiro", race: "Labrador", birthDay: "2018-11-01" }],
-  desc: (
-    <>
-      Wie bei uns allen sind Hundefreunde und Tiere im Allgemeinen ein großer
-      Teil meines Lebens. So war es für mich selbstverständlich, dass ich eines
-      Tages auch als Trainerin arbeiten wollte. Für sie stehe ich jede Woche mit
-      Herz und Seele auf dem Platz.
-    </>
-  ),
-};
-
 import imgMarianne from "@/public/team/marianne.jpg";
 
 const marianne: Member = {
@@ -272,7 +254,6 @@ const ralfConstruction: Member = {
 // -----------------------------------------------------------------------------------
 
 const trainer: Array<Member> = [
-  elisabeth,
   marianne,
   andrea,
   birgit,
