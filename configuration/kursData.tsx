@@ -19,7 +19,7 @@ export const kursData: Array<Kurs> = [
     id: "Anfänger",
     name: "Anfänger-Kurs",
     img: ImgAnfaenger,
-    leiter: ["Marianne", "Andrea"],
+    leiter: ["Birgit"],
     startTime: "14:00",
     contentShort: (
       <>
@@ -50,7 +50,7 @@ export const kursData: Array<Kurs> = [
     id: "BGVP",
     name: "BGVP-Kurs",
     img: ImgBGVP,
-    leiter: ["Birgit"],
+    leiter: ["Marianne", "Andrea"],
     startTime: "15:15",
     contentShort: (
       <>
@@ -87,7 +87,7 @@ export const kursData: Array<Kurs> = [
     name: "Leistungs-Kurs",
     img: ImgLeistung,
     leiter: ["Patrick"],
-    startTime: "16:30",
+    startTime: "16:45",
     contentShort: (
       <>
         Im Leistungskurs werden die Übungen der BGVP weiter vertieft. Hier

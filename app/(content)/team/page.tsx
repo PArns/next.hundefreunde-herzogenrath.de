@@ -18,7 +18,7 @@ const marianne: Member = {
   name: "Marianne",
   img: imgMarianne,
   trainerSince: "2009-01-01",
-  kurs: ["Anfänger"],
+  kurs: ["BGVP"],
   email: "marianne@hundefreunde-herzogenrath.de",
   emailEnabled: true,
   dogs: [
@@ -42,7 +42,7 @@ const andrea: Member = {
   name: "Andrea",
   img: imgAndrea,
   traineeSince: "2023-01-01",
-  kurs: ["Anfänger"],
+  kurs: ["BGVP"],
   email: "andrea@hundefreunde-herzogenrath.de",
   emailEnabled: true,
   dogs: [
@@ -67,7 +67,7 @@ const birgit: Member = {
   name: "Birgit",
   img: imgBirgit,
   trainerSince: "2022-05-01",
-  kurs: ["BGVP"],
+  kurs: ["Anfänger"],
   email: "birgit@hundefreunde-herzogenrath.de",
   emailEnabled: true,
   dogs: [
@@ -255,9 +255,9 @@ const ralfConstruction: Member = {
 // -----------------------------------------------------------------------------------
 
 const trainer: Array<Member> = [
+  birgit,
   marianne,
   andrea,
-  birgit,
   julia,
   patrick,
 ];
