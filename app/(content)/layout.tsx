@@ -15,7 +15,7 @@ export default function RootLayout({
     { name: "Termine", href: "/termine" },
     { name: "Kurse & Zeiten", href: "/kurse" },
     { name: "Unser Team", href: "/team" },
-    { name: "Bilder", href: "/bilder", disabled: true },
+    { name: "Bilder", href: "/bilder" },
     { name: "Anfahrt & Kontakt", href: "/anfahrt" },
   ];
 
