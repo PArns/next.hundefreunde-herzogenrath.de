@@ -1,6 +1,7 @@
 import ContentBox from "@/components/layout/default-box";
 import Link from "next/link";
 import Kurs from "@/components/kurs";
+import Calendar from "@/components/calendar";
 
 import { kursData } from "@/configuration/kursData";
 import Motds from "@/sections/motd";
@@ -9,7 +10,7 @@ export const dynamic = "force-static";
 
 export function generateMetadata() {
   return {
-    title: "Kurse",
+    title: "Kurse, Termine und Zeiten",
     description:
       "Unsere Kurse sind auf eine Dauer von jeweis 1/2 Jahr ausgelegt und starten im April und Oktober. Ein Einstieg in die Anfängergruppen ist aber jederzeit, auch unabhängig vom Kursbeginn möglich. Alle weiterführenden Kurse setzen den erfolgreichen Abschluss des jeweiligen Vorkurses voraus.",
   };
@@ -23,7 +24,7 @@ export default function Kurse() {
       <Motds />
 
       <ContentBox>
-        <h2>Kurse & Zeiten</h2>
+        <h2>Kurse, Termine & Zeiten</h2>
         <p>
           Unsere Kurse finden wöchentlich jeweils{" "}
           <b>samstags ab {firstKurs.startTime} Uhr</b> auf unserem{" "}
@@ -70,14 +71,21 @@ export default function Kurse() {
         <h3 className="pt-4">Kursabschluss</h3>
         <p>
           Jeder unserer Kurse endet mit einer Leistungsabfrage bzw., ab der
-          BGVP, mit einer Prüfung, in der das Gelernte komprimiert in praktischen
-          Aufgaben abgefragt wird. Die BGVP-Prüfung besteht zusätzlich zur
-          Praxis aus einer schriftlichen Prüfung und einer Prüfung in der Stadt.
+          BGVP, mit einer Prüfung, in der das Gelernte komprimiert in
+          praktischen Aufgaben abgefragt wird. Die BGVP-Prüfung besteht
+          zusätzlich zur Praxis aus einer schriftlichen Prüfung und einer
+          Prüfung in der Stadt.
         </p>
         <p>
           Um zur Prüfung zugelassen zu werden, besteht eine Anwesenheitspflicht
           von <b>mindestens 50%</b> der angebotenen Übungsstunden.
         </p>
+
+        <Calendar
+          calendarId={process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_ID}
+          googleApiKey={process.env.NEXT_PUBLIC_GOOGLE_API_KEY}
+          className="pt-6"
+        />
       </ContentBox>
 
       {kursData.map((kurs) => (

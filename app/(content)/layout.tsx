@@ -12,8 +12,7 @@ export default function RootLayout({
   const navigationItems: HeaderItem[] = [
     { name: "Über uns", href: "/" },
     { name: "Aktuelles", href: "/aktuelles" },
-    { name: "Termine", href: "/termine" },
-    { name: "Kurse & Zeiten", href: "/kurse" },
+    { name: "Kurse, Termine & Zeiten", href: "/kurse" },
     { name: "Unser Team", href: "/team" },
     { name: "Bilder", href: "/bilder" },
     { name: "Anfahrt & Kontakt", href: "/anfahrt" },
