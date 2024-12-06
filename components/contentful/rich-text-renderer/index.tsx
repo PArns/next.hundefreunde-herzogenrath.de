@@ -46,6 +46,7 @@ function renderOptions(links: any) {
               galleryImages.push({
                 src: getImageSource(image, 400),
                 lightboxImageSrc: getImageSource(image, 1200),
+                albumTitle: null,
                 alt: image.description,
                 title: image.title,
                 width: image.width,

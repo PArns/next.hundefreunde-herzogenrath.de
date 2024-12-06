@@ -75,6 +75,7 @@ export default async function Gallerie({
     galleryImages.push({
       src: getImageSource(image, 400),
       lightboxImageSrc: getImageSource(image, 1200),
+      albumTitle: gallery.name,
       alt: image.description,
       title: image.title,
       width: image.width,

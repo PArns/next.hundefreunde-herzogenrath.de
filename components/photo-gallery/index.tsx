@@ -9,19 +9,28 @@ import "react-photo-album/rows.css";
 
 export interface GalleryPhoto extends Photo {
   lightboxImageSrc: string;
+  albumTitle: string | null;
 }
 
 function renderNextImage(
   { alt = "", title, sizes }: RenderImageProps,
   { photo, width, height }: RenderImageContext,
-) { 
+) {
   const galleryPhoto = photo as GalleryPhoto;
   const imageClasses = clsx(
     "cursor-zoom-in opacity-0 transition-opacity",
   );
 
+  var imageTitle = alt;
+
+  if (galleryPhoto.albumTitle) {
+    imageTitle = galleryPhoto.albumTitle;
+  } else if (title) {
+    imageTitle = title
+  }
+
   return (
-    <div style={{width: "100%", position: "relative", aspectRatio: `${width} / ${height}` }}>
+    <div style={{ width: "100%", position: "relative", aspectRatio: `${width} / ${height}` }}>
       <Image
         src={photo}
         alt={alt}
@@ -31,7 +40,7 @@ function renderNextImage(
         onClick={(e) => {
           showLightBoxImage({
             src: galleryPhoto.lightboxImageSrc,
-            title: title ? title : alt,
+            title: imageTitle,
           });
         }}
         onLoad={(image: any) => {
