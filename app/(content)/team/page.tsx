@@ -12,7 +12,7 @@ export function generateMetadata() {
   };
 }
 
-import imgMarianne from "@/public/team/marianne.jpg";
+import imgMarianne from "@/public/team/julia.jpg";
 
 const marianne: Member = {
   name: "Marianne",
@@ -79,29 +79,6 @@ const birgit: Member = {
       Durch unseren 1. Golden Retriever sind wir seit 2006 bei den Hundefreunden
       aktiv. Zuerst nur als Mitglied und Kursteilnehmer, dann seit 2010 als
       Kassiererin im Vorstand und nun im BGVP-Kurs auf der Wiese.
-    </>
-  ),
-};
-
-import imgJulia from "@/public/team/julia.jpg";
-
-const julia: Member = {
-  name: "Julia",
-  img: imgJulia,
-  trainerSince: "2016-11-01",
-  kurs: ["Leistung"],
-  email: "julia@hundefreunde-herzogenrath.de",
-  emailEnabled: true,
-  dogs: [
-    { name: "Chilli", race: "Labrador-Weimaraner", birthDay: "2014-11-01" },
-  ],
-  desc: (
-    <>
-      2006 bin ich zu den Hundefreunden gestoßen und seit November 2016 endlich
-      auch als Ausbilderin im Verein tätig. Seit Mai 2022 bin ich Mutter von
-      einem kleinen Zwerg, sodass ich leider momentan nicht mehr regelmäßig
-      Kurse übernehmen kann, allerdings schlägt mein Herz für den
-      Leistungs-Kurs.
     </>
   ),
 };
@@ -258,7 +235,6 @@ const trainer: Array<Member> = [
   birgit,
   marianne,
   andrea,
-  julia,
   patrick,
 ];
 
