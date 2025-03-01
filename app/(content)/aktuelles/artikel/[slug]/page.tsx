@@ -36,10 +36,11 @@ export async function generateStaticParams(): Promise<PostParams[]> {
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
+  const { slug } = await params;
   const config = PageBaseConfiguration();
-  const post = await GetBlogPostBySlug(params.slug);
+  const post = await GetBlogPostBySlug(slug);
   if (!post) return {};
 
   return {
@@ -50,7 +51,7 @@ export async function generateMetadata({
       type: "article",
       description: post.excerpt,
       publishedTime: post.publishedAt.toISOString(),
-      url: `${config.baseUrl}aktuelles/artikel/${params.slug}`,
+      url: `${config.baseUrl}aktuelles/artikel/${slug}`,
       images: [
         { url: getImageSource(post.image, 800), width: 800 },
         { url: getImageSource(post.image, 1800), width: 1800 },
@@ -62,14 +63,19 @@ export async function generateMetadata({
 export default async function BlogArticle({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const article = await GetBlogPostBySlug(params.slug);
+  const { slug } = await params;
+  const article = await GetBlogPostBySlug(slug);
   if (!article) notFound();
 
   return (
     <div className="pt-4">
-      <BlogHeader title={article.title} subTitle={article.subTitle} backgroundImage={article.image} />
+      <BlogHeader
+        title={article.title}
+        subTitle={article.subTitle}
+        backgroundImage={article.image}
+      />
       <ContentBox>
         <h2>{article.title}</h2>
         <h3>{article.subTitle}</h3>

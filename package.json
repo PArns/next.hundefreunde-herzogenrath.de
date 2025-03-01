@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -20,35 +20,35 @@
     "@fullcalendar/timegrid": "^6.1.15",
     "@headlessui/react": "^2.2.0",
     "@heroicons/react": "^2.2.0",
-    "@vercel/analytics": "^1.4.1",
+    "@next/third-parties": "^15.2.0",
+    "@vercel/analytics": "^1.5.0",
     "clsx": "^2.1.1",
-    "contentful": "^11.4.3",
-    "embla-carousel": "^8.5.1",
+    "contentful": "^11.5.2",
+    "embla-carousel": "^8.5.2",
     "embla-carousel-autoplay": "^8.5.2",
     "embla-carousel-react": "^8.5.2",
-    "leaflet": "^1.9.4",
-    "leaflet-defaulticon-compatibility": "^0.1.2",
-    "next": "14.2.22",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "next": "^15.2.0",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
     "react-event-hook": "^3.1.2",
-    "react-leaflet": "^4.2.1",
-    "react-photo-album": "^3.0.2",
-    "sharp": "^0.33.5"
+    "react-photo-album": "^3.0.2"
   },
   "devDependencies": {
+    "@tailwindcss/postcss": "^4.0.9",
     "@tailwindcss/typography": "^0.5.16",
-    "@types/leaflet": "^1.9.16",
-    "@types/node": "^22.13.1",
-    "@types/react": "^19.0.7",
-    "@types/react-dom": "^19.0.3",
-    "autoprefixer": "^10.4.20",
-    "eslint": "^9.19.0",
-    "eslint-config-next": "15.1.6",
-    "postcss": "^8.5.1",
-    "prettier": "^3.4.2",
-    "prettier-plugin-tailwindcss": "^0.6.10",
-    "tailwindcss": "^3.4.17",
-    "typescript": "^5.7.3"
+    "@types/node": "^22.13.8",
+    "@types/react": "19.0.10",
+    "@types/react-dom": "19.0.4",
+    "eslint": "^9.21.0",
+    "eslint-config-next": "15.2.0",
+    "postcss": "^8.5.3",
+    "prettier": "^3.5.2",
+    "prettier-plugin-tailwindcss": "^0.6.11",
+    "tailwindcss": "^4.0.9",
+    "typescript": "^5.7.2"
+  },
+  "overrides": {
+    "@types/react": "19.0.10",
+    "@types/react-dom": "19.0.4"
   }
 }
