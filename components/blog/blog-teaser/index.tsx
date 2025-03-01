@@ -9,17 +9,17 @@ export default function BlogTeaser({ post }: { post: BlogPost }) {
       href={`/aktuelles/artikel/${post.slug}`}
       className="flex h-full flex-col rounded-lg border bg-white shadow-lg"
     >
-      <div className="@lg/card:p-48 relative overflow-hidden bg-cover bg-no-repeat p-36">
+      <div className="relative overflow-hidden bg-cover bg-no-repeat p-36 @lg/card:p-48">
         <ContentfulImageAsset
           asset={post.image}
           alt={post.title}
           fill={true}
           quality={50}
-          className="absolute bottom-0 left-0 right-0 top-0 h-full w-full rounded-t-lg object-cover"
+          className="absolute top-0 right-0 bottom-0 left-0 h-full w-full rounded-t-lg object-cover"
         />
 
-        <div className="absolute left-2 top-2 overflow-hidden">
-          <div className="text-white">
+        <div className="absolute top-2 left-2 overflow-hidden">
+          <div>
             <h2 className="text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
               {post.title}
             </h2>
