@@ -35,10 +35,11 @@ export async function generateStaticParams(): Promise<GalleryParams[]> {
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
+  const { slug } = await params;
   const config = PageBaseConfiguration();
-  const post = await GetGalleryBySlug(params.slug);
+  const post = await GetGalleryBySlug(slug);
   if (!post) return {};
 
   return {
@@ -49,7 +50,7 @@ export async function generateMetadata({
       type: "article",
       description: post.description,
       publishedTime: post.date.toISOString(),
-      url: `${config.baseUrl}bilder/${params.slug}`,
+      url: `${config.baseUrl}bilder/${slug}`,
       images: [
         { url: getImageSource(post.teaserImage, 800), width: 800 },
         { url: getImageSource(post.teaserImage, 1800), width: 1800 },
