@@ -1,5 +1,5 @@
 import ContentBox from "@/components/layout/default-box";
-import DynamicMap from "@/components/map/dynamic-map";
+import { GoogleMapsEmbed } from "@next/third-parties/google";
 
 export default function Anfart() {
   return (
@@ -12,11 +12,13 @@ export default function Anfart() {
         über eigene Parkplätze sowie natürlich über Sanitäre Anlagen!
       </div>
       <div className="h-[500px]">
-        <DynamicMap position={[50.880173, 6.087774]}>
-          <b>Hundefreunde Herzogenrath e.V.</b>
-          <br />
-          Grenzstr. 9 - 52134 Herzogenrath
-        </DynamicMap>
+        <GoogleMapsEmbed
+          apiKey="AIzaSyBhkykJnHxtXdYdi6ZkygzHSLg5iySkKZw"
+          height={500}
+          width="100%"
+          mode="place"
+          q="Hundefreunde+Herzogenrath"
+        />
       </div>
     </ContentBox>
   );
