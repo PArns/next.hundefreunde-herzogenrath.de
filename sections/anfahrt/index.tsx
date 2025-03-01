@@ -13,7 +13,7 @@ export default function Anfart() {
       </div>
       <div className="h-[500px]">
         <GoogleMapsEmbed
-          apiKey="AIzaSyBhkykJnHxtXdYdi6ZkygzHSLg5iySkKZw"
+          apiKey={process.env.NEXT_PUBLIC_API_KEY || ""}
           height={500}
           width="100%"
           mode="place"
