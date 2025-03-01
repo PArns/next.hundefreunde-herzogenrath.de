@@ -74,7 +74,7 @@ export default function Lightbox() {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <DialogPanel className="transform rounded-md border-2 border-sky-500 bg-white/60 text-left align-middle shadow-md backdrop-blur-sm transition-all dark:border-sky-600 dark:bg-neutral-700/60">
+                <DialogPanel className="transform rounded-md border-2 border-sky-500 bg-white/60 text-left align-middle shadow-md backdrop-blur-xs transition-all dark:border-sky-600 dark:bg-neutral-700/60">
                   <DialogTitle
                     as="div"
                     className="flex h-7 border-b bg-white/90"
@@ -83,7 +83,7 @@ export default function Lightbox() {
                       {image?.title}
                     </div>
                     <button
-                      className="flex h-7 w-7 flex-none items-center justify-center rounded-tr-sm border-0 hover:bg-red-500/50 focus:bg-red-500/50 focus:outline-none"
+                      className="flex h-7 w-7 flex-none items-center justify-center rounded-tr-sm border-0 hover:bg-red-500/50 focus:bg-red-500/50 focus:outline-hidden"
                       aria-label="Close"
                       onClick={() => closeModal()}
                       onTouchStart={() => closeModal()}

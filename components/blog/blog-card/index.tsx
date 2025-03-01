@@ -42,7 +42,7 @@ export default function BlogCard({ post }: { post: BlogPost }) {
           <div className="mr-1 mt-2 flex w-full flex-nowrap place-content-end text-neutral-800">
             <Link
               href={`/aktuelles/artikel/${post.slug}`}
-              className="rounded bg-sky-400 px-2 py-2 font-semibold text-white transition hover:bg-sky-700 lg:px-4"
+              className="rounded-sm bg-sky-400 px-2 py-2 font-semibold text-white transition hover:bg-sky-700 lg:px-4"
             >
               Mehr ...
             </Link>

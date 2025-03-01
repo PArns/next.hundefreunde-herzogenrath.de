@@ -115,7 +115,7 @@ function renderOptions(links: any) {
         return <h6>{children}</h6>;
       },
       [BLOCKS.PARAGRAPH]: (node: any, children: any) => {
-        return <p className="[&:not(:last-child)]:pb-3">{children}</p>;
+        return <p className="not-last:pb-3">{children}</p>;
       },
       [BLOCKS.OL_LIST]: (node: any, children: any) => {
         return <ol className="ml-6 list-decimal pb-2">{children}</ol>;

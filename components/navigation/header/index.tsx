@@ -28,7 +28,7 @@ export default function Header({
 
   return (
     <header>
-      <div className="absolute inset-x-0 top-0 z-50 mx-auto max-w-screen-2xl">
+      <div className="absolute inset-x-0 top-0 z-50 mx-auto max-w-(--breakpoint-2xl)">
         <nav
           className="flex items-center justify-between px-6 pt-4 2xl:px-0"
           aria-label="Global"

@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <>
       <Header menuItems={navigationItems}>
-        <div className="mx-auto max-w-screen-2xl px-6 2xl:px-0">
+        <div className="mx-auto max-w-(--breakpoint-2xl) px-6 2xl:px-0">
           <Jumbotron>
             <Slide
               bgImage={"/jumbotron/gruppe.jpg"}
@@ -60,7 +60,7 @@ export default function RootLayout({
       </Header>
 
       <div id="top"></div>
-      <main className="mx-auto max-w-screen-2xl px-6 2xl:px-0">{children}</main>
+      <main className="mx-auto max-w-(--breakpoint-2xl) px-6 2xl:px-0">{children}</main>
       <Footer>
         <div className="flex gap-4">
           <Link href={"/anfahrt"}>Anfahrt & Kontakt</Link>
