@@ -61,9 +61,10 @@ export async function generateMetadata({
 export default async function Gallerie({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const gallery = await GetGalleryBySlug(params.slug);
+  const { slug } = await params;
+  const gallery = await GetGalleryBySlug(slug);
 
   if (!gallery) {
     notFound();
