@@ -8,7 +8,7 @@ import {
   Transition,
   TransitionChild,
 } from "@headlessui/react";
-import { Fragment, useState, useEffect } from "react";
+import { Fragment, useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import Loader from "@/components/lightbox/loader";
 import { GalleryPhoto } from "../photo-gallery";
@@ -24,20 +24,22 @@ export default function Lightbox() {
   const [image, setImage] = useState<GalleryPhoto | null>(null);
   const [loading, setLoading] = useState(true);
 
-  function closeModal() {
+  const closeModal = useCallback(() => {
     setIsOpen(false);
-  }
+  }, []);
 
-  function openModal() {
+  const openModal = useCallback(() => {
     setIsOpen(true);
-  }
+  }, []);
 
-  function updateImage(image: GalleryPhoto) {
-    console.log(image);
-    setLoading(true);
-    setImage(image);
-    openModal();
-  }
+  const updateImage = useCallback(
+    (image: GalleryPhoto) => {
+      setLoading(true);
+      setImage(image);
+      openModal();
+    },
+    [openModal],
+  );
 
   showLightBox.useOnShowLightBoxListener(updateImage);
 
@@ -59,7 +61,7 @@ export default function Lightbox() {
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [isOpen, image]);
+  }, [isOpen, image, updateImage]);
 
   return (
     <>
@@ -104,8 +106,8 @@ export default function Lightbox() {
                     <button
                       className="flex h-7 w-7 flex-none items-center justify-center rounded-tr-sm border-0 hover:bg-red-500/50 focus:bg-red-500/50 focus:outline-none"
                       aria-label="Close"
-                      onClick={() => closeModal()}
-                      onTouchStart={() => closeModal()}
+                      onClick={closeModal}
+                      onTouchStart={closeModal}
                     >
                       X
                     </button>
@@ -125,7 +127,7 @@ export default function Lightbox() {
                           alt={image?.title || "Lightbox Image"}
                           className={`max-h-[calc(100vh-100px)] w-full rounded-b-md object-contain ${loading ? "hidden" : "visible"}`}
                           priority={true}
-                          onLoad={(e) => {
+                          onLoad={() => {
                             setLoading(false);
                           }}
                         />

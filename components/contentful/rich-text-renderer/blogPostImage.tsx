@@ -72,8 +72,14 @@ export default function BlogPostImage({ imageData }: { imageData: any }) {
         onClick={() => {
           if (useLightBox) {
             showLightBoxImage({
-              src: getImageSource(image, 1200),
+              lightboxImageSrc: getImageSource(image, 1200),
               title: name,
+              albumTitle: undefined,
+              next: undefined,
+              prev: undefined,
+              src: "",
+              width: 0,
+              height: 0
             });
           }
         }}

@@ -42,16 +42,28 @@ function renderOptions(links: any) {
           case "ImageGallery": {
             let galleryImages: GalleryPhoto[] = [];
 
-            entry.imagesCollection.items.map((image: any) => {
-              galleryImages.push({
-                src: getImageSource(image, 400),
-                lightboxImageSrc: getImageSource(image, 1200),
-                albumTitle: null,
-                alt: image.description,
-                title: image.title,
-                width: image.width,
-                height: image.height,
-              });
+            entry.imagesCollection.items.map((image: any, index: number) => {
+              if (image.width && image.height) {
+                galleryImages.push({
+                  src: getImageSource(image, 400),
+                  lightboxImageSrc: getImageSource(image, 1200),
+                  albumTitle: null,
+                  alt: image.description || image.title,
+                  title: image.title,
+                  width: image.width,
+                  height: image.height,
+                  prev: null,
+                  next: null,
+                });
+              }
+            });
+
+            galleryImages.forEach((image, index) => {
+              image.prev = index > 0 ? galleryImages[index - 1] : null;
+              image.next =
+                index < galleryImages.length - 1
+                  ? galleryImages[index + 1]
+                  : null;
             });
 
             return <PhotoGallery photos={galleryImages} />;

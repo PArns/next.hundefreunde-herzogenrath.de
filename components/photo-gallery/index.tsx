@@ -9,9 +9,9 @@ import "react-photo-album/rows.css";
 
 export interface GalleryPhoto extends Photo {
   lightboxImageSrc: string;
-  albumTitle: string | null;
-  next: GalleryPhoto | null;
-  prev: GalleryPhoto | null;
+  albumTitle: string | null | undefined;
+  next: GalleryPhoto | null | undefined;
+  prev: GalleryPhoto | null | undefined;
 }
 
 function renderNextImage(
