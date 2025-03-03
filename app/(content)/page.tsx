@@ -1,5 +1,6 @@
 import ContentBox from "@/components/layout/default-box";
 import Anfahrt from "@/sections/anfahrt";
+import Bilder from "@/sections/bilder";
 import Kurse from "@/sections/kurse";
 import Motds from "@/sections/motd";
 import News from "@/sections/neuigkeiten";
@@ -77,7 +78,7 @@ export default function Home() {
           <div>
             <Image
               src={"/team/trainer.jpg"}
-              className="mr-20 mt-16 rounded-full drop-shadow-lg"
+              className="mt-16 mr-20 rounded-full drop-shadow-lg"
               width={500}
               height={500}
               alt="Trainer"
@@ -86,6 +87,7 @@ export default function Home() {
         </div>
       </ContentBox>
 
+      <Bilder />
       <News />
       <Kurse />
       <Anfahrt />

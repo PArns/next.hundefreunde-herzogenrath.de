@@ -13,10 +13,15 @@ export interface ImageGallery {
   images: any[];
 }
 
-export async function GetGalleries(): Promise<ImageGallery[]> {
-  const data = await fetchGraphQL(
-    `query {
-      imageGalleryCollection(order: date_DESC) {
+export async function GetGalleries(
+  skip: number = 0,
+  limit: number = 100,
+): Promise<ImageGallery[]> {
+  const query = `query($limit: Int!, $skip: Int!) {
+      imageGalleryCollection(
+        order: date_DESC, 
+        limit: $limit, 
+        skip: $skip) {
           total
           items {
             name
@@ -28,9 +33,10 @@ export async function GetGalleries(): Promise<ImageGallery[]> {
             }
           }
         }
-      }`,
-  );
+      }`;
 
+  const variables = { limit: limit, skip: skip };
+  const data = await fetchGraphQL(query, variables);
   const collection = data.data.imageGalleryCollection;
 
   const galleries: ImageGallery[] = collection.items.map(
