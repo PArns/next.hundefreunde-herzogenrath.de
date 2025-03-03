@@ -10,6 +10,8 @@ import "react-photo-album/rows.css";
 export interface GalleryPhoto extends Photo {
   lightboxImageSrc: string;
   albumTitle: string | null;
+  next: GalleryPhoto | null;
+  prev: GalleryPhoto | null;
 }
 
 function renderNextImage(
@@ -38,10 +40,7 @@ function renderNextImage(
         sizes={sizes}
         className={imageClasses}
         onClick={(e) => {
-          showLightBoxImage({
-            src: galleryPhoto.lightboxImageSrc,
-            title: imageTitle,
-          });
+          showLightBoxImage(galleryPhoto);
         }}
         onLoad={(image: any) => {
           image.currentTarget.classList.remove("opacity-0");

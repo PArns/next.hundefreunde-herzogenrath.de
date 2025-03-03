@@ -73,16 +73,26 @@ export default async function Gallerie({
 
   let galleryImages: GalleryPhoto[] = [];
 
-  gallery.images.map((image: any) => {
-    galleryImages.push({
-      src: getImageSource(image, 400),
-      lightboxImageSrc: getImageSource(image, 1200),
-      albumTitle: gallery.name,
-      alt: image.description,
-      title: image.title,
-      width: image.width,
-      height: image.height,
-    });
+  gallery.images.map((image: any, index: number) => {
+    if (image.width && image.height) {
+      galleryImages.push({
+        src: getImageSource(image, 400),
+        lightboxImageSrc: getImageSource(image, 1200),
+        albumTitle: gallery.name,
+        alt: image.description || image.title,
+        title: image.title,
+        width: image.width,
+        height: image.height,
+        prev: null,
+        next: null,
+      });
+    }
+  });
+
+  galleryImages.forEach((image, index) => {
+    image.prev = index > 0 ? galleryImages[index - 1] : null;
+    image.next =
+      index < galleryImages.length - 1 ? galleryImages[index + 1] : null;
   });
 
   return (
@@ -92,7 +102,7 @@ export default async function Gallerie({
       <div className="pb-2">{gallery.description}</div>
 
       <PhotoGallery photos={galleryImages} />
-      <div className="pb-2 pt-6">
+      <div className="pt-6 pb-2">
         <Button href="/bilder">Zurück zur Übersicht</Button>
       </div>
       <Lightbox />

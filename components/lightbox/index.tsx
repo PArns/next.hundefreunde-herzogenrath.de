@@ -8,24 +8,20 @@ import {
   Transition,
   TransitionChild,
 } from "@headlessui/react";
-import { Fragment, useState } from "react";
+import { Fragment, useState, useEffect } from "react";
 import Image from "next/image";
 import Loader from "@/components/lightbox/loader";
+import { GalleryPhoto } from "../photo-gallery";
 
-export interface LightboxImage {
-  src: string;
-  title: string;
-}
+const showLightBox = createEvent("onShowLightBox")<GalleryPhoto>();
 
-const showLightBox = createEvent("onShowLightBox")<LightboxImage>();
-
-export function showLightBoxImage(image: LightboxImage) {
+export function showLightBoxImage(image: GalleryPhoto) {
   showLightBox.emitOnShowLightBox(image);
 }
 
 export default function Lightbox() {
   const [isOpen, setIsOpen] = useState(false);
-  const [image, setImage] = useState<LightboxImage | null>(null);
+  const [image, setImage] = useState<GalleryPhoto | null>(null);
   const [loading, setLoading] = useState(true);
 
   function closeModal() {
@@ -36,11 +32,34 @@ export default function Lightbox() {
     setIsOpen(true);
   }
 
-  showLightBox.useOnShowLightBoxListener((image) => {
+  function updateImage(image: GalleryPhoto) {
+    console.log(image);
     setLoading(true);
     setImage(image);
     openModal();
-  });
+  }
+
+  showLightBox.useOnShowLightBoxListener(updateImage);
+
+  useEffect(() => {
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === "ArrowLeft" && image?.prev) {
+        updateImage(image.prev);
+      } else if (event.key === "ArrowRight" && image?.next) {
+        updateImage(image.next);
+      }
+    }
+
+    if (isOpen) {
+      window.addEventListener("keydown", handleKeyDown);
+    } else {
+      window.removeEventListener("keydown", handleKeyDown);
+    }
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isOpen, image]);
 
   return (
     <>
@@ -98,17 +117,53 @@ export default function Lightbox() {
                       </div>
                     )}
                     {image && (
-                      <Image
-                        src={image ? image.src : ""}
-                        width={1200}
-                        height={1200}
-                        alt={image?.title || "Lightbox Image"}
-                        className={`max-h-[calc(100vh-100px)] w-full rounded-b-md object-contain ${loading ? "hidden" : "visible"}`}
-                        priority={true}
-                        onLoad={(e) => {
-                          setLoading(false);
-                        }}
-                      />
+                      <div className="relative">
+                        <Image
+                          src={image ? image.lightboxImageSrc : ""}
+                          width={1200}
+                          height={1200}
+                          alt={image?.title || "Lightbox Image"}
+                          className={`max-h-[calc(100vh-100px)] w-full rounded-b-md object-contain ${loading ? "hidden" : "visible"}`}
+                          priority={true}
+                          onLoad={(e) => {
+                            setLoading(false);
+                          }}
+                        />
+                        {!loading && (
+                          <>
+                            {image?.prev && (
+                              <div
+                                className="absolute top-0 left-2 flex h-full cursor-pointer items-center justify-center"
+                                onClick={() =>
+                                  image?.prev && updateImage(image.prev)
+                                }
+                                onTouchStart={() =>
+                                  image?.prev && updateImage(image.prev)
+                                }
+                              >
+                                <div className="rounded-full bg-white/70 p-3 font-extrabold text-neutral-700">
+                                  &lt;
+                                </div>
+                              </div>
+                            )}
+                            {image?.next && (
+                              <div
+                                className="absolute top-0 right-2 flex h-full cursor-pointer items-center justify-center"
+                                onClick={() =>
+                                  image?.next && updateImage(image.next)
+                                }
+                                onTouchStart={() =>
+                                  image?.next && updateImage(image.next)
+                                }
+                              >
+                                <div className="rounded-full bg-white/70 p-3 font-extrabold text-neutral-700">
+                                  &gt;
+                                </div>
+                              </div>
+                            )}
+                          </>
+                        )}
+                      </div>
                     )}
                   </div>
                 </DialogPanel>
