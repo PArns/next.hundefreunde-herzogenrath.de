@@ -37,24 +37,6 @@ export default function RootLayout({
                 </div>
               </div>
             </Slide>
-            <Slide
-              bgImage={"/jumbotron/hund-stock.jpg"}
-              imageAlt="Wir suchen Verstärkung - werde jetzt Teil unseres Teams"
-            >
-              <div className="text-center font-bold text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
-                <div className="text-2xl md:text-4xl lg:text-6xl">
-                  Wir suchen Verstärkung!
-                </div>
-                <div className="text-xl md:text-2xl lg:text-4xl">
-                  Werde jetzt Teil unseres Teams
-                </div>
-                <div className="mt-8">
-                  <Button href="/aktuelles/artikel/ausbilder-gesucht">
-                    Mehr informationen
-                  </Button>
-                </div>
-              </div>
-            </Slide>
           </Jumbotron>
         </div>
       </Header>
