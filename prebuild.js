@@ -1,27 +1,63 @@
-const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+const https = require('https');
 
-// Get the total number of commits
-const commitCount = execSync('git rev-list --count HEAD').toString().trim();
+// Konfiguration
+const owner = 'PArns';
+const repo = 'next.hundefreunde-herzogenrath.de';
 
-// Read the version from package.json
-const packageJsonPath = path.resolve(process.cwd(), 'package.json');
-const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
-const version = packageJson.version;
+// Funktion: Commit-Count aus GitHub API holen
+function getCommitCountFromGitHub(owner, repo) {
+  return new Promise((resolve, reject) => {
+    const options = {
+      hostname: 'api.github.com',
+      path: `/repos/${owner}/${repo}/commits?per_page=1`,
+      method: 'GET',
+      headers: {
+        'User-Agent': 'BuildInfoScript',
+        'Accept': 'application/vnd.github+json'
+      }
+    };
 
-// Get the current date in UTC format
-const buildDate = new Date().toISOString();
+    https.get(options, (res) => {
+      const linkHeader = res.headers.link;
 
-// Combine the version, commit count, and build date
-const buildInfo = {
-  version,
-  commitCount,
-  buildDate,
-  buildNumber: `${version}.${commitCount}`
-};
+      if (!linkHeader) {
+        return resolve(1); // Fallback wenn keine Paginierung
+      }
 
-// Write the build info to a file
-fs.writeFileSync('build-info.json', JSON.stringify(buildInfo, null, 2));
+      const match = /page=(\d+)>; rel="last"/.exec(linkHeader);
+      if (match) {
+        resolve(parseInt(match[1], 10));
+      } else {
+        resolve(1);
+      }
+    }).on('error', (err) => {
+      console.error('Fehler beim Abrufen von Commits:', err);
+      resolve(0); // Fallback bei Fehler
+    });
+  });
+}
 
-console.log(`Build info generated: ${JSON.stringify(buildInfo, null, 2)}`);
+async function generateBuildInfo() {
+  const commitCount = await getCommitCountFromGitHub(owner, repo);
+
+  // Version aus package.json lesen
+  const packageJsonPath = path.resolve(process.cwd(), 'package.json');
+  const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
+  const version = packageJson.version;
+
+  const buildDate = new Date().toISOString();
+
+  const buildInfo = {
+    version,
+    commitCount,
+    buildDate,
+    buildNumber: `${version}.${commitCount}`
+  };
+
+  fs.writeFileSync('build-info.json', JSON.stringify(buildInfo, null, 2));
+  console.log(`✅ Build info generated: ${JSON.stringify(buildInfo, null, 2)}`);
+}
+
+generateBuildInfo();
