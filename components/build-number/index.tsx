@@ -10,7 +10,7 @@ export default function BuildInfo() {
   return (
     <div className="flex items-center">
       <span className="text-xs">
-        {buildInfo.buildNumber} ({buildDate.toLocaleDateString("de-DE")})
+        Version: {buildInfo.buildNumber} ({buildDate.toLocaleDateString("de-DE")})
       </span>
     </div>
   );
