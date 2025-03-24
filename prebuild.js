@@ -34,7 +34,7 @@ function getCommitCountFromGitHub(owner, repo) {
       }
     }).on('error', (err) => {
       console.error('Fehler beim Abrufen von Commits:', err);
-      resolve(0); // Fallback bei Fehler
+      reject(err); // Reject the promise to handle the error upstream
     });
   });
 }
