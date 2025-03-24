@@ -1,0 +1,26 @@
+import fs from "fs";
+import path from "path";
+import React from "react";
+
+interface BuildInfoProps {
+  version: string;
+  commitCount: string;
+  buildDate: string;
+  buildNumber: string;
+}
+
+const BuildInfo: React.FC<BuildInfoProps> = () => {
+  const buildInfoPath = path.resolve(process.cwd(), "build-info.json");
+  const buildInfo = JSON.parse(fs.readFileSync(buildInfoPath, "utf8"));
+  const buildDate = new Date(buildInfo.buildDate);
+
+  return (
+    <div className="flex items-center">
+      <span className="text-xs">
+        {buildInfo.buildNumber} ({buildDate.toLocaleDateString()})
+      </span>
+    </div>
+  );
+};
+
+export default BuildInfo;
