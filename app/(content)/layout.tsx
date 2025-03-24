@@ -1,4 +1,3 @@
-import Button from "@/components/button";
 import Footer from "@/components/navigation/footer";
 import Header, { HeaderItem } from "@/components/navigation/header";
 import Jumbotron, { Slide } from "@/components/navigation/jumbotron";
