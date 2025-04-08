@@ -78,7 +78,7 @@ export default function Home() {
           <div>
             <Image
               src={"/team/trainer.jpg"}
-              className="mt-16 mr-20 rounded-full drop-shadow-lg"
+              className="mt-16 mr-20 rounded-xl drop-shadow-lg"
               width={500}
               height={500}
               alt="Trainer"

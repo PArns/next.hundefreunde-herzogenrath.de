@@ -12,7 +12,7 @@ export function generateMetadata() {
   };
 }
 
-import imgMarianne from "@/public/team/julia.jpg";
+import imgMarianne from "@/public/team/marianne.jpg";
 
 const marianne: Member = {
   name: "Marianne",
