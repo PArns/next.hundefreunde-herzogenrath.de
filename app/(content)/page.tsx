@@ -75,12 +75,12 @@ export default function Home() {
               </Link>
             </p>
           </div>
-          <div>
+          <div className="flex justify-start items-start pt-2 md:pt-12 md:ml-4">
             <Image
               src={"/team/trainer.jpg"}
-              className="mt-16 mr-20 rounded-xl drop-shadow-lg"
-              width={500}
-              height={500}
+              className="rounded-xl drop-shadow-lg"
+              width={1200}
+              height={800}
               alt="Trainer"
             />
           </div>
