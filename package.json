@@ -21,14 +21,14 @@
     "@fullcalendar/timegrid": "^6.1.17",
     "@headlessui/react": "^2.2.1",
     "@heroicons/react": "^2.2.0",
-    "@next/third-parties": "^15.2.4",
+    "@next/third-parties": "^15.2.5",
     "@vercel/analytics": "^1.5.0",
     "clsx": "^2.1.1",
     "contentful": "^11.5.13",
     "embla-carousel": "^8.6.0",
     "embla-carousel-autoplay": "^8.6.0",
     "embla-carousel-react": "^8.6.0",
-    "next": "^15.2.4",
+    "next": "^15.2.5",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-event-hook": "^3.1.2",
@@ -39,9 +39,9 @@
     "@tailwindcss/typography": "^0.5.16",
     "@types/node": "^22.14.0",
     "@types/react": "19.1.0",
-    "@types/react-dom": "19.1.1",
+    "@types/react-dom": "19.1.2",
     "eslint": "^9.24.0",
-    "eslint-config-next": "15.2.4",
+    "eslint-config-next": "15.2.5",
     "postcss": "^8.5.3",
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
@@ -50,6 +50,6 @@
   },
   "overrides": {
     "@types/react": "19.1.0",
-    "@types/react-dom": "19.1.1"
+    "@types/react-dom": "19.1.2"
   }
 }

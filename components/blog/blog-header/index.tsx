@@ -16,6 +16,8 @@ export default function BlogHeader({
         alt={title}
         fill={true}
         quality={80}
+        priority={true}
+        sizes="100vw"
         usePlaceholder={true}
         className="absolute bottom-0 left-0 right-0 top-0 h-max w-max object-cover"
       />
