@@ -1,6 +1,7 @@
 import ContentBox from "@/components/layout/default-box";
 import TeamMember, { Member } from "@/components/team-member";
 import Age from "@/components/age";
+import Motds from "@/sections/motd";
 
 export const dynamic = "force-static";
 
@@ -212,16 +213,7 @@ const thomasConstruction: Member = {
   ),
 };
 
-import imgJoerg from "@/public/team/joerg.jpg";
-
-const joergConstruction: Member = {
-  name: "Jörg",
-  img: imgJoerg,
-  desc: <></>,
-};
-
 import imgRalf from "@/public/team/ralf.jpg";
-import Motds from "@/sections/motd";
 
 const ralfConstruction: Member = {
   name: "Ralf",
@@ -247,7 +239,6 @@ const constructionTeam: Array<Member> = [
   juergenConstruction,
   udoConstruction,
   thomasConstruction,
-  joergConstruction,
   ralfConstruction,
 ];
 
