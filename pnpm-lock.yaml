@@ -51,8 +51,8 @@ importers:
         specifier: ^2.1.1
         version: 2.1.1
       contentful:
-        specifier: ^11.5.16
-        version: 11.5.16
+        specifier: ^11.5.17
+        version: 11.5.17
       embla-carousel:
         specifier: ^8.6.0
         version: 8.6.0
@@ -86,7 +86,7 @@ importers:
         version: 0.5.16(tailwindcss@4.1.4)
       '@types/node':
         specifier: ^22.15.2
-        version: 22.15.2
+        version: 22.15.3
       '@types/react':
         specifier: 19.1.2
         version: 19.1.2
@@ -121,8 +121,8 @@ packages:
     resolution: {integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==}
     engines: {node: '>=10'}
 
-  '@contentful/content-source-maps@0.11.12':
-    resolution: {integrity: sha512-L7GgT+W6UNFdq34KQ+x0M+3Yk5AwKuIUXD53gGO1ci6x57ra+2fQ6/anPIZUYxAaDs3kDOkNP7RnEHU7iEZqqA==}
+  '@contentful/content-source-maps@0.11.13':
+    resolution: {integrity: sha512-jat7adpKzymcYRvBwPt6t0XN1bnBI6WlCfJEGDXNX7zCpia9TTweh8nHrwc/MbgAitQr4tZ0uBD43iqUx+b6MA==}
 
   '@contentful/rich-text-react-renderer@16.0.1':
     resolution: {integrity: sha512-7wZZBMgwbq5Udp2KebKCJoh9K+EPGlgRkudhXSp+OxtAIdBC6JUz3Oi9kXXKYKLeSg7iTBpkO1dd0/xFjHHKbg==}
@@ -500,8 +500,8 @@ packages:
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
 
-  '@rollup/rollup-linux-x64-gnu@4.40.0':
-    resolution: {integrity: sha512-RcDGMtqF9EFN8i2RYN2W+64CdHruJ5rPqrlYw+cgM3uOVPSsnAQps7cpjXe9be/yDp8UC7VLoCoKC8J3Kn2FkQ==}
+  '@rollup/rollup-linux-x64-gnu@4.40.1':
+    resolution: {integrity: sha512-XiK5z70PEFEFqcNj3/zRSz/qX4bp4QIraTy9QjwJAb/Z8GM7kVUsD0Uk8maIPeTyPCP03ChdI+VVmJriKYbRHQ==}
     cpu: [x64]
     os: [linux]
 
@@ -634,8 +634,8 @@ packages:
   '@types/json5@0.0.29':
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
 
-  '@types/node@22.15.2':
-    resolution: {integrity: sha512-uKXqKN9beGoMdBfcaTY1ecwz6ctxuJAcUlwE55938g0ZJ8lRxwAZqRz2AJ4pzpt5dHdTPMB863UZ0ESiFUcP7A==}
+  '@types/node@22.15.3':
+    resolution: {integrity: sha512-lX7HFZeHf4QG/J7tBZqrCAXwz9J5RD56Y6MpP0eJkka8p+K0RY/yBTW7CYFJ4VGCclxqOLKmiGP5juQc6MKgcw==}
 
   '@types/react-dom@19.1.2':
     resolution: {integrity: sha512-XGJkWF41Qq305SKWEILa1O8vzhb3aOo3ogBlSmiqNko/WmRb6QIaweuZCXjKygVDXpzXb5wyxKTSOsmkuqj+Qw==}
@@ -963,8 +963,8 @@ packages:
     resolution: {integrity: sha512-cUvHbC2u8ouJHhG3tofQhUc0FAmM/QBcalYjiczMtFKrR77BW+eSPcPg+A9DQlhIP0UGcQ/knXxoJpBvrERXTA==}
     engines: {node: '>=18'}
 
-  contentful@11.5.16:
-    resolution: {integrity: sha512-2g0ZILYi5BxxVZGdpA2CUIjSJi0laNrZkycAaSFIRZfJh8kg/d1xWP17Jr4efHxZxZ99KItCmBjGAxF60XtnvQ==}
+  contentful@11.5.17:
+    resolution: {integrity: sha512-XTxAKxnFHmIkoeIqOj3wHyb/S95ZcGJrajB9kssLoa6V9eAt7gAuQMo5V6AO4+p2EUGe9Bjwf4Oe5rhfC8hteQ==}
     engines: {node: '>=18'}
 
   cross-spawn@7.0.6:
@@ -2105,8 +2105,8 @@ packages:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
     engines: {node: '>= 0.8.0'}
 
-  type-fest@4.40.0:
-    resolution: {integrity: sha512-ABHZ2/tS2JkvH1PEjxFDTUWC8dB5OsIGZP4IFLhR293GqT5Y5qB1WwL2kMPYhQW9DVgVD8Hd7I8gjwPIf5GFkw==}
+  type-fest@4.40.1:
+    resolution: {integrity: sha512-9YvLNnORDpI+vghLU/Nf+zSv0kL47KbVJ1o3sKgoTefl6i+zebxbiDQWoe/oWWqPhIgQdRZRT1KA9sCPL810SA==}
     engines: {node: '>=16'}
 
   typed-array-buffer@1.0.3:
@@ -2184,7 +2184,7 @@ snapshots:
 
   '@alloc/quick-lru@5.2.0': {}
 
-  '@contentful/content-source-maps@0.11.12':
+  '@contentful/content-source-maps@0.11.13':
     dependencies:
       '@vercel/stega': 0.1.2
       json-pointer: 0.6.2
@@ -2529,7 +2529,7 @@ snapshots:
     dependencies:
       react: 19.1.0
 
-  '@rollup/rollup-linux-x64-gnu@4.40.0':
+  '@rollup/rollup-linux-x64-gnu@4.40.1':
     optional: true
 
   '@rtsao/scc@1.1.0': {}
@@ -2639,7 +2639,7 @@ snapshots:
 
   '@types/json5@0.0.29': {}
 
-  '@types/node@22.15.2':
+  '@types/node@22.15.3':
     dependencies:
       undici-types: 6.21.0
 
@@ -2981,17 +2981,17 @@ snapshots:
       process: 0.11.10
       qs: 6.14.0
     optionalDependencies:
-      '@rollup/rollup-linux-x64-gnu': 4.40.0
+      '@rollup/rollup-linux-x64-gnu': 4.40.1
 
-  contentful@11.5.16:
+  contentful@11.5.17:
     dependencies:
-      '@contentful/content-source-maps': 0.11.12
+      '@contentful/content-source-maps': 0.11.13
       '@contentful/rich-text-types': 16.8.5
       axios: 1.9.0
       contentful-resolve-response: 1.9.2
       contentful-sdk-core: 9.2.0
       json-stringify-safe: 5.0.1
-      type-fest: 4.40.0
+      type-fest: 4.40.1
     transitivePeerDependencies:
       - debug
 
@@ -4252,7 +4252,7 @@ snapshots:
     dependencies:
       prelude-ls: 1.2.1
 
-  type-fest@4.40.0: {}
+  type-fest@4.40.1: {}
 
   typed-array-buffer@1.0.3:
     dependencies:
