@@ -85,6 +85,9 @@ export default function Home() {
             />
           </div>
         </div>
+        <div className="flex justify-center items-center pt-4">
+          <iframe src='https://www.youtube.com/embed/aaQPQfe_b2E' width={500} height={350} allowFullScreen />
+        </div>
       </ContentBox>
 
       <Bilder />
