@@ -50,6 +50,7 @@ export default function Home() {
               der Hunde.
             </p>
             <ul className="ml-10 list-disc">
+              <li>Welpen - für Hunde bis 6 Monate</li>
               <li>Anfänger - Einsteigerkurs</li>
               <li>BGVP - Begleit- Gehorsams- &amp; Verkehrs-Prüfung</li>
               <li>Leistung (mit Abzeichen Bronze, Silber & Gold)</li>

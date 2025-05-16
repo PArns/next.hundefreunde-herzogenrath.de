@@ -16,6 +16,41 @@ export interface Kurs {
 
 export const kursData: Array<Kurs> = [
   {
+    id: "Welpen",
+    name: "Welpen-Kurs",
+    img: ImgWelpen,
+    leiter: ["Andrea"],
+    startTime: "13:00",
+    contentShort: (
+      <>
+        <p>
+          Der Welpenkurs ist für die Kleinsten unter unseren Vierbeinern gedacht
+          und bietet für Hunde, bis 6 Monate, sowie Herrchen und Frauchen eine
+          Grundeinführung für die neue Fellnase an.
+        </p>
+        <p className="font-bold">Neuer Kursbeginn ab 17.05.25!</p>
+      </>
+    ),
+    contentLong: (
+      <>
+        <p>
+          An dem Tag, an dem der Welpe sein neues Zuhause bezieht, sollte auch
+          bereits mit der Ausbildung begonnen werden. Hierzu gehört es dem neuen
+          Familienmitglied die Möglichkeit zu geben, seinen natürlichen
+          Spieldrang mit Artgenossen auszuleben.
+        </p>
+        <p>
+          In der Welpengruppe werden deshalb Hunde von 2 bis 6 Monaten langsam
+          und spielerisch an verschiedene Aufgaben herangeführt. Neben dem
+          Nachstellen verschiedener alltäglicher Situationen, wie einem
+          Tierarztbesuch, der Futteraufnahme und vielem mehr, wird das
+          „Fuß“-gehen, das Abrufen und die Ausführung der Ruhekommandos Sitz und
+          Platz eingeführt.
+        </p>
+      </>
+    ),
+  },
+  {
     id: "Anfänger",
     name: "Anfänger-Kurs",
     img: ImgAnfaenger,
@@ -50,7 +85,7 @@ export const kursData: Array<Kurs> = [
     id: "BGVP",
     name: "BGVP-Kurs",
     img: ImgBGVP,
-    leiter: ["Marianne", "Andrea"],
+    leiter: ["Marianne"],
     startTime: "15:15",
     contentShort: (
       <>

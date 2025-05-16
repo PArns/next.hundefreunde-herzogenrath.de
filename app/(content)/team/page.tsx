@@ -42,8 +42,8 @@ import imgAndrea from "@/public/team/andrea.jpg";
 const andrea: Member = {
   name: "Andrea",
   img: imgAndrea,
-  traineeSince: "2023-01-01",
-  kurs: ["Anfänger"],
+  trainerSince: "2025-05-10",
+  kurs: ["Welpen"],
   email: "andrea@hundefreunde-herzogenrath.de",
   emailEnabled: true,
   dogs: [
@@ -55,7 +55,7 @@ const andrea: Member = {
       Seit 2022 bin ich mit meinem Welpen Louie zu den Hundefreunden gekommen
       und habe Feuer gefangen! Nachdem ich mit meinem Hund erfolgreich die BGVP
       bestanden habe, wollte ich auch einmal die andere Seite der Medaillie
-      kennen lernen und möchte nun Ausbilder werden. Solltet ihr nach einer
+      kennen lernen und bin seit Mai 2025 nun ebenfalls Trainerin. Solltet ihr nach einer
       unserer Stunden ebenfalls Lust und Laune verspüren, so macht mir dies doch
       gerne &quot;nach&quot;.
     </>
@@ -224,8 +224,8 @@ const ralfConstruction: Member = {
 // -----------------------------------------------------------------------------------
 
 const trainer: Array<Member> = [
-  marianne,
   andrea,
+  marianne,
   birgit,
   patrick,
 ];
