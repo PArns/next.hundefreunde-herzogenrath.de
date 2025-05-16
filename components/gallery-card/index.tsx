@@ -11,6 +11,7 @@ export default function GalleryCard({ gallery }: { gallery: ImageGallery }) {
           fill
           alt={gallery.name}
           className="rounded-t-lg object-cover"
+          style={{ objectPosition: 'center 40%' }}
         />
 
         <div className="absolute bottom-0 left-2 overflow-hidden">
