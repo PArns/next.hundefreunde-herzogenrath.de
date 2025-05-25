@@ -54,7 +54,7 @@ export const kursData: Array<Kurs> = [
     id: "Anfänger",
     name: "Anfänger-Kurs",
     img: ImgAnfaenger,
-    leiter: ["Birgit"],
+    leiter: ["Marianne"],
     startTime: "14:00",
     contentShort: (
       <>
@@ -85,7 +85,7 @@ export const kursData: Array<Kurs> = [
     id: "BGVP",
     name: "BGVP-Kurs",
     img: ImgBGVP,
-    leiter: ["Marianne"],
+    leiter: ["Birgit"],
     startTime: "15:15",
     contentShort: (
       <>

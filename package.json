@@ -20,12 +20,12 @@
     "@fullcalendar/multimonth": "^6.1.17",
     "@fullcalendar/react": "^6.1.17",
     "@fullcalendar/timegrid": "^6.1.17",
-    "@headlessui/react": "^2.2.3",
+    "@headlessui/react": "^2.2.4",
     "@heroicons/react": "^2.2.0",
     "@next/third-parties": "^15.3.2",
     "@vercel/analytics": "^1.5.0",
     "clsx": "^2.1.1",
-    "contentful": "^11.5.22",
+    "contentful": "^11.5.23",
     "embla-carousel": "^8.6.0",
     "embla-carousel-autoplay": "^8.6.0",
     "embla-carousel-react": "^8.6.0",
@@ -38,8 +38,8 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.7",
     "@tailwindcss/typography": "^0.5.16",
-    "@types/node": "^22.15.19",
-    "@types/react": "19.1.4",
+    "@types/node": "^22.15.21",
+    "@types/react": "19.1.5",
     "@types/react-dom": "19.1.5",
     "eslint": "^9.27.0",
     "eslint-config-next": "15.3.2",
@@ -50,7 +50,7 @@
     "typescript": "^5.8.3"
   },
   "overrides": {
-    "@types/react": "19.1.4",
+    "@types/react": "19.1.5",
     "@types/react-dom": "19.1.5"
   }
 }
