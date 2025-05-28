@@ -5,7 +5,7 @@ const nextConfig = {
       { hostname: "images.ctfassets.net" },
       { hostname: "downloads.ctfassets.net" },
     ],
-    minimumCacheTTL: 86400,
+    minimumCacheTTL: 2592000,
   },
 };
 
