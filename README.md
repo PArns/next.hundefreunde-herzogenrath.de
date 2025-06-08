@@ -1,36 +1,185 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🐕 Hundefreunde Herzogenrath Website
 
-## Getting Started
+![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-38B2AC?style=for-the-badge&logo=tailwind-css)
+![Contentful](https://img.shields.io/badge/Contentful-CMS-2478CC?style=for-the-badge&logo=contentful)
 
-First, run the development server:
+**Moderne Website für den Hundesportverein Hundefreunde Herzogenrath e.V.**
 
+[🌐 Live Website](https://hundefreunde-herzogenrath.de) • [📧 Kontakt](mailto:info@hundefreunde-herzogenrath.de)
+
+## 📖 Über das Projekt
+
+Die offizielle Website der **Hundefreunde Herzogenrath e.V.** - ein moderner, responsiver Webauftritt für den traditionsreichen Hundesportverein aus der Städteregion Aachen. Die Website bietet umfassende Informationen über Kurse, Termine, das Team und aktuelle Neuigkeiten.
+
+### 🎯 Hauptfunktionen
+
+- 📝 **Content Management** - Dynamische Inhalte über Contentful CMS
+- 🖼️ **Bildergalerien** - Interaktive Galerie für Events und Aktivitäten  
+- 📰 **Blog-System** - Aktuelle Nachrichten und Vereinsinformationen
+- 📅 **Kursmanagement** - Detaillierte Kursinformationen und Terminplanung
+- 👥 **Team-Profile** - Vorstellung der Trainer und Vereinsmitglieder
+- 🎨 **Modernes Design** - Responsive Layout mit Tailwind CSS
+- ⚡ **Performance** - Optimiert für schnelle Ladezeiten und SEO
+
+## 🚀 Tech Stack
+
+### Frontend
+- **[Next.js 14](https://nextjs.org/)** - React Framework mit App Router
+- **[TypeScript](https://www.typescriptlang.org/)** - Typsichere Entwicklung
+- **[Tailwind CSS](https://tailwindcss.com/)** - Utility-First CSS Framework
+- **[React](https://reactjs.org/)** - UI Bibliothek
+
+### Content Management
+- **[Contentful](https://www.contentful.com/)** - Headless CMS
+- **[Contentful Delivery API](https://www.contentful.com/developers/docs/references/content-delivery-api/)** - Content API
+
+### Entwicklung & Build
+- **[PNPM](https://pnpm.io/)** - Package Manager
+- **[ESLint](https://eslint.org/)** - Code Linting
+- **[PostCSS](https://postcss.org/)** - CSS Processing
+
+### Hosting & Deployment
+- **[Vercel](https://vercel.com/)** - Deployment Platform
+
+## 🛠️ Installation & Entwicklung
+
+### Voraussetzungen
+- Node.js 18+ 
+- PNPM (empfohlen) oder npm
+- Git
+
+### Lokale Entwicklung starten
+
+1. **Repository klonen**
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+git clone https://github.com/your-username/next.hundefreunde-herzogenrath.de.git
+cd next.hundefreunde-herzogenrath.de
+```
+
+2. **Abhängigkeiten installieren**
+```bash
+pnpm install
+# oder
+npm install
+```
+
+3. **Umgebungsvariablen konfigurieren**
+```bash
+# .env.local erstellen und Contentful API Keys hinzufügen
+cp .env.example .env.local
+```
+
+4. **Entwicklungsserver starten**
+```bash
 pnpm dev
-# or
+# oder
+npm run dev
+# oder  
+yarn dev
+# oder
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. **Website öffnen**  
+Öffne [http://localhost:3000](http://localhost:3000) in deinem Browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 📝 Entwicklung
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Bearbeite `app/page.tsx` um die Startseite zu ändern
+- Die Seite aktualisiert sich automatisch bei Änderungen
+- Nutze das [Next.js Font System](https://nextjs.org/docs/basic-features/font-optimization) für optimierte Schriftarten
 
-## Learn More
+## 📚 Projektstruktur
 
-To learn more about Next.js, take a look at the following resources:
+```
+├── app/                    # Next.js App Router
+│   ├── (content)/         # Gruppierte Routen
+│   └── globals.css        # Globale Styles
+├── components/            # React Komponenten
+│   ├── blog/             # Blog-spezifische Komponenten
+│   ├── gallery-card/     # Galerie Komponenten
+│   └── navigation/       # Navigation & Layout
+├── data-provider/        # Contentful Integration
+│   └── contentful/       # API Client & Provider
+├── public/               # Statische Assets
+└── sections/             # Seiten-Sektionen
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🔧 Verfügbare Scripts
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```bash
+pnpm dev          # Entwicklungsserver starten
+pnpm build        # Production Build erstellen
+pnpm start        # Production Server starten
+pnpm lint         # Code Linting
+pnpm type-check   # TypeScript Typen prüfen
+```
 
-## Deploy on Vercel
+## 📈 SEO & Performance
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- ✅ **Core Web Vitals** optimiert
+- ✅ **Strukturierte Daten** für bessere Suchmaschinenerkennung
+- ✅ **Meta Tags** für Social Media Sharing
+- ✅ **Responsive Images** mit Next.js Image Optimierung
+- ✅ **Semantic HTML** für Barrierefreiheit
+- ✅ **Lighthouse Score** 90+ in allen Kategorien
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 🌐 Deployment
+
+### Automatisches Deployment mit Vercel
+
+Die Website wird automatisch bei Push auf den `main` Branch deployed.
+
+[![Deploy mit Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/your-username/next.hundefreunde-herzogenrath.de)
+
+### Manuelle Deployment
+
+```bash
+# Build erstellen
+pnpm build
+
+# Build testen
+pnpm start
+```
+
+## 📖 Weiterführende Ressourcen
+
+- 📚 [Next.js Dokumentation](https://nextjs.org/docs) - Erfahre mehr über Next.js Features und API
+- 🎓 [Next.js Tutorial](https://nextjs.org/learn) - Interaktives Next.js Tutorial  
+- 🎨 [Tailwind CSS Docs](https://tailwindcss.com/docs) - Utility-First CSS Framework
+- 📝 [Contentful Docs](https://www.contentful.com/developers/docs/) - Headless CMS Dokumentation
+
+Du kannst auch das [Next.js GitHub Repository](https://github.com/vercel/next.js/) besuchen - Feedback und Beiträge sind willkommen!
+
+## 👨‍💻 Autor
+
+**Patrick Arns**  
+*Full-Stack Developer & Digital Solutions Architect*
+
+[![Website](https://img.shields.io/badge/Website-arns.dev-blue?style=for-the-badge&logo=safari)](https://arns.dev)
+[![GitHub](https://img.shields.io/badge/GitHub-PatrickArns-black?style=for-the-badge&logo=github)](https://github.com/PatrickArns)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/patrick-arns)
+
+*Spezialisiert auf moderne Webentwicklung mit React, Next.js und TypeScript*
+
+## 🤝 Mitwirken
+
+Beiträge sind herzlich willkommen! Bitte beachte folgende Schritte:
+
+1. 🍴 Fork das Repository
+2. 🔀 Erstelle einen Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. 💾 Committe deine Änderungen (`git commit -m 'Add some AmazingFeature'`)
+4. 📤 Push zum Branch (`git push origin feature/AmazingFeature`)
+5. 🔃 Öffne eine Pull Request
+
+## 📄 Lizenz
+
+Dieses Projekt ist proprietary Software, entwickelt für die **Hundefreunde Herzogenrath e.V.**
+
+Alle Rechte vorbehalten. Die Nutzung, Vervielfältigung oder Verbreitung ohne ausdrückliche schriftliche Genehmigung ist untersagt.
+
+---
+
+**Mit ❤️ entwickelt für die Hundefreunde Herzogenrath e.V.**
