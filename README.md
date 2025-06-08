@@ -153,17 +153,6 @@ pnpm start
 
 Du kannst auch das [Next.js GitHub Repository](https://github.com/vercel/next.js/) besuchen - Feedback und Beiträge sind willkommen!
 
-## 👨‍💻 Autor
-
-**Patrick Arns**  
-*Full-Stack Developer & Digital Solutions Architect*
-
-[![Website](https://img.shields.io/badge/Website-arns.dev-blue?style=for-the-badge&logo=safari)](https://arns.dev)
-[![GitHub](https://img.shields.io/badge/GitHub-PatrickArns-black?style=for-the-badge&logo=github)](https://github.com/PatrickArns)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/patrick-arns)
-
-*Spezialisiert auf moderne Webentwicklung mit React, Next.js und TypeScript*
-
 ## 🤝 Mitwirken
 
 Beiträge sind herzlich willkommen! Bitte beachte folgende Schritte:
@@ -182,4 +171,15 @@ Alle Rechte vorbehalten. Die Nutzung, Vervielfältigung oder Verbreitung ohne au
 
 ---
 
-**Mit ❤️ entwickelt für die Hundefreunde Herzogenrath e.V.**
+**Mit ❤️ entwickelt für die Hundefreunde Herzogenrath e.V. von Patrick Arns [https://arns.dev](https://arns.dev) **
+
+## 👨‍💻 Autor
+
+**Patrick Arns**  
+*Full-Stack Developer & Digital Solutions Architect*
+
+[![Website](https://img.shields.io/badge/Website-arns.dev-blue?style=for-the-badge&logo=safari)](https://arns.dev)
+[![GitHub](https://img.shields.io/badge/GitHub-PatrickArns-black?style=for-the-badge&logo=github)](https://github.com/PArns)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/patrick-arns)
+
+*Spezialisiert auf Rust & VPN Technik*
