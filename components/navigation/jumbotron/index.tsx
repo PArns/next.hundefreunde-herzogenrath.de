@@ -14,11 +14,13 @@ export function Slide({
   imageAlt,
   className,
   bgImage,
+  priority = false,
 }: {
   children: React.ReactNode;
   imageAlt: string;
   className?: string;
   bgImage?: string;
+  priority?: boolean;
 }) {
   if (!className) className = "";
 
@@ -34,6 +36,8 @@ export function Slide({
             src={bgImage}
             alt={imageAlt}
             fill
+            priority={priority}
+            sizes="100vw"
             className={`rounded-lg object-cover ${className}`.trim()}
           />
         )}

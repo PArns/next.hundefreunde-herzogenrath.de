@@ -26,6 +26,7 @@ export default function RootLayout({
               bgImage={"/jumbotron/gruppe.jpg"}
               className="object-top"
               imageAlt="Willkommen bei den Hundefreunden Herzogenrath e.V."
+              priority={true}
             >
               <div className="text-center font-bold text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]" role="banner" aria-hidden="true">
                 <div className="text-2xl md:text-4xl lg:text-6xl">

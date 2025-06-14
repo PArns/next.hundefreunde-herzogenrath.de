@@ -103,6 +103,7 @@ export default function Home() {
                 className="rounded-xl drop-shadow-lg"
                 width={1200}
                 height={800}
+                priority={true}
                 alt="Trainer der Hundefreunde Herzogenrath beim Training"
               />
             </aside>
