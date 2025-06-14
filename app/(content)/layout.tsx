@@ -10,11 +10,10 @@ export default function RootLayout({
 }>) {
   const navigationItems: HeaderItem[] = [
     { name: "Über uns", href: "/" },
-    { name: "Aktuelles", href: "/aktuelles" },
-    { name: "Kurse, Termine & Zeiten", href: "/kurse" },
+    { name: "Kurse & Termine", href: "/kurse" },
     { name: "Unser Team", href: "/team" },
+    { name: "Aktuelles", href: "/aktuelles" },
     { name: "Bilder", href: "/bilder" },
-    { name: "Anfahrt & Kontakt", href: "/anfahrt" },
   ];
 
   return (
@@ -44,10 +43,17 @@ export default function RootLayout({
       <div id="top"></div>
       <main className="mx-auto max-w-(--breakpoint-2xl) px-6 2xl:px-0">{children}</main>
       <Footer>
-        <div className="flex gap-4">
-          <Link href={"/anfahrt"}>Anfahrt & Kontakt</Link>
-          <Link href={"/impressum"}>Impressum</Link>
-        </div>
+        <nav aria-label="Footer Navigation" className="flex flex-wrap gap-4 text-sm">
+          <Link href="/anfahrt" className="hover:text-white transition-colors">
+            Anfahrt & Kontakt
+          </Link>
+          <Link href="/impressum" className="hover:text-white transition-colors">
+            Impressum
+          </Link>
+          <Link href="/aktuelles" className="hover:text-white transition-colors">
+            News
+          </Link>
+        </nav>
       </Footer>
     </>
   );

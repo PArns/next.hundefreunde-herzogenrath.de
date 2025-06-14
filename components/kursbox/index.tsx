@@ -19,29 +19,48 @@ export default function KursBox({
   const endTime = addOneHour(startTime);
 
   return (
-    <Link
-      href={`/kurse/#${name}`}
-      className="flex h-full flex-col rounded-lg border bg-white shadow-lg"
+    <article 
+      itemScope 
+      itemType="https://schema.org/Course"
+      className="flex h-full flex-col rounded-lg border bg-white shadow-lg hover:shadow-xl transition-shadow"
     >
-      <div className="relative flex h-52 w-full">
-        <Image
-          src={imageName}
-          alt={name}
-          className="rounded-t-lg"
-          style={{
-            objectFit: "cover",
-          }}
-          fill
-        />
-      </div>
+      <Link
+        href={`/kurse/#${name}`}
+        className="flex h-full flex-col"
+        aria-label={`Mehr über ${name} erfahren`}
+      >
+        <div className="relative flex h-52 w-full">
+          <Image
+            src={imageName}
+            alt={`${name} - Hundetraining für ${kursName} bei den Hundefreunden Herzogenrath`}
+            className="rounded-t-lg"
+            style={{
+              objectFit: "cover",
+            }}
+            fill
+            itemProp="image"
+          />
+        </div>
 
-      <div className="pt-2 text-center">
-        <h2>{name}</h2>
-      </div>
-      <div className="px-4 pb-3">{children}</div>
-      <div className="mt-auto px-4 pb-2 font-semibold text-gray-600">
-        Der {kursName} findet von {startTime} Uhr bis {endTime} Uhr statt
-      </div>
-    </Link>
+        <header className="pt-2 text-center">
+          <h3 itemProp="name">{name}</h3>
+        </header>
+        
+        <div className="px-4 pb-3" itemProp="description">
+          {children}
+        </div>
+        
+        <div className="mt-auto px-4 pb-2 font-semibold text-gray-600" itemScope itemType="https://schema.org/Schedule">
+          <time itemProp="startTime" dateTime={`${startTime}:00`}>
+            Der {kursName} findet von {startTime} Uhr
+          </time>
+          {" bis "}
+          <time itemProp="endTime" dateTime={`${endTime}:00`}>
+            {endTime} Uhr
+          </time>
+          {" statt"}
+        </div>
+      </Link>
+    </article>
   );
 }
