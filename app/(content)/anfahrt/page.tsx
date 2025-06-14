@@ -9,7 +9,20 @@ export const dynamic = "force-static";
 export function generateMetadata() {
   return {
     title: "Anfahrt & Kontakt",
-    description: "So findet ihr uns!",
+    description: "Besucht uns in Herzogenrath! Grenzstr. 9, 52134 Herzogenrath - direkt an der niederländischen Grenze. Kostenlose Probestunden samstags. Eigene Parkplätze und Sanitäranlagen vorhanden.",
+    keywords: [
+      "Hundefreunde Herzogenrath Anfahrt",
+      "Grenzstraße 9 Herzogenrath", 
+      "Probestunde Hundeschule",
+      "Kontakt Hundetrainer",
+      "Hundeschule Aachen Umgebung",
+      "Training samstags"
+    ],
+    openGraph: {
+      title: "Anfahrt & Kontakt - Hundefreunde Herzogenrath",
+      description: "Besucht uns für eine kostenlose Probestunde in Herzogenrath, Grenzstr. 9",
+      type: "website",
+    },
   };
 }
 

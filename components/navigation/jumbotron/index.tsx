@@ -58,7 +58,7 @@ export default function Jumbotron({
 
   return (
     <div className="relative isolate pt-16">
-      <section className="embla" data-nosnipplet>
+      <section className="embla" data-nosnippet role="banner" aria-label="Bildkarussell">
         <div className="embla__viewport h-56 lg:h-96" ref={emblaRef}>
           <div className="embla__container">
             {slides.map((slide, index) => (

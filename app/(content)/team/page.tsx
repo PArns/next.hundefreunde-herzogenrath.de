@@ -9,7 +9,21 @@ export function generateMetadata() {
   return {
     title: "Unser Team",
     description:
-      "Unsere Trainer haben alle jahrelange Erfahrung in der Hundeerziehung und -Ausbildung und freuen sich, auf jeden neuen Vierbeiner in unseren Stunden. Selbstverständlich stehen sie auch mit Rat und Tat nach den jeweiligen Kursen zur Verfügung.",
+      "Lernt unser erfahrenes Trainerteam der Hundefreunde Herzogenrath kennen. Unsere ehrenamtlichen Trainer haben jahrelange Erfahrung in der Hundeerziehung und -ausbildung. Kontaktiert uns gerne direkt per E-Mail für Fragen zu den Kursen.",
+    keywords: [
+      "Hundetrainer Herzogenrath",
+      "Team Hundefreunde",
+      "Hundeschule Trainer",
+      "Erfahrene Hundetrainer Aachen",
+      "Kontakt Hundetrainer",
+      "Welpenkurs Trainer",
+      "BGVP Trainer"
+    ],
+    openGraph: {
+      title: "Unser Trainerteam - Hundefreunde Herzogenrath",
+      description: "Erfahrene und ehrenamtliche Hundetrainer mit jahrelanger Expertise in der Hundeerziehung.",
+      type: "website",
+    },
   };
 }
 

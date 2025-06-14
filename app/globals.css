@@ -10,6 +10,34 @@
   If we ever want to remove these styles, we need to add an explicit border
   color utility to any element that depends on these defaults.
 */
+
+/* SEO Optimizations */
+main {
+  /* Ensure main content is prioritized by search engines */
+  order: 1;
+}
+
+[data-nosnippet] {
+  /* Prevent Google from using decorative content as snippets */
+  visibility: visible;
+}
+
+/* Structured content hierarchy */
+h1 {
+  /* Main page title - highest priority for SEO */
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+article {
+  /* Article content should be prioritized */
+  order: 2;
+}
+
+aside {
+  /* Sidebar content lower priority */
+  order: 3;
+}
 @layer base {
   *,
   ::after,

@@ -33,7 +33,7 @@ export default async function Motds() {
   if (messages.length === 0) return null;
 
   return (
-    <div className="flex flex-col gap-4 pt-4" data-nosnipplet>
+    <div className="flex flex-col gap-4 pt-4" data-nosnippet role="alert">
       {messages.map((m) => (
         <Message motd={m} key={m.title} />
       ))}

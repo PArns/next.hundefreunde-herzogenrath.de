@@ -39,7 +39,23 @@ export function generateMetadata(): Readonly<Metadata> {
       },
       description: config.description,
       locale: "de-DE",
-      images: { url: "/jumbotron/gruppe.jpg", width: 800 },
+      siteName: "Hundefreunde Herzogenrath e.V.",
+      type: "website",
+      images: { 
+        url: "/jumbotron/gruppe.jpg", 
+        width: 1200, 
+        height: 630,
+        alt: "Hundefreunde Herzogenrath - Hundetraining Gruppe"
+      },
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: config.title,
+      description: config.description,
+      images: ["/jumbotron/gruppe.jpg"],
+    },
+    alternates: {
+      canonical: config.baseUrl,
     },
   };
 }

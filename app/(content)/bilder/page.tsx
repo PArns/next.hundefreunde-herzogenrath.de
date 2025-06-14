@@ -13,7 +13,20 @@ export function generateMetadata() {
   return {
     title: "Bilder unserer Veranstaltungen",
     description:
-      "Hier findet ihr einige Bilder unseres Trainings, sowie einige unserer Veranstaltungen",
+      "Seht hier Bilder von unserem Hundetraining und vergangenen Veranstaltungen der Hundefreunde Herzogenrath. Eindruck von der Arbeit mit Welpen, Anfängern und fortgeschrittenen Hunden auf unserem Trainingsgelände.",
+    keywords: [
+      "Hundetraining Bilder",
+      "Veranstaltungen Hundefreunde",
+      "Welpentraining Fotos",
+      "Hundeschule Galerie",
+      "Training Impressionen",
+      "Herzogenrath Hundeverein Bilder"
+    ],
+    openGraph: {
+      title: "Training & Veranstaltungen - Hundefreunde Herzogenrath",
+      description: "Bilder von unserem Hundetraining und Events in Herzogenrath",
+      type: "website",
+    },
   };
 }
 
