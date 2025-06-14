@@ -13,8 +13,8 @@ export default function BlogTeaser({ post }: { post: BlogPost }) {
         <ContentfulImageAsset
           asset={post.image}
           alt={post.title}
-          fill={true}
-          quality={50}
+          width={500}
+          height={400}
           className="absolute top-0 right-0 bottom-0 left-0 h-full w-full rounded-t-lg object-cover"
         />
 

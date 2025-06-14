@@ -8,9 +8,10 @@ export default function GalleryCard({ gallery }: { gallery: ImageGallery }) {
       <div className="relative h-60">
         <ContentfulImageAsset
           asset={gallery.teaserImage}
-          fill
+          width={400}
+          height={300}
           alt={gallery.name}
-          className="rounded-t-lg object-cover"
+          className="rounded-t-lg object-cove relative h-full w-full"
           style={{ objectPosition: 'center 40%' }}
         />
 

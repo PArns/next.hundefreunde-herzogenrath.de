@@ -1,10 +1,9 @@
-import { EntryFieldTypes } from "contentful";
 import Image from "next/image";
 import { CSSProperties } from "react";
 
-interface ContentfulImageAssetProps {
+export interface ContentfulImageAssetProps {
   asset: any;
-  alt: string | EntryFieldTypes.Symbol;
+  alt: string;
   width?: number;
   height?: number;
   quality?: number;
@@ -16,7 +15,7 @@ interface ContentfulImageAssetProps {
   [key: string]: any; // For other props that might be passed
 }
 
-export function getImageSource(asset: any, width: number, quality?: number) {
+export function getImageSource(asset: any, width: number, height?: number, quality?: number, fit?: "fit" | "pad" | "fill" | "scale" | "crop" | "thumb") {
   let assetSrc = asset?.url;
 
   if (!assetSrc) {
@@ -31,7 +30,7 @@ export function getImageSource(asset: any, width: number, quality?: number) {
     ? "https:" + assetSrc
     : assetSrc;
 
-  const fullSource = `${imageSource}?w=${width}&q=${quality ?? 90}`;
+  const fullSource = `${imageSource}?w=${width ?? ""}&h=${height ?? ""}&q=${quality ?? 90}&fit=${fit ?? ""}`;
 
   return fullSource;
 }
@@ -53,10 +52,11 @@ export default function ContentfulImageAsset(props: ContentfulImageAssetProps) {
     style,
     usePlaceholder,
     sizes,
+    className,
     ...rest
   } = props;
 
-  const imageSource = getImageSource(asset, width ?? maxImageWidth ?? 1980);
+  const imageSource = getImageSource(asset, width ?? maxImageWidth ?? 1980, height ?? 1080, quality, width && height ? "fill" : undefined);
   if (!Boolean(imageSource) || imageSource === undefined) return <></>;
 
   return (
@@ -69,6 +69,8 @@ export default function ContentfulImageAsset(props: ContentfulImageAssetProps) {
       fill={fill}
       quality={quality}
       style={style}
+      sizes={sizes}
+      className={className}
       {...rest}
     />
   );
