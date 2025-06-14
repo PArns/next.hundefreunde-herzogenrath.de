@@ -12,10 +12,12 @@ export interface ContentfulImageAssetProps {
   maxImageWidth?: number;
   style?: CSSProperties;
   sizes?: string;
+  fit?: "pad" | "fill" | "scale" | "crop" | "thumb";
+  className?: string;
   [key: string]: any; // For other props that might be passed
 }
 
-export function getImageSource(asset: any, width: number, height?: number, quality?: number, fit?: "fit" | "pad" | "fill" | "scale" | "crop" | "thumb") {
+export function getImageSource(asset: any, width: number, height?: number, quality?: number, fit?: "pad" | "fill" | "scale" | "crop" | "thumb") {
   let assetSrc = asset?.url;
 
   if (!assetSrc) {
@@ -53,11 +55,28 @@ export default function ContentfulImageAsset(props: ContentfulImageAssetProps) {
     usePlaceholder,
     sizes,
     className,
+    fit = "fill", // Default zu "fill" für feste Dimensionen
     ...rest
   } = props;
 
-  const imageSource = getImageSource(asset, width ?? maxImageWidth ?? 1980, height ?? 1080, quality, width && height ? "fill" : undefined);
+  // Wenn width und height angegeben sind, verwende "fill" für exakte Dimensionen
+  const contentfulFit = (width && height) ? (fit || "fill") : "fill";
+  
+  const imageSource = getImageSource(
+    asset, 
+    width ?? maxImageWidth ?? 1980, 
+    height ?? 1080, 
+    quality, 
+    contentfulFit
+  );
+  
   if (!Boolean(imageSource) || imageSource === undefined) return <></>;
+
+  // Wenn width und height angegeben sind, setze object-fit für korrekte Darstellung
+  const imageStyle: CSSProperties = {
+    ...style,
+    ...(width && height && !fill ? { objectFit: 'cover' } : {})
+  };
 
   return (
     <Image
@@ -68,7 +87,7 @@ export default function ContentfulImageAsset(props: ContentfulImageAssetProps) {
       priority={priority}
       fill={fill}
       quality={quality}
-      style={style}
+      style={imageStyle}
       sizes={sizes}
       className={className}
       {...rest}
