@@ -262,7 +262,9 @@ export default function Team() {
       <Motds />
       
       <ContentBox>
-        <h2>Unsere Trainer</h2>
+        <header>
+          <h1>Unser Team</h1>
+        </header>
 
         <p>
           Unsere Trainer haben alle jahrelange Erfahrung in der Hundeerziehung

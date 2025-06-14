@@ -4,11 +4,16 @@ export default function BlogHeader({
   title,
   subTitle,
   backgroundImage,
+  useH1 = true,
 }: {
   title: string;
   subTitle?: string;
   backgroundImage: any;
+  useH1?: boolean;
 }) {
+  const TitleTag = useH1 ? 'h1' : 'div';
+  const SubTitleTag = useH1 ? 'h2' : 'div';
+
   return (
     <div className="relative w-full overflow-hidden rounded-lg bg-cover bg-no-repeat text-center">
       <ContentfulImageAsset
@@ -24,13 +29,13 @@ export default function BlogHeader({
       <div className="py-16 md:py-28 lg:py-48 xl:py-64">
         <div className="flex h-full items-center justify-center">
           <div>
-            <h1 className="mb-2 font-semibold text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] xl:text-6xl">
+            <TitleTag className="mb-2 font-semibold text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] xl:text-6xl">
               {title}
-            </h1>
+            </TitleTag>
             {subTitle && (
-              <h2 className="font-semibold text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] xl:text-4xl">
+              <SubTitleTag className="font-semibold text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] xl:text-4xl">
                 {subTitle}
-              </h2>
+              </SubTitleTag>
             )}
           </div>
         </div>

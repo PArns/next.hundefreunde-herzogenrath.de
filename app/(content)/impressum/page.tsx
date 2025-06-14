@@ -13,7 +13,10 @@ export function generateMetadata() {
 export default function Impressum() {
   return (
     <ContentBox className="relative">
-      <h2>Hundefreunde Herzogenrath e.V.</h2>
+      <header>
+        <h1>Impressum</h1>
+        <h2>Hundefreunde Herzogenrath e.V.</h2>
+      </header>
       <p>Vereinsregister Aachen VR 3387</p>
       <Image
         src={DogImage}

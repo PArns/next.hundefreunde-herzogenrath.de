@@ -1,5 +1,4 @@
 import ContentBox from "@/components/layout/default-box";
-import FAQStructuredData from "@/components/faq-structured-data";
 
 const faqs = [
   {
@@ -26,9 +25,7 @@ const faqs = [
 
 export default function FAQ() {
   return (
-    <>
-      <FAQStructuredData faqs={faqs} />
-      <ContentBox>
+    <ContentBox>
         <h2>Häufig gestellte Fragen</h2>
         <div className="space-y-4">
           {faqs.map((faq, index) => (
@@ -41,6 +38,5 @@ export default function FAQ() {
           ))}
         </div>
       </ContentBox>
-    </>
   );
 }

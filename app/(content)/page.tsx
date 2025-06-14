@@ -5,7 +5,6 @@ import Kurse from "@/sections/kurse";
 import Motds from "@/sections/motd";
 import News from "@/sections/neuigkeiten";
 import FAQ from "@/sections/faq";
-import { OrganizationStructuredData } from "@/components/structured-data";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -37,9 +36,7 @@ export function generateMetadata(): Readonly<Metadata> {
 
 export default function Home() {
   return (
-    <>
-      <OrganizationStructuredData />
-      
+    <>      
       <Motds />
 
       <ContentBox>

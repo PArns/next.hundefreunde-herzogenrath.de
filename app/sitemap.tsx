@@ -1,11 +1,14 @@
 import { MetadataRoute } from 'next'
 import PageBaseConfiguration from '@/configuration'
+import { GetAllBlogPostSlugs } from '@/data-provider/contentful/provider/blog-post-provider'
+import { GetAllGallerySlugs } from '@/data-provider/contentful/provider/gallery-provider'
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const config = PageBaseConfiguration()
   const baseUrl = config.baseUrl.toString()
 
-  return [
+  // Statische Seiten
+  const staticPages: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
       lastModified: new Date(),
@@ -49,4 +52,54 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.3,
     },
   ]
+
+  // Dynamische Blog-Artikel mit tatsächlichen Publish-Daten
+  const blogPosts = await GetAllBlogPostSlugs() || []
+  const now = new Date()
+  const thirtyDaysAgo = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000)
+  
+  const blogPages: MetadataRoute.Sitemap = blogPosts.map((post) => {
+    // Neue Posts haben höhere Priorität und häufigere Updates
+    const isRecent = post.publishedAt > thirtyDaysAgo
+    
+    return {
+      url: `${baseUrl}aktuelles/artikel/${post.slug}`,
+      lastModified: post.publishedAt,
+      changeFrequency: isRecent ? 'weekly' as const : 'monthly' as const,
+      priority: isRecent ? 0.7 : 0.5,
+    }
+  })
+
+  // Dynamische Bildergalerien mit Datum-basierter Priorität
+  const galleries = await GetAllGallerySlugs() || []
+  const galleryPages: MetadataRoute.Sitemap = galleries.map((gallery) => {
+    const isRecent = gallery.publishedAt > thirtyDaysAgo
+    
+    return {
+      url: `${baseUrl}bilder/${gallery.slug}`,
+      lastModified: gallery.publishedAt,
+      changeFrequency: 'monthly' as const,
+      priority: isRecent ? 0.6 : 0.4,
+    }
+  })
+
+  // Blog-Übersichtsseiten mit dynamischer Paginierung
+  const totalBlogPosts = blogPosts.length
+  const postsPerPage = 10
+  const totalPages = Math.ceil(totalBlogPosts / postsPerPage)
+  
+  const blogPaginationPages: MetadataRoute.Sitemap = Array.from(
+    { length: totalPages },
+    (_, index) => {
+      const pageNumber = index + 1
+      return {
+        url: `${baseUrl}aktuelles/seite/${pageNumber}`,
+        lastModified: new Date(),
+        changeFrequency: 'daily' as const,
+        priority: pageNumber === 1 ? 0.6 : Math.max(0.3, 0.6 - (pageNumber * 0.1)),
+      }
+    }
+  )
+
+  return [...staticPages, ...blogPages, ...galleryPages, ...blogPaginationPages]
 }

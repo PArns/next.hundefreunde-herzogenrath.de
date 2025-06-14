@@ -75,14 +75,19 @@ export default async function BlogArticle({
         title={article.title}
         subTitle={article.subTitle}
         backgroundImage={article.image}
+        useH1={false}
       />
       <ContentBox>
-        <h2>{article.title}</h2>
-        <h3>{article.subTitle}</h3>
-        <DateRenderer date={article.publishedAt} format="long" />
-        <div className="flex flex-col pt-4">
-          <RichTextRenderer document={article.body} />
-        </div>
+        <article>
+          <header>
+            <h1>{article.title}</h1>
+            {article.subTitle && <h2>{article.subTitle}</h2>}
+          </header>
+          <DateRenderer date={article.publishedAt} format="long" />
+          <div className="flex flex-col pt-4">
+            <RichTextRenderer document={article.body} />
+          </div>
+        </article>
         <div className="pb-2 pt-6">
           <Button href="/aktuelles">Zurück zur Übersicht</Button>
         </div>

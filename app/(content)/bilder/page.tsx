@@ -36,16 +36,21 @@ export default async function Bilder() {
   return (
     <>
       <ContentBox>
-        <h2>Bilder unseres Trainings & vergangener Events</h2>
-        Hier findet ihr einige Bilder unseres{" "}
-        <Link href="/kurse" className="text-sky-800">
-          Trainings
-        </Link>
-        , sowie einige unserer{" "}
-        <Link href="/termine" className="text-sky-800">
-          Veranstaltungen
-        </Link>
-        .
+        <header>
+          <h1>Bilder unserer Veranstaltungen</h1>
+          <h2>Training & Events der Hundefreunde Herzogenrath</h2>
+        </header>
+        <section>
+          Hier findet ihr einige Bilder unseres{" "}
+          <Link href="/kurse" className="text-sky-800">
+            Trainings
+          </Link>
+          , sowie einige unserer{" "}
+          <Link href="/termine" className="text-sky-800">
+            Veranstaltungen
+          </Link>
+          .
+        </section>
       </ContentBox>
 
       <div className="grid grid-cols-1 gap-4 pb-4 lg:grid-cols-3">

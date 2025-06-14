@@ -97,8 +97,10 @@ export default async function Gallerie({
 
   return (
     <ContentBox>
-      <h2>{gallery.name}</h2>
-      <h4>{gallery.date.toLocaleDateString("de")}</h4>
+      <header>
+        <h1>{gallery.name}</h1>
+        <h2>{gallery.date.toLocaleDateString("de")}</h2>
+      </header>
       <div className="pb-2">{gallery.description}</div>
 
       <PhotoGallery photos={galleryImages} />

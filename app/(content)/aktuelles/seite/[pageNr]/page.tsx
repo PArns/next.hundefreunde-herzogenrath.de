@@ -61,9 +61,13 @@ export default async function Aktuelles({
       <Motds />
 
       <ContentBox>
-        <h2>Aktuelles rund um die Hundefreunde</h2>
-        Hier findet ihr alle aktuellen Neuigkeiten rund um die Hundefreunde
-        Herzogenrath e.V.
+        <header>
+          <h1>Aktuelles rund um die Hundefreunde</h1>
+        </header>
+        <section>
+          Hier findet ihr alle aktuellen Neuigkeiten rund um die Hundefreunde
+          Herzogenrath e.V.
+        </section>
       </ContentBox>
 
       <div className="grid grid-cols-1 gap-4 pb-4 md:grid-cols-2">
