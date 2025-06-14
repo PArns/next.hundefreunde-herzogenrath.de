@@ -37,7 +37,8 @@ export default function KursBox({
             style={{
               objectFit: "cover",
             }}
-            fill
+            width={800}
+            sizes="(max-width: 800px) 100vw, 800px"
             itemProp="image"
           />
         </div>
