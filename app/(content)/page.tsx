@@ -5,6 +5,7 @@ import Kurse from "@/sections/kurse";
 import Motds from "@/sections/motd";
 import News from "@/sections/neuigkeiten";
 import FAQ from "@/sections/faq";
+import { YouTubeEmbed } from '@next/third-parties/google';
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -107,13 +108,13 @@ export default function Home() {
             </aside>
           </div>
           <div className="flex justify-center items-center pt-4">
-            <iframe 
-              src='https://www.youtube.com/embed/aaQPQfe_b2E' 
-              width={500} 
-              height={350} 
-              allowFullScreen 
-              title="Hundefreunde Herzogenrath Trainingsvideo"
-            />
+            <div className="w-full max-w-2xl">
+              <YouTubeEmbed 
+                videoid="aaQPQfe_b2E" 
+                height={400}
+                params="controls=1&start=0&end=0&loop=0&playsinline=0&rel=0&enablejsapi=1"
+              />
+            </div>
           </div>
         </section>
       </ContentBox>
