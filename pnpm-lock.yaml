@@ -51,8 +51,8 @@ importers:
         specifier: ^2.1.1
         version: 2.1.1
       contentful:
-        specifier: ^11.7.1
-        version: 11.7.1
+        specifier: ^11.7.2
+        version: 11.7.2
       embla-carousel:
         specifier: ^8.6.0
         version: 8.6.0
@@ -125,8 +125,8 @@ packages:
     resolution: {integrity: sha512-30iZtAPgz+LTIYoeivqYo853f02jBYSd5uGnGpkFV0M3xOt9aN73erkgYAmZU43x4VfqcnLxW9Kpg3R5LC4YYw==}
     engines: {node: '>=6.0.0'}
 
-  '@contentful/content-source-maps@0.11.19':
-    resolution: {integrity: sha512-hSkGrktJWqJYHnMjXSdFNNp5eaICJidAJmBHN5kaUvqa7o5femSbFRoEi3Zh+sxmDbEhv+kWOOpsz8Dz3D/NSg==}
+  '@contentful/content-source-maps@0.11.20':
+    resolution: {integrity: sha512-q1Zp1TZcQEVvJ7qxSnkmhe7JWFXH8EBhIGvtWu8pmAkea9ET5rTM5m2/fiu3nIcKc18pX+iv+Pb1K3UgeHRl8w==}
 
   '@contentful/rich-text-react-renderer@16.0.1':
     resolution: {integrity: sha512-7wZZBMgwbq5Udp2KebKCJoh9K+EPGlgRkudhXSp+OxtAIdBC6JUz3Oi9kXXKYKLeSg7iTBpkO1dd0/xFjHHKbg==}
@@ -938,8 +938,8 @@ packages:
     resolution: {integrity: sha512-Xm7bpRXnDSX2YE2YFfBk2FnF0ep6tmG7xPh8iHee8MIcrgq762Nkce856dYtJYLkuIoYZvGfTs/PbZhideTcEg==}
     engines: {node: '>=4'}
 
-  axios@1.9.0:
-    resolution: {integrity: sha512-re4CqKTJaURpzbLHtIi6XpDv20/CnpXOtjRY5/CU32L8gU8ek9UIivcfvSWvmKEngmVbrUtPpdDwWDWL7DNHvg==}
+  axios@1.10.0:
+    resolution: {integrity: sha512-/1xYAC4MP/HEG+3duIhFr4ZQXR4sQXOIe+o6sdqzeykGLx6Upp/1p8MHqhINOvGeP7xyNHe7tsiJByc4SSVUxw==}
 
   axobject-query@4.1.0:
     resolution: {integrity: sha512-qIj0G9wZbMGNLjLmg1PT6v2mE9AH2zlnADJD/2tC6E00hgmhUOfEB6greHPAfLRSufHqROIUTkw6E+M3lH0PTQ==}
@@ -1025,8 +1025,8 @@ packages:
     resolution: {integrity: sha512-cUvHbC2u8ouJHhG3tofQhUc0FAmM/QBcalYjiczMtFKrR77BW+eSPcPg+A9DQlhIP0UGcQ/knXxoJpBvrERXTA==}
     engines: {node: '>=18'}
 
-  contentful@11.7.1:
-    resolution: {integrity: sha512-wcn8ZO4njFRtjkoLSSIMvj5AwW7bKRbtMDTT1IGfCEGVSOndNgIuZU4DmSrYVcUez059pw0G/ACXFa1S3NGk7Q==}
+  contentful@11.7.2:
+    resolution: {integrity: sha512-M6TtN457HI1huPXyWixtiyrmN3n/wMsu1iR1ses+YG8Y6PRLwAljUTaaFq66eTCGqHQ9M047M5sdsHOWfuBFNw==}
     engines: {node: '>=18'}
 
   cross-spawn@7.0.6:
@@ -2287,7 +2287,7 @@ snapshots:
       '@jridgewell/gen-mapping': 0.3.8
       '@jridgewell/trace-mapping': 0.3.25
 
-  '@contentful/content-source-maps@0.11.19':
+  '@contentful/content-source-maps@0.11.20':
     dependencies:
       '@vercel/stega': 0.1.2
       json-pointer: 0.6.2
@@ -3046,7 +3046,7 @@ snapshots:
 
   axe-core@4.10.3: {}
 
-  axios@1.9.0:
+  axios@1.10.0:
     dependencies:
       follow-redirects: 1.15.9
       form-data: 4.0.3
@@ -3145,11 +3145,11 @@ snapshots:
     optionalDependencies:
       '@rollup/rollup-linux-x64-gnu': 4.43.0
 
-  contentful@11.7.1:
+  contentful@11.7.2:
     dependencies:
-      '@contentful/content-source-maps': 0.11.19
+      '@contentful/content-source-maps': 0.11.20
       '@contentful/rich-text-types': 16.8.5
-      axios: 1.9.0
+      axios: 1.10.0
       contentful-resolve-response: 1.9.3
       contentful-sdk-core: 9.2.0
       json-stringify-safe: 5.0.1
