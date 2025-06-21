@@ -60,11 +60,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   
   const blogPages: MetadataRoute.Sitemap = blogPosts.map((post) => {
     // Neue Posts haben höhere Priorität und häufigere Updates
-    const isRecent = post.publishedAt > thirtyDaysAgo
-    
+    const pubDate = new Date(post.publishedAt)
+    const isRecent = pubDate > thirtyDaysAgo
+    const lastModified = isNaN(pubDate.getTime()) ? now : pubDate
+
     return {
       url: `${baseUrl}aktuelles/artikel/${post.slug}`,
-      lastModified: post.publishedAt,
+      lastModified,
       changeFrequency: isRecent ? 'weekly' as const : 'monthly' as const,
       priority: isRecent ? 0.7 : 0.5,
     }
@@ -73,11 +75,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Dynamische Bildergalerien mit Datum-basierter Priorität
   const galleries = await GetAllGallerySlugs() || []
   const galleryPages: MetadataRoute.Sitemap = galleries.map((gallery) => {
-    const isRecent = gallery.publishedAt > thirtyDaysAgo
-    
+    const pubDate = new Date(gallery.publishedAt)
+    const isRecent = pubDate > thirtyDaysAgo
+    const lastModified = isNaN(pubDate.getTime()) ? now : pubDate
+
     return {
       url: `${baseUrl}bilder/${gallery.slug}`,
-      lastModified: gallery.publishedAt,
+      lastModified,
       changeFrequency: 'monthly' as const,
       priority: isRecent ? 0.6 : 0.4,
     }
