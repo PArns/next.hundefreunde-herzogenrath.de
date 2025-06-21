@@ -2,6 +2,8 @@ import ContentBox from "@/components/layout/default-box";
 import Link from "next/link";
 import Kurs from "@/components/kurs";
 import Calendar from "@/components/calendar";
+import Script from 'next/script';
+import PageBaseConfiguration from '@/configuration';
 
 import { kursData } from "@/configuration/kursData";
 import Motds from "@/sections/motd";
@@ -31,10 +33,43 @@ export function generateMetadata() {
 }
 
 export default function Kurse() {
+  const config = PageBaseConfiguration();
+  const origin = config.baseUrl.toString();
   const firstKurs = kursData[0];
+  // Build structured data for courses
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": kursData.map((kurs) => ({
+      "@type": "Course",
+      "name": kurs.name,
+      "description": `Kurs ${kurs.name} bei den Hundefreunden Herzogenrath e.V.`,
+      "provider": {
+        "@type": "Organization",
+        "name": "Hundefreunde Herzogenrath e.V.",
+        "sameAs": origin
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": `${origin}/kurse`,
+        "availability": "https://schema.org/InStock"
+      },
+      "hasCourseInstance": [
+        {
+          "@type": "CourseInstance",
+          "courseMode": "https://schema.org/OfflineCourse",
+          "startDate": new Date().toISOString()
+        }
+      ]
+    }))
+  };
 
   return (
     <>
+      <Script
+        id="course-structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <Motds />
       <ContentBox>
         <header>
