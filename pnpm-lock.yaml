@@ -51,8 +51,8 @@ importers:
         specifier: ^2.1.1
         version: 2.1.1
       contentful:
-        specifier: ^11.7.2
-        version: 11.7.2
+        specifier: ^11.7.4
+        version: 11.7.4
       embla-carousel:
         specifier: ^8.6.0
         version: 8.6.0
@@ -125,8 +125,8 @@ packages:
     resolution: {integrity: sha512-30iZtAPgz+LTIYoeivqYo853f02jBYSd5uGnGpkFV0M3xOt9aN73erkgYAmZU43x4VfqcnLxW9Kpg3R5LC4YYw==}
     engines: {node: '>=6.0.0'}
 
-  '@contentful/content-source-maps@0.11.20':
-    resolution: {integrity: sha512-q1Zp1TZcQEVvJ7qxSnkmhe7JWFXH8EBhIGvtWu8pmAkea9ET5rTM5m2/fiu3nIcKc18pX+iv+Pb1K3UgeHRl8w==}
+  '@contentful/content-source-maps@0.11.23':
+    resolution: {integrity: sha512-jAI9NqrdY8oPAnWDocosXQNtUrl+kkNxx/DC0xUS5Kb4gbdGUchkGlASAoWFgOi7W5pJXeIJt5yan0WdOv0NYw==}
 
   '@contentful/rich-text-react-renderer@16.0.2':
     resolution: {integrity: sha512-rh1leRqndG3RzWQTKOXu7GrLGY2ijlrGkDi+df9sI14aaj6Tl2vCoHwEtmW5kjNS5XBwo+RSR86j1ro9fDTnfw==}
@@ -536,8 +536,8 @@ packages:
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
 
-  '@rollup/rollup-linux-x64-gnu@4.44.0':
-    resolution: {integrity: sha512-iUVJc3c0o8l9Sa/qlDL2Z9UP92UZZW1+EmQ4xfjTc1akr0iUFZNfxrXJ/R1T90h/ILm9iXEY6+iPrmYB3pXKjw==}
+  '@rollup/rollup-linux-x64-gnu@4.44.1':
+    resolution: {integrity: sha512-EtnsrmZGomz9WxK1bR5079zee3+7a+AdFlghyd6VbAjgRJDbTANJ9dcPIPAi76uG05micpEL+gPGmAKYTschQw==}
     cpu: [x64]
     os: [linux]
 
@@ -1025,8 +1025,8 @@ packages:
     resolution: {integrity: sha512-cUvHbC2u8ouJHhG3tofQhUc0FAmM/QBcalYjiczMtFKrR77BW+eSPcPg+A9DQlhIP0UGcQ/knXxoJpBvrERXTA==}
     engines: {node: '>=18'}
 
-  contentful@11.7.2:
-    resolution: {integrity: sha512-M6TtN457HI1huPXyWixtiyrmN3n/wMsu1iR1ses+YG8Y6PRLwAljUTaaFq66eTCGqHQ9M047M5sdsHOWfuBFNw==}
+  contentful@11.7.4:
+    resolution: {integrity: sha512-uV/d2MUK734TrPAp3RavNBPAR3l8Al0VcMbqX5TALUSRbjAcQ3uydS00BO0Wd5SSvtnEPM+GiiLFe0AtpNbNdA==}
     engines: {node: '>=18'}
 
   cross-spawn@7.0.6:
@@ -2287,7 +2287,7 @@ snapshots:
       '@jridgewell/gen-mapping': 0.3.8
       '@jridgewell/trace-mapping': 0.3.25
 
-  '@contentful/content-source-maps@0.11.20':
+  '@contentful/content-source-maps@0.11.23':
     dependencies:
       '@vercel/stega': 0.1.2
       json-pointer: 0.6.2
@@ -2660,7 +2660,7 @@ snapshots:
     dependencies:
       react: 19.1.0
 
-  '@rollup/rollup-linux-x64-gnu@4.44.0':
+  '@rollup/rollup-linux-x64-gnu@4.44.1':
     optional: true
 
   '@rtsao/scc@1.1.0': {}
@@ -3143,11 +3143,11 @@ snapshots:
       process: 0.11.10
       qs: 6.14.0
     optionalDependencies:
-      '@rollup/rollup-linux-x64-gnu': 4.44.0
+      '@rollup/rollup-linux-x64-gnu': 4.44.1
 
-  contentful@11.7.2:
+  contentful@11.7.4:
     dependencies:
-      '@contentful/content-source-maps': 0.11.20
+      '@contentful/content-source-maps': 0.11.23
       '@contentful/rich-text-types': 16.8.5
       axios: 1.10.0
       contentful-resolve-response: 1.9.3
