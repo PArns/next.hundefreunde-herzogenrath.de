@@ -54,7 +54,7 @@ Die offizielle Website der **Hundefreunde Herzogenrath e.V.** - ein moderner, re
 
 1. **Repository klonen**
 ```bash
-git clone https://github.com/your-username/next.hundefreunde-herzogenrath.de.git
+git clone https://github.com/parns/next.hundefreunde-herzogenrath.de.git
 cd next.hundefreunde-herzogenrath.de
 ```
 
