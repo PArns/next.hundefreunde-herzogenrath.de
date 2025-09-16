@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^16.1.0",
-    "@contentful/rich-text-types": "^17.1.0",
+    "@contentful/rich-text-types": "^17.2.2",
     "@fullcalendar/core": "^6.1.19",
     "@fullcalendar/daygrid": "^6.1.19",
     "@fullcalendar/google-calendar": "^6.1.19",
