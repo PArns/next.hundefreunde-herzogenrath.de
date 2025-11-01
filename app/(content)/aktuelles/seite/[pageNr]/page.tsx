@@ -42,13 +42,14 @@ export async function generateStaticParams(): Promise<PostPageParams[]> {
 export default async function Aktuelles({
   params,
 }: {
-  params: { pageNr: number };
+  params: Promise<{ pageNr: number }>;
 }) {
+  const { pageNr } = await params;
   const postsPerPage = PageBaseConfiguration().blogPostsPerPage;
-  const activePage = +params.pageNr - 1;
+  const activePage = +pageNr - 1;
 
   const posts = await GetBlogPosts(
-    postsPerPage * (activePage * postsPerPage),
+    activePage * postsPerPage,
     postsPerPage,
   );
 
@@ -80,7 +81,7 @@ export default async function Aktuelles({
           <Pagination
             baseUrl={`/aktuelles`}
             paginationSlug="seite"
-            currentPage={+params.pageNr}
+            currentPage={+pageNr}
             pageCount={pageCount}
           />
         </div>

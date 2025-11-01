@@ -50,7 +50,9 @@ export async function GetBlogPosts(
 
   const variables = { limit: limit, skip: skip };
   const data = await fetchGraphQL(query, variables);
-  const collection = data.data.blogPostCollection;
+  const collection = data?.data?.blogPostCollection;
+
+  if (!collection) return null;
 
   const posts: BlogPost[] = collection.items.map((postEntry: any) => {
     return {
@@ -188,7 +190,9 @@ export async function GetAllBlogPostSlugs(): Promise<BlogPostSlug[]> {
     }`;
 
   const data = await fetchGraphQL(query);
-  const collection = data.data.blogPostCollection;
+  const collection = data?.data?.blogPostCollection;
+
+  if (!collection) return [];
 
   const posts: BlogPostSlug[] = collection.items.map((postEntry: any) => {
     return {
