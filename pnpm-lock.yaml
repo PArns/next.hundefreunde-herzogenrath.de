@@ -6,7 +6,7 @@ settings:
 
 overrides:
   '@types/react': 19.2.2
-  '@types/react-dom': 19.2.2
+  '@types/react-dom': 19.2.3
 
 importers:
 
@@ -56,7 +56,7 @@ importers:
         version: 2.1.1
       contentful:
         specifier: ^11.8.13
-        version: 11.8.13
+        version: 11.9.0
       embla-carousel:
         specifier: ^8.6.0
         version: 8.6.0
@@ -95,8 +95,8 @@ importers:
         specifier: 19.2.2
         version: 19.2.2
       '@types/react-dom':
-        specifier: 19.2.2
-        version: 19.2.2(@types/react@19.2.2)
+        specifier: 19.2.3
+        version: 19.2.3(@types/react@19.2.2)
       eslint:
         specifier: ^9.39.1
         version: 9.39.1(jiti@2.6.1)
@@ -764,8 +764,8 @@ packages:
   '@types/node@24.10.1':
     resolution: {integrity: sha512-GNWcUTRBgIRJD5zj+Tq0fKOJ5XZajIiBroOF0yvj2bSU1WvNdYS/dn9UxwsujGW4JX06dnHyjV2y9rRaybH0iQ==}
 
-  '@types/react-dom@19.2.2':
-    resolution: {integrity: sha512-9KQPoO6mZCi7jcIStSnlOWn2nEF3mNmyr3rIAsGnAbQKYbRLyqmeSc39EVgtxXVia+LMT8j3knZLAZAh+xLmrw==}
+  '@types/react-dom@19.2.3':
+    resolution: {integrity: sha512-jp2L/eY6fn+KgVVQAOqYItbF0VY/YApe5Mz2F0aykSO8gx31bYCZyvSeYxCHKvzHG5eZjc+zyaS5BrBWya2+kQ==}
     peerDependencies:
       '@types/react': 19.2.2
 
@@ -1110,8 +1110,8 @@ packages:
     resolution: {integrity: sha512-Y+Qz2tGYE2ia6o42R8DG4uFSMSLJ6qfAbKQLU6p2+KxsqvbK1Fg60wKVKF+FHMShuCnlg2EwToOvxVsM2N+BrQ==}
     engines: {node: '>=18'}
 
-  contentful@11.8.13:
-    resolution: {integrity: sha512-rNTcjphgHY7buppIkXUHdwUpPg9Sz41IBYJgT7QjqRvSgDMn0+hZRpLXSIaw0zGCgtMXcWWAFOPVYGjLhA2uvg==}
+  contentful@11.9.0:
+    resolution: {integrity: sha512-nQAiYWyDWec+LaXSiclYnmK0QZ65dGqBnMKzffrqW0Q1B2SQ9LW0b07UshN56aPXDfX7sf5MRvlUVTW9v5+iLw==}
     engines: {node: '>=18'}
 
   convert-source-map@2.0.0:
@@ -3025,7 +3025,7 @@ snapshots:
     dependencies:
       undici-types: 7.16.0
 
-  '@types/react-dom@19.2.2(@types/react@19.2.2)':
+  '@types/react-dom@19.2.3(@types/react@19.2.2)':
     dependencies:
       '@types/react': 19.2.2
 
@@ -3383,7 +3383,7 @@ snapshots:
     optionalDependencies:
       '@rollup/rollup-linux-x64-gnu': 4.53.2
 
-  contentful@11.8.13:
+  contentful@11.9.0:
     dependencies:
       '@contentful/content-source-maps': 0.11.42
       '@contentful/rich-text-types': 16.8.5
