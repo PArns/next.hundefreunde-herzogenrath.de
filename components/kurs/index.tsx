@@ -66,7 +66,7 @@ export default function Kurs({
 
             <div className="mt-auto flex flex-col space-y-2">
               <div itemScope itemType="https://schema.org/Person">
-                <strong>Kursleiter:</strong> 
+                <strong className="pr-1">Kursleiter:</strong> 
                 <span itemProp="instructor">
                   <KursLeiter leiter={leiter} />
                 </span>

@@ -28,7 +28,6 @@ export const kursData: Array<Kurs> = [
           und bietet für Hunde, bis 6 Monate, sowie Herrchen und Frauchen eine
           Grundeinführung für die neue Fellnase an.
         </p>
-        <p className="font-bold">Neuer Kursbeginn ab 17.05.25!</p>
       </>
     ),
     contentLong: (
