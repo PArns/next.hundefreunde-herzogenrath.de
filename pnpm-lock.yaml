@@ -55,8 +55,8 @@ importers:
         specifier: ^2.1.1
         version: 2.1.1
       contentful:
-        specifier: ^11.10.0
-        version: 11.10.0
+        specifier: ^11.10.1
+        version: 11.10.1
       embla-carousel:
         specifier: ^8.6.0
         version: 8.6.0
@@ -196,8 +196,8 @@ packages:
     resolution: {integrity: sha512-qQ5m48eI/MFLQ5PxQj4PFaprjyCTLI37ElWMmNs0K8Lk3dVeOdNpB3ks8jc7yM5CDmVC73eMVk/trk3fgmrUpA==}
     engines: {node: '>=6.9.0'}
 
-  '@contentful/content-source-maps@0.11.43':
-    resolution: {integrity: sha512-2FHAjtre+lc3EXMqrZh97vA/kIDVdu2eHyRj/yaXPKtacP0qCA7lPE1QvMaZeKqZkP6i3afY0WyeKoX4Y5eRlg==}
+  '@contentful/content-source-maps@0.11.44':
+    resolution: {integrity: sha512-tu1gfmZI59hQ7qKhmGOV0dA5brxhsc+LOfPwBsQQMDAVy5kVpTrKf/AGlL2y9QhKHu/NtCrwX/ZrmRFgtGEtIA==}
 
   '@contentful/rich-text-react-renderer@16.1.6':
     resolution: {integrity: sha512-Pt0KfEnB7UP53gUKupUZjsUCHR7CiDbVyMdMmuyzYT6lNvjR7+KKYWP9eU2TOfVaXy7PxF1XEpBjSALDOHUNKQ==}
@@ -633,8 +633,8 @@ packages:
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
 
-  '@rollup/rollup-linux-x64-gnu@4.53.3':
-    resolution: {integrity: sha512-3EhFi1FU6YL8HTUJZ51imGJWEX//ajQPfqWLI3BQq4TlvHy4X0MOr5q3D2Zof/ka0d5FNdPwZXm3Yyib/UEd+w==}
+  '@rollup/rollup-linux-x64-gnu@4.53.4':
+    resolution: {integrity: sha512-jjEMkzvASQBbzzlzf4os7nzSBd/cvPrpqXCUOqoeCh1dQ4BP3RZCJk8XBeik4MUln3m+8LeTJcY54C/u8wb3DQ==}
     cpu: [x64]
     os: [linux]
 
@@ -1110,8 +1110,8 @@ packages:
     resolution: {integrity: sha512-Y+Qz2tGYE2ia6o42R8DG4uFSMSLJ6qfAbKQLU6p2+KxsqvbK1Fg60wKVKF+FHMShuCnlg2EwToOvxVsM2N+BrQ==}
     engines: {node: '>=18'}
 
-  contentful@11.10.0:
-    resolution: {integrity: sha512-w1akW/pzxN+KAST8/jUbSauWmwKiCweqKYF208JScivBf1687QKSeCusLzrYFz46hCN5KoISCamiEd21R9yDOQ==}
+  contentful@11.10.1:
+    resolution: {integrity: sha512-NIqdz7FxPjKzcamZPVEiEq+07JaocI0S8yw1nMLof/cpHGeNxSWA2I0Yj1D7xGva2BVkxmc724B3krB0DxtiCQ==}
     engines: {node: '>=18'}
 
   convert-source-map@2.0.0:
@@ -2505,7 +2505,7 @@ snapshots:
       '@babel/helper-string-parser': 7.27.1
       '@babel/helper-validator-identifier': 7.28.5
 
-  '@contentful/content-source-maps@0.11.43':
+  '@contentful/content-source-maps@0.11.44':
     dependencies:
       '@vercel/stega': 0.1.2
       json-pointer: 0.6.2
@@ -2909,7 +2909,7 @@ snapshots:
     dependencies:
       react: 19.2.3
 
-  '@rollup/rollup-linux-x64-gnu@4.53.3':
+  '@rollup/rollup-linux-x64-gnu@4.53.4':
     optional: true
 
   '@rtsao/scc@1.1.0': {}
@@ -3373,16 +3373,17 @@ snapshots:
       process: 0.11.10
       qs: 6.14.0
     optionalDependencies:
-      '@rollup/rollup-linux-x64-gnu': 4.53.3
+      '@rollup/rollup-linux-x64-gnu': 4.53.4
 
-  contentful@11.10.0:
+  contentful@11.10.1:
     dependencies:
-      '@contentful/content-source-maps': 0.11.43
+      '@contentful/content-source-maps': 0.11.44
       '@contentful/rich-text-types': 16.8.5
       axios: 1.13.2
       contentful-resolve-response: 1.9.4
       contentful-sdk-core: 9.2.1
       json-stringify-safe: 5.0.1
+      tslib: 2.8.1
       type-fest: 4.41.0
     transitivePeerDependencies:
       - debug
