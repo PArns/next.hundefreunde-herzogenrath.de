@@ -46,8 +46,8 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0(react@19.2.3)
       '@next/third-parties':
-        specifier: 16.0.8
-        version: 16.0.8(next@16.0.10(@babel/core@7.28.5)(react-dom@19.2.1(react@19.2.3))(react@19.2.3))(react@19.2.3)
+        specifier: 16.1.0
+        version: 16.1.0(next@16.0.10(@babel/core@7.28.5)(react-dom@19.2.1(react@19.2.3))(react@19.2.3))(react@19.2.3)
       '@vercel/analytics':
         specifier: ^1.6.1
         version: 1.6.1(next@16.0.10(@babel/core@7.28.5)(react-dom@19.2.1(react@19.2.3))(react@19.2.3))(react@19.2.3)
@@ -574,8 +574,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@next/third-parties@16.0.8':
-    resolution: {integrity: sha512-F8TNI1GFm7ivZX6HBMDVsDklAXOHlACbtw7w3WFbDk2oFXdVgKZBfdK+ILhjTBK4ibIXzLMWO1Py3bgSETKHYQ==}
+  '@next/third-parties@16.1.0':
+    resolution: {integrity: sha512-VxD1UxwXNgCnDDBW+oinysZORkzir2B/MvCYF8S02r78VnGr37cbkMlM0LESrE9Nc/qlo2bLBgvpvnyOy4vleg==}
     peerDependencies:
       next: ^13.0.0 || ^14.0.0 || ^15.0.0 || ^16.0.0-beta.0
       react: ^18.2.0 || 19.0.0-rc-de68d2f4-20241204 || ^19.0.0
@@ -2840,7 +2840,7 @@ snapshots:
   '@next/swc-win32-x64-msvc@16.0.10':
     optional: true
 
-  '@next/third-parties@16.0.8(next@16.0.10(@babel/core@7.28.5)(react-dom@19.2.1(react@19.2.3))(react@19.2.3))(react@19.2.3)':
+  '@next/third-parties@16.1.0(next@16.0.10(@babel/core@7.28.5)(react-dom@19.2.1(react@19.2.3))(react@19.2.3))(react@19.2.3)':
     dependencies:
       next: 16.0.10(@babel/core@7.28.5)(react-dom@19.2.1(react@19.2.3))(react@19.2.3)
       react: 19.2.3
