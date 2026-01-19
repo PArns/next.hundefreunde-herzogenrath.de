@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { Analytics } from "@vercel/analytics/react";
 import PageBaseConfiguration from "@/configuration";
 
 import "@/app/globals.css";
@@ -71,7 +70,6 @@ export default function RootLayout({
         className={`${inter.className} relative min-h-screen overflow-x-hidden`}
       >
         {children}
-        <Analytics />
       </body>
     </html>
   );

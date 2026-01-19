@@ -124,7 +124,6 @@ The site includes comprehensive SEO features:
 ### Third-Party Integrations
 
 - **@next/third-parties/google** - YouTube embeds
-- **@vercel/analytics** - Analytics
 - **@fullcalendar** - Event calendar with Google Calendar integration
 - **embla-carousel** - Image carousels
 - **react-photo-album** - Photo gallery layouts
