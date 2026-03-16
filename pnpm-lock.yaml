@@ -52,8 +52,8 @@ importers:
         specifier: ^2.1.1
         version: 2.1.1
       contentful:
-        specifier: ^11.10.5
-        version: 11.10.5
+        specifier: ^11.10.6
+        version: 11.10.6
       embla-carousel:
         specifier: ^8.6.0
         version: 8.6.0
@@ -1021,8 +1021,8 @@ packages:
     resolution: {integrity: sha512-BASOg+YwO2C+346x3LZOeoovTIoTrRqEsqMa6fmfAV0P+U9mFr9NsyOEpiYvFjbc64NMrSswhV50WdXzdb/Z5A==}
     engines: {node: '>=4'}
 
-  axios@1.13.5:
-    resolution: {integrity: sha512-cz4ur7Vb0xS4/KUN0tPWe44eqxrIu31me+fbang3ijiNscE129POzipJJA6zniq2C/Z6sJCjMimjS8Lc/GAs8Q==}
+  axios@1.13.6:
+    resolution: {integrity: sha512-ChTCHMouEe2kn713WHbQGcuYrr6fXTBiu460OTwWrWob16g1bXn4vtz07Ope7ewMozJAnEquLk5lWQWtBig9DQ==}
 
   axobject-query@4.1.0:
     resolution: {integrity: sha512-qIj0G9wZbMGNLjLmg1PT6v2mE9AH2zlnADJD/2tC6E00hgmhUOfEB6greHPAfLRSufHqROIUTkw6E+M3lH0PTQ==}
@@ -1093,8 +1093,8 @@ packages:
     resolution: {integrity: sha512-61MfMyMU23dqCEOTHaHGys16tK2D0tbDe67GPcl6JkfbCcnhtmgTMLUbBnimW5wQse1mNmwS7lK2BNsz+rlFjA==}
     engines: {node: '>=18'}
 
-  contentful@11.10.5:
-    resolution: {integrity: sha512-5VtIrJ7X6209Yn25PfFRSz51eAtKJtxXSMSYG8loNMYVd+1lfAFRcw+dMVgnOQLv/TmYRSh1KKjtbwxlzHBm4g==}
+  contentful@11.10.6:
+    resolution: {integrity: sha512-HsmxfdYt0ZD23VzhPFWe8JBQiIkPQpLGYSUnhCtSL7xW6qXfNVm9FwJF2ZJ+IfIpcVo+8fBGDZKJaj/qZbVDrw==}
     engines: {node: '>=18'}
 
   convert-source-map@2.0.0:
@@ -3211,7 +3211,7 @@ snapshots:
 
   axe-core@4.11.1: {}
 
-  axios@1.13.5:
+  axios@1.13.6:
     dependencies:
       follow-redirects: 1.15.11
       form-data: 4.0.5
@@ -3290,11 +3290,11 @@ snapshots:
     optionalDependencies:
       '@rollup/rollup-linux-x64-gnu': 4.59.0
 
-  contentful@11.10.5:
+  contentful@11.10.6:
     dependencies:
       '@contentful/content-source-maps': 0.11.44
       '@contentful/rich-text-types': 16.8.5
-      axios: 1.13.5
+      axios: 1.13.6
       contentful-resolve-response: 1.9.6
       contentful-sdk-core: 9.4.4
       json-stringify-safe: 5.0.1
