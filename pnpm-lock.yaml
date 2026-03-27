@@ -52,8 +52,8 @@ importers:
         specifier: ^2.1.1
         version: 2.1.1
       contentful:
-        specifier: ^11.11.1
-        version: 11.11.1
+        specifier: ^11.12.0
+        version: 11.12.0
       embla-carousel:
         specifier: ^8.6.0
         version: 8.6.0
@@ -642,8 +642,8 @@ packages:
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
 
-  '@rollup/rollup-linux-x64-gnu@4.59.1':
-    resolution: {integrity: sha512-NQ9KyU1Anuy59L8+HHOKM++CoUxrQWrZWXRik4BJFm+7i5NP6q/SW43xIBr80zzt+PDBJ7LeNmloQGfa0JGk0w==}
+  '@rollup/rollup-linux-x64-gnu@4.60.0':
+    resolution: {integrity: sha512-EtylprDtQPdS5rXvAayrNDYoJhIz1/vzN2fEubo3yLE7tfAw+948dO0g4M0vkTVFhKojnF+n6C8bDNe+gDRdTg==}
     cpu: [x64]
     os: [linux]
     libc: [glibc]
@@ -1093,8 +1093,8 @@ packages:
     resolution: {integrity: sha512-8eGTMO11LXFAiosaiV38bjvW6cjoQFtNE38pNtVilZTXpmGFinClljihH0eriv11Ispd4q82TqtsXMJPYD/C+A==}
     engines: {node: '>=18'}
 
-  contentful@11.11.1:
-    resolution: {integrity: sha512-KLgA8cEvUc9x4nRCFX9yyanV25dF7A0giCIfa9LNQ1oL99mfbFDZ47XdcGTAz4UGFaNbrki75Gza/gNwX0eIPQ==}
+  contentful@11.12.0:
+    resolution: {integrity: sha512-L4dbwZA0jieiFfIJPAj9NTpx28Ey8HRRkwo69WqMoij6HikbBJ7Lw5gG9zBn/wM4FigFWuKEKd9A4sCyi7hqbA==}
     engines: {node: '>=18'}
 
   convert-source-map@2.0.0:
@@ -2845,7 +2845,7 @@ snapshots:
     dependencies:
       react: 19.2.4
 
-  '@rollup/rollup-linux-x64-gnu@4.59.1':
+  '@rollup/rollup-linux-x64-gnu@4.60.0':
     optional: true
 
   '@rtsao/scc@1.1.0': {}
@@ -3288,9 +3288,9 @@ snapshots:
       process: 0.11.10
       qs: 6.15.0
     optionalDependencies:
-      '@rollup/rollup-linux-x64-gnu': 4.59.1
+      '@rollup/rollup-linux-x64-gnu': 4.60.0
 
-  contentful@11.11.1:
+  contentful@11.12.0:
     dependencies:
       '@contentful/content-source-maps': 0.11.44
       '@contentful/rich-text-types': 16.8.5
