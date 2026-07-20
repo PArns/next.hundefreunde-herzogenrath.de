@@ -30,9 +30,9 @@ export async function generateStaticParams(): Promise<PostPageParams[]> {
 
   if (!posts) notFound();
 
-  const pageCount = posts.length / postsPerPage;
+  const pageCount = Math.ceil(posts.length / postsPerPage);
 
-  for (let x: number = 1; x < pageCount; x++) {
+  for (let x: number = 1; x <= pageCount; x++) {
     entries.push({ pageNr: x.toString() });
   }
 

@@ -69,7 +69,7 @@ const andrea: Member = {
     <>
       Seit 2022 bin ich mit meinem Welpen Louie zu den Hundefreunden gekommen
       und habe Feuer gefangen! Nachdem ich mit meinem Hund erfolgreich die BGVP
-      bestanden habe, wollte ich auch einmal die andere Seite der Medaillie
+      bestanden habe, wollte ich auch einmal die andere Seite der Medaille
       kennen lernen und bin seit Mai 2025 nun ebenfalls Trainerin. Solltet ihr
       nach einer unserer Stunden ebenfalls Lust und Laune verspüren, so macht
       mir dies doch gerne &quot;nach&quot;.

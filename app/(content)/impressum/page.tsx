@@ -47,12 +47,22 @@ export default function Impressum() {
       <h3 className="pt-4">Bildmaterial:</h3>
       <p>
         Patrick Arns –{" "}
-        <a href="https://arns.dev" target="_blank" className="text-sky-600">
+        <a
+          href="https://arns.dev"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sky-600"
+        >
           https://arns.dev
         </a>
         <br />
         Unsplash.com – &nbsp;
-        <a href="https://unsplash.com" target="_blank" className="text-sky-600">
+        <a
+          href="https://unsplash.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sky-600"
+        >
           https://unsplash.com
         </a>
       </p>

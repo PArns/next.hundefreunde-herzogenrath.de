@@ -33,7 +33,7 @@ export default function RootLayout({
                 aria-hidden="true"
               >
                 <div className="text-2xl md:text-4xl lg:text-6xl">
-                  Willkommmen
+                  Willkommen
                 </div>
                 <div className="text-xl md:text-2xl lg:text-4xl">
                   bei den Hundefreunden Herzogenrath e.V.

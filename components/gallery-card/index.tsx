@@ -12,7 +12,7 @@ export default function GalleryCard({ gallery }: { gallery: ImageGallery }) {
           height={600}
           alt={gallery.name}
           sizes="(max-width: 800px) 100vw, 800px, 400px, 200px"
-          className="object-cove relative h-full w-full rounded-t-lg"
+          className="relative h-full w-full rounded-t-lg object-cover"
           style={{ objectPosition: "center 40%" }}
         />
 

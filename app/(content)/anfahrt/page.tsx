@@ -62,8 +62,8 @@ export default function Anfart() {
             oder samstags direkt auf dem Platz!
           </p>
           <p>
-            Beachtet bitte, das das <b>Training ausschließlich samstags</b>{" "}
-            statt findet. Eine detailierte Terminübersicht findet ihr aber auch
+            Beachtet bitte, dass das <b>Training ausschließlich samstags</b>{" "}
+            stattfindet. Eine detaillierte Terminübersicht findet ihr aber auch
             noch einmal{" "}
             <Link href="/termine" className="text-sky-600">
               HIER
