@@ -133,10 +133,10 @@ export const kursData: Array<Kurs> = [
       <>
         <p>
           Im Leistungskurs werden die Übungen der BGVP weiter vertieft, bei
-          diesem Kurs handelt es sich um die "Königsklasse" unseres Trainings,
-          bei dem alle Leistungsanwärter zusammen in einem Kurs trainieren.
-          Unter anderem werden hier Übungen aus der Bewegung sowie Einheiten aus
-          dem Agility-Sport absolviert.
+          diesem Kurs handelt es sich um die &quot;Königsklasse&quot; unseres
+          Trainings, bei dem alle Leistungsanwärter zusammen in einem Kurs
+          trainieren. Unter anderem werden hier Übungen aus der Bewegung sowie
+          Einheiten aus dem Agility-Sport absolviert.
         </p>
         <p>
           In diesem Kurs können die Teilnehmer die Leistungsabzeichen Bronze,
