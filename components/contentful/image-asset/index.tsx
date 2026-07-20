@@ -17,7 +17,13 @@ export interface ContentfulImageAssetProps {
   [key: string]: any; // For other props that might be passed
 }
 
-export function getImageSource(asset: any, width: number, height?: number, quality?: number, fit?: "pad" | "fill" | "scale" | "crop" | "thumb") {
+export function getImageSource(
+  asset: any,
+  width: number,
+  height?: number,
+  quality?: number,
+  fit?: "pad" | "fill" | "scale" | "crop" | "thumb",
+) {
   let assetSrc = asset?.url;
 
   if (!assetSrc) {
@@ -60,22 +66,22 @@ export default function ContentfulImageAsset(props: ContentfulImageAssetProps) {
   } = props;
 
   // Wenn width und height angegeben sind, verwende "fill" für exakte Dimensionen
-  const contentfulFit = (width && height) ? (fit || "fill") : "fill";
-  
+  const contentfulFit = width && height ? fit || "fill" : "fill";
+
   const imageSource = getImageSource(
-    asset, 
-    width ?? maxImageWidth ?? 1980, 
-    height ?? 1080, 
-    quality, 
-    contentfulFit
+    asset,
+    width ?? maxImageWidth ?? 1980,
+    height ?? 1080,
+    quality,
+    contentfulFit,
   );
-  
+
   if (!Boolean(imageSource) || imageSource === undefined) return <></>;
 
   // Wenn width und height angegeben sind, setze object-fit für korrekte Darstellung
   const imageStyle: CSSProperties = {
     ...style,
-    ...(width && height && !fill ? { objectFit: 'cover' } : {})
+    ...(width && height && !fill ? { objectFit: "cover" } : {}),
   };
 
   return (

@@ -1,15 +1,15 @@
-import { MetadataRoute } from 'next'
-import PageBaseConfiguration from '@/configuration'
+import { MetadataRoute } from "next";
+import PageBaseConfiguration from "@/configuration";
 
 export default function robots(): MetadataRoute.Robots {
-  const config = PageBaseConfiguration()
-  const baseUrl = config.baseUrl.toString()
+  const config = PageBaseConfiguration();
+  const baseUrl = config.baseUrl.toString();
 
   return {
     rules: {
-      userAgent: '*',
-      allow: '/',
+      userAgent: "*",
+      allow: "/",
     },
     sitemap: `${baseUrl}sitemap.xml`,
-  }
+  };
 }

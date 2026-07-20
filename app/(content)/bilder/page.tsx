@@ -20,11 +20,12 @@ export function generateMetadata() {
       "Welpentraining Fotos",
       "Hundeschule Galerie",
       "Training Impressionen",
-      "Herzogenrath Hundeverein Bilder"
+      "Herzogenrath Hundeverein Bilder",
     ],
     openGraph: {
       title: "Training & Veranstaltungen - Hundefreunde Herzogenrath",
-      description: "Bilder von unserem Hundetraining und Events in Herzogenrath",
+      description:
+        "Bilder von unserem Hundetraining und Events in Herzogenrath",
       type: "website",
     },
   };

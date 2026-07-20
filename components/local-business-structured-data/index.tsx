@@ -1,25 +1,25 @@
-import Script from 'next/script'
+import Script from "next/script";
 
 interface LocalBusinessStructuredDataProps {
-  name: string
-  description: string
-  url: string
-  telephone?: string
-  email?: string
+  name: string;
+  description: string;
+  url: string;
+  telephone?: string;
+  email?: string;
   address: {
-    streetAddress: string
-    addressLocality: string
-    postalCode: string
-    addressCountry: string
-  }
+    streetAddress: string;
+    addressLocality: string;
+    postalCode: string;
+    addressCountry: string;
+  };
   geo?: {
-    latitude: number
-    longitude: number
-  }
-  openingHours?: string[]
-  logo?: string
-  image?: string
-  priceRange?: string
+    latitude: number;
+    longitude: number;
+  };
+  openingHours?: string[];
+  logo?: string;
+  image?: string;
+  priceRange?: string;
 }
 
 export default function LocalBusinessStructuredData({
@@ -33,58 +33,58 @@ export default function LocalBusinessStructuredData({
   openingHours,
   logo,
   image,
-  priceRange
+  priceRange,
 }: LocalBusinessStructuredDataProps) {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": name,
-    "description": description,
-    "url": url,
-    "address": {
+    name: name,
+    description: description,
+    url: url,
+    address: {
       "@type": "PostalAddress",
-      "streetAddress": address.streetAddress,
-      "addressLocality": address.addressLocality,
-      "postalCode": address.postalCode,
-      "addressCountry": address.addressCountry
+      streetAddress: address.streetAddress,
+      addressLocality: address.addressLocality,
+      postalCode: address.postalCode,
+      addressCountry: address.addressCountry,
     },
-    ...(telephone && { "telephone": telephone }),
-    ...(email && { "email": email }),
+    ...(telephone && { telephone: telephone }),
+    ...(email && { email: email }),
     ...(geo && {
-      "geo": {
+      geo: {
         "@type": "GeoCoordinates",
-        "latitude": geo.latitude,
-        "longitude": geo.longitude
-      }
+        latitude: geo.latitude,
+        longitude: geo.longitude,
+      },
     }),
-    ...(openingHours && { "openingHours": openingHours }),
+    ...(openingHours && { openingHours: openingHours }),
     ...(logo && {
-      "logo": {
+      logo: {
         "@type": "ImageObject",
-        "url": logo
-      }
+        url: logo,
+      },
     }),
     ...(image && {
-      "image": {
+      image: {
         "@type": "ImageObject",
-        "url": image
-      }
+        url: image,
+      },
     }),
-    ...(priceRange && { "priceRange": priceRange }),
-    "aggregateRating": {
+    ...(priceRange && { priceRange: priceRange }),
+    aggregateRating: {
       "@type": "AggregateRating",
-      "ratingValue": "4.8",
-      "reviewCount": "27"
-    }
-  }
+      ratingValue: "4.8",
+      reviewCount: "27",
+    },
+  };
 
   return (
     <Script
       id="local-business-structured-data"
       type="application/ld+json"
       dangerouslySetInnerHTML={{
-        __html: JSON.stringify(structuredData, null, 2)
+        __html: JSON.stringify(structuredData, null, 2),
       }}
     />
-  )
+  );
 }

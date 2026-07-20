@@ -50,6 +50,7 @@ export default function Impressum() {
         <a
           href="https://arns.dev"
           target="_blank"
+          rel="noopener noreferrer"
           className="text-sky-600"
         >
           https://arns.dev
@@ -59,6 +60,7 @@ export default function Impressum() {
         <a
           href="https://unsplash.com"
           target="_blank"
+          rel="noopener noreferrer"
           className="text-sky-600"
         >
           https://unsplash.com

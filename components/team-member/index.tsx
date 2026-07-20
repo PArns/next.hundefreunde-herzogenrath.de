@@ -21,7 +21,7 @@ export interface Member {
   kurs?: Array<string>;
   dogs?: Array<Dog>;
   email?: string;
-  emailEnabled?: boolean,
+  emailEnabled?: boolean;
 }
 
 function Kurse({ kurse }: { kurse: Array<string> }) {

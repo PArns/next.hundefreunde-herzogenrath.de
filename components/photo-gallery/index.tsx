@@ -1,9 +1,14 @@
 "use client";
 
-import { Photo, RenderImageContext, RenderImageProps, RowsPhotoAlbum } from "react-photo-album";
+import {
+  Photo,
+  RenderImageContext,
+  RenderImageProps,
+  RowsPhotoAlbum,
+} from "react-photo-album";
 import Image from "next/image";
 import { showLightBoxImage } from "../lightbox";
-import clsx from 'clsx';
+import clsx from "clsx";
 
 import "react-photo-album/rows.css";
 
@@ -19,20 +24,24 @@ function renderNextImage(
   { photo, width, height }: RenderImageContext,
 ) {
   const galleryPhoto = photo as GalleryPhoto;
-  const imageClasses = clsx(
-    "cursor-zoom-in opacity-0 transition-opacity",
-  );
+  const imageClasses = clsx("cursor-zoom-in opacity-0 transition-opacity");
 
-  var imageTitle = alt;
+  let imageTitle = alt;
 
   if (galleryPhoto.albumTitle) {
     imageTitle = galleryPhoto.albumTitle;
   } else if (title) {
-    imageTitle = title
+    imageTitle = title;
   }
 
   return (
-    <div style={{ width: "100%", position: "relative", aspectRatio: `${width} / ${height}` }}>
+    <div
+      style={{
+        width: "100%",
+        position: "relative",
+        aspectRatio: `${width} / ${height}`,
+      }}
+    >
       <Image
         src={photo}
         alt={alt}

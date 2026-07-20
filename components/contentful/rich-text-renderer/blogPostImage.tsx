@@ -79,7 +79,7 @@ export default function BlogPostImage({ imageData }: { imageData: any }) {
               prev: undefined,
               src: "",
               width: 0,
-              height: 0
+              height: 0,
             });
           }
         }}

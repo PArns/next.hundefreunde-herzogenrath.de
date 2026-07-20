@@ -11,8 +11,8 @@ export default function BlogHeader({
   backgroundImage: any;
   useH1?: boolean;
 }) {
-  const TitleTag = useH1 ? 'h1' : 'div';
-  const SubTitleTag = useH1 ? 'h2' : 'div';
+  const TitleTag = useH1 ? "h1" : "div";
+  const SubTitleTag = useH1 ? "h2" : "div";
 
   return (
     <div className="relative w-full overflow-hidden rounded-lg bg-cover bg-no-repeat text-center">
@@ -24,7 +24,7 @@ export default function BlogHeader({
         priority={true}
         sizes="100vw"
         usePlaceholder={true}
-        className="absolute bottom-0 left-0 right-0 top-0 h-max w-max object-cover"
+        className="absolute top-0 right-0 bottom-0 left-0 h-max w-max object-cover"
       />
       <div className="py-16 md:py-28 lg:py-48 xl:py-64">
         <div className="flex h-full items-center justify-center">

@@ -9,18 +9,20 @@ export const dynamic = "force-static";
 export function generateMetadata() {
   return {
     title: "Anfahrt & Kontakt",
-    description: "Besucht uns in Herzogenrath! Grenzstr. 9, 52134 Herzogenrath - direkt an der niederländischen Grenze. Kostenlose Probestunden samstags. Eigene Parkplätze und Sanitäranlagen vorhanden.",
+    description:
+      "Besucht uns in Herzogenrath! Grenzstr. 9, 52134 Herzogenrath - direkt an der niederländischen Grenze. Kostenlose Probestunden samstags. Eigene Parkplätze und Sanitäranlagen vorhanden.",
     keywords: [
       "Hundefreunde Herzogenrath Anfahrt",
-      "Grenzstraße 9 Herzogenrath", 
+      "Grenzstraße 9 Herzogenrath",
       "Probestunde Hundeschule",
       "Kontakt Hundetrainer",
       "Hundeschule Aachen Umgebung",
-      "Training samstags"
+      "Training samstags",
     ],
     openGraph: {
       title: "Anfahrt & Kontakt - Hundefreunde Herzogenrath",
-      description: "Besucht uns für eine kostenlose Probestunde in Herzogenrath, Grenzstr. 9",
+      description:
+        "Besucht uns für eine kostenlose Probestunde in Herzogenrath, Grenzstr. 9",
       type: "website",
     },
   };
@@ -30,13 +32,13 @@ export default function Anfart() {
   return (
     <>
       <Motds />
-      
+
       <ContentBox>
         <header>
           <h1>Anfahrt & Kontakt</h1>
           <h2>
-            Ihr findet das Trainingsgelände direkt an der niederländischen Grenze
-            in Herzogenrath
+            Ihr findet das Trainingsgelände direkt an der niederländischen
+            Grenze in Herzogenrath
           </h2>
         </header>
         <section>
@@ -60,9 +62,9 @@ export default function Anfart() {
             oder samstags direkt auf dem Platz!
           </p>
           <p>
-            Beachtet bitte, das das <b>Training ausschließlich samstags</b> statt
-            findet. Eine detailierte Terminübersicht findet ihr aber auch noch
-            einmal{" "}
+            Beachtet bitte, dass das <b>Training ausschließlich samstags</b>{" "}
+            stattfindet. Eine detaillierte Terminübersicht findet ihr aber auch
+            noch einmal{" "}
             <Link href="/termine" className="text-sky-600">
               HIER
             </Link>

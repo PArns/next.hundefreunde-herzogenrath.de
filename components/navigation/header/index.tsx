@@ -75,12 +75,10 @@ export default function Header({
                   <Link
                     key={item.name}
                     href={item.href}
-                    className={`text-md font-semibold leading-8 text-white drop-shadow-lg transition-colors hover:text-blue-200 ${
-                      isActive(item.href) 
-                        ? 'border-b-2 border-white' 
-                        : ''
+                    className={`text-md leading-8 font-semibold text-white drop-shadow-lg transition-colors hover:text-blue-200 ${
+                      isActive(item.href) ? "border-b-2 border-white" : ""
                     }`}
-                    aria-current={isActive(item.href) ? 'page' : undefined}
+                    aria-current={isActive(item.href) ? "page" : undefined}
                   >
                     {item.name}
                   </Link>
@@ -88,10 +86,10 @@ export default function Header({
             )}
             <Link
               href="/anfahrt"
-              className="inline-flex items-center rounded-md bg-sky-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-sky-500 transition-colors"
+              className="inline-flex items-center rounded-md bg-sky-600 px-3 py-2 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-sky-500"
               aria-label="Kontakt aufnehmen"
             >
-              <PhoneIcon className="h-4 w-4 mr-1" aria-hidden="true" />
+              <PhoneIcon className="mr-1 h-4 w-4" aria-hidden="true" />
               Kontakt
             </Link>
           </div>
@@ -104,8 +102,14 @@ export default function Header({
           <div className="fixed inset-0 z-50 bg-black/25" />
           <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
-              <Link href="/" className="-m-1.5 p-1.5" onClick={() => setMobileMenuOpen(false)}>
-                <h3 className="text-lg font-semibold text-gray-900">Hundefreunde Herzogenrath e.V.</h3>
+              <Link
+                href="/"
+                className="-m-1.5 p-1.5"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <h3 className="text-lg font-semibold text-gray-900">
+                  Hundefreunde Herzogenrath e.V.
+                </h3>
               </Link>
               <button
                 type="button"
@@ -125,25 +129,27 @@ export default function Header({
                         <Link
                           key={item.name}
                           href={item.href}
-                          className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50 transition-colors ${
-                            isActive(item.href) 
-                              ? 'text-blue-600 bg-blue-50' 
-                              : 'text-gray-900'
+                          className={`-mx-3 block rounded-lg px-3 py-2 text-base leading-7 font-semibold transition-colors hover:bg-gray-50 ${
+                            isActive(item.href)
+                              ? "bg-blue-50 text-blue-600"
+                              : "text-gray-900"
                           }`}
                           onClick={() => setMobileMenuOpen(false)}
-                          aria-current={isActive(item.href) ? 'page' : undefined}
+                          aria-current={
+                            isActive(item.href) ? "page" : undefined
+                          }
                         >
                           {item.name}
                         </Link>
                       ),
                   )}
-                  <div className="pt-4 border-t border-gray-200">
+                  <div className="border-t border-gray-200 pt-4">
                     <Link
                       href="/anfahrt"
-                      className="flex items-center justify-center rounded-lg bg-sky-600 px-4 py-3 text-base font-semibold text-white hover:bg-sky-500 transition-colors"
+                      className="flex items-center justify-center rounded-lg bg-sky-600 px-4 py-3 text-base font-semibold text-white transition-colors hover:bg-sky-500"
                       onClick={() => setMobileMenuOpen(false)}
                     >
-                      <PhoneIcon className="h-5 w-5 mr-2" aria-hidden="true" />
+                      <PhoneIcon className="mr-2 h-5 w-5" aria-hidden="true" />
                       Kontakt aufnehmen
                     </Link>
                   </div>

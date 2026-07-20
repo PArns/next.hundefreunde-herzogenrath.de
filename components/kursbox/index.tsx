@@ -19,10 +19,10 @@ export default function KursBox({
   const endTime = addOneHour(startTime);
 
   return (
-    <article 
-      itemScope 
+    <article
+      itemScope
       itemType="https://schema.org/Course"
-      className="flex h-full flex-col rounded-lg border bg-white shadow-lg hover:shadow-xl transition-shadow"
+      className="flex h-full flex-col rounded-lg border bg-white shadow-lg transition-shadow hover:shadow-xl"
     >
       <Link
         href={`/kurse/#${name}`}
@@ -46,12 +46,16 @@ export default function KursBox({
         <header className="pt-2 text-center">
           <h3 itemProp="name">{name}</h3>
         </header>
-        
+
         <div className="px-4 pb-3" itemProp="description">
           {children}
         </div>
-        
-        <div className="mt-auto px-4 pb-2 font-semibold text-gray-600" itemScope itemType="https://schema.org/Schedule">
+
+        <div
+          className="mt-auto px-4 pb-2 font-semibold text-gray-600"
+          itemScope
+          itemType="https://schema.org/Schedule"
+        >
           <time itemProp="startTime" dateTime={`${startTime}:00`}>
             Der {kursName} findet von {startTime} Uhr
           </time>

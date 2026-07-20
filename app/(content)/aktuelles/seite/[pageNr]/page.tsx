@@ -30,9 +30,9 @@ export async function generateStaticParams(): Promise<PostPageParams[]> {
 
   if (!posts) notFound();
 
-  const pageCount = posts.length / postsPerPage;
+  const pageCount = Math.ceil(posts.length / postsPerPage);
 
-  for (var x: number = 1; x < pageCount; x++) {
+  for (let x: number = 1; x <= pageCount; x++) {
     entries.push({ pageNr: x.toString() });
   }
 
@@ -48,10 +48,7 @@ export default async function Aktuelles({
   const postsPerPage = PageBaseConfiguration().blogPostsPerPage;
   const activePage = +pageNr - 1;
 
-  const posts = await GetBlogPosts(
-    activePage * postsPerPage,
-    postsPerPage,
-  );
+  const posts = await GetBlogPosts(activePage * postsPerPage, postsPerPage);
 
   if (!posts) notFound();
 
