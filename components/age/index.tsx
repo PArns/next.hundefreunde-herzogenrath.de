@@ -22,7 +22,22 @@ const Age = ({
 
   const { yearsOld, pluralize } = useMemo(() => {
     const today = new Date();
-    const birthDate = new Date(birthday);
+
+    // Parse a "YYYY-MM-DD" string into a *local* date. Using `new Date(str)`
+    // would treat it as UTC midnight and shift the day for non-UTC timezones,
+    // skewing the age by a day around the birthday.
+    const parts = birthday ? birthday.split("-") : [];
+    const birthDate =
+      parts.length === 3
+        ? new Date(Number(parts[0]), Number(parts[1]) - 1, Number(parts[2]))
+        : new Date(birthday);
+
+    // Empty or malformed input yields an Invalid Date; NaN would slip past the
+    // `yearsOld < 0` guard and render "NaN Jahre", so bail out explicitly.
+    if (Number.isNaN(birthDate.getTime())) {
+      return { yearsOld: -1, pluralize: plural };
+    }
+
     const m = today.getMonth() - birthDate.getMonth();
     let age = today.getFullYear() - birthDate.getFullYear();
 
