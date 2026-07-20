@@ -45,9 +45,11 @@ export default function Kurs({
     <ContentBox>
       <article itemScope itemType="https://schema.org/EducationalOrganization">
         <header>
-          <h2 id={id} itemProp="name">{name}</h2>
+          <h2 id={id} itemProp="name">
+            {name}
+          </h2>
         </header>
-        
+
         <div className="flex flex-col lg:flex-row">
           <div className="relative mx-auto min-h-[250px] w-full lg:order-last lg:ml-4 lg:w-[550px]">
             <Image
@@ -58,21 +60,25 @@ export default function Kurs({
               itemProp="image"
             />
           </div>
-          
+
           <div className="flex h-auto w-full flex-col">
-            <div className="pb-2 pt-2 lg:pt-0" itemProp="description">
+            <div className="pt-2 pb-2 lg:pt-0" itemProp="description">
               {children}
             </div>
 
             <div className="mt-auto flex flex-col space-y-2">
               <div itemScope itemType="https://schema.org/Person">
-                <strong className="pr-1">Kursleiter:</strong> 
+                <strong className="pr-1">Kursleiter:</strong>
                 <span itemProp="instructor">
                   <KursLeiter leiter={leiter} />
                 </span>
               </div>
-              
-              <div className="font-semibold text-gray-600" itemScope itemType="https://schema.org/Schedule">
+
+              <div
+                className="font-semibold text-gray-600"
+                itemScope
+                itemType="https://schema.org/Schedule"
+              >
                 <time itemProp="startTime" dateTime={`${startTime}:00`}>
                   Der {name} findet von {startTime} Uhr
                 </time>

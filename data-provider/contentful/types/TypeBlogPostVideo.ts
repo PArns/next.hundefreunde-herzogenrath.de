@@ -1,4 +1,10 @@
-import type { ChainModifiers, Entry, EntryFieldTypes, EntrySkeletonType, LocaleCode } from "contentful";
+import type {
+  ChainModifiers,
+  Entry,
+  EntryFieldTypes,
+  EntrySkeletonType,
+  LocaleCode,
+} from "contentful";
 
 /**
  * Fields type definition for content type 'TypeBlogPostVideo'
@@ -7,18 +13,18 @@ import type { ChainModifiers, Entry, EntryFieldTypes, EntrySkeletonType, LocaleC
  * @memberof TypeBlogPostVideo
  */
 export interface TypeBlogPostVideoFields {
-    /**
-     * Field type definition for field 'title' (Title)
-     * @name Title
-     * @localized true
-     */
-    title: EntryFieldTypes.Symbol;
-    /**
-     * Field type definition for field 'videoUrl' (VideoUrl)
-     * @name VideoUrl
-     * @localized true
-     */
-    videoUrl: EntryFieldTypes.Symbol;
+  /**
+   * Field type definition for field 'title' (Title)
+   * @name Title
+   * @localized true
+   */
+  title: EntryFieldTypes.Symbol;
+  /**
+   * Field type definition for field 'videoUrl' (VideoUrl)
+   * @name VideoUrl
+   * @localized true
+   */
+  videoUrl: EntryFieldTypes.Symbol;
 }
 
 /**
@@ -29,7 +35,10 @@ export interface TypeBlogPostVideoFields {
  * @since 2024-04-13T09:14:50.409Z
  * @version 1
  */
-export type TypeBlogPostVideoSkeleton = EntrySkeletonType<TypeBlogPostVideoFields, "blogPostVideo">;
+export type TypeBlogPostVideoSkeleton = EntrySkeletonType<
+  TypeBlogPostVideoFields,
+  "blogPostVideo"
+>;
 /**
  * Entry type definition for content type 'blogPostVideo' (Blog Post Video)
  * @name TypeBlogPostVideo
@@ -39,4 +48,7 @@ export type TypeBlogPostVideoSkeleton = EntrySkeletonType<TypeBlogPostVideoField
  * @version 1
  * @link https://app.contentful.com/spaces/1hyew6sbxidu/environments/master/content_types/blogPostVideo
  */
-export type TypeBlogPostVideo<Modifiers extends ChainModifiers, Locales extends LocaleCode> = Entry<TypeBlogPostVideoSkeleton, Modifiers, Locales>;
+export type TypeBlogPostVideo<
+  Modifiers extends ChainModifiers,
+  Locales extends LocaleCode,
+> = Entry<TypeBlogPostVideoSkeleton, Modifiers, Locales>;

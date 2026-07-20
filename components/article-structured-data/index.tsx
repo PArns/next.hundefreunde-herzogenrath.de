@@ -1,19 +1,19 @@
-import Script from 'next/script'
+import Script from "next/script";
 
 interface ArticleStructuredDataProps {
-  title: string
-  description: string
-  url: string
-  image?: string
-  publishedAt: Date
+  title: string;
+  description: string;
+  url: string;
+  image?: string;
+  publishedAt: Date;
   author?: {
-    name: string
-    url?: string
-  }
+    name: string;
+    url?: string;
+  };
   organization?: {
-    name: string
-    url: string
-  }
+    name: string;
+    url: string;
+  };
 }
 
 export default function ArticleStructuredData({
@@ -24,50 +24,50 @@ export default function ArticleStructuredData({
   publishedAt,
   author = {
     name: "Hundefreunde Herzogenrath e.V.",
-    url: "https://hundefreunde-herzogenrath.de/team"
+    url: "https://hundefreunde-herzogenrath.de/team",
   },
   organization = {
     name: "Hundefreunde Herzogenrath e.V.",
-    url: "https://hundefreunde-herzogenrath.de"
-  }
+    url: "https://hundefreunde-herzogenrath.de",
+  },
 }: ArticleStructuredDataProps) {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": title,
-    "description": description,
-    "url": url,
-    "datePublished": publishedAt.toISOString(),
-    "dateModified": publishedAt.toISOString(),
-    "author": {
+    headline: title,
+    description: description,
+    url: url,
+    datePublished: publishedAt.toISOString(),
+    dateModified: publishedAt.toISOString(),
+    author: {
       "@type": "Organization",
-      "name": author.name,
-      "url": author.url
+      name: author.name,
+      url: author.url,
     },
-    "publisher": {
+    publisher: {
       "@type": "Organization",
-      "name": organization.name,
-      "url": organization.url
+      name: organization.name,
+      url: organization.url,
     },
     ...(image && {
-      "image": {
+      image: {
         "@type": "ImageObject",
-        "url": image
-      }
+        url: image,
+      },
     }),
-    "mainEntityOfPage": {
+    mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": url
-    }
-  }
+      "@id": url,
+    },
+  };
 
   return (
     <Script
       id="article-structured-data"
       type="application/ld+json"
       dangerouslySetInnerHTML={{
-        __html: JSON.stringify(structuredData, null, 2)
+        __html: JSON.stringify(structuredData, null, 2),
       }}
     />
-  )
+  );
 }

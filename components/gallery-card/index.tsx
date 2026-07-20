@@ -12,8 +12,8 @@ export default function GalleryCard({ gallery }: { gallery: ImageGallery }) {
           height={600}
           alt={gallery.name}
           sizes="(max-width: 800px) 100vw, 800px, 400px, 200px"
-          className="rounded-t-lg object-cove relative h-full w-full"
-          style={{ objectPosition: 'center 40%' }}
+          className="object-cove relative h-full w-full rounded-t-lg"
+          style={{ objectPosition: "center 40%" }}
         />
 
         <div className="absolute bottom-0 left-2 overflow-hidden">

@@ -17,11 +17,12 @@ export function generateMetadata() {
       "Erfahrene Hundetrainer Aachen",
       "Kontakt Hundetrainer",
       "Welpenkurs Trainer",
-      "BGVP Trainer"
+      "BGVP Trainer",
     ],
     openGraph: {
       title: "Unser Trainerteam - Hundefreunde Herzogenrath",
-      description: "Erfahrene und ehrenamtliche Hundetrainer mit jahrelanger Expertise in der Hundeerziehung.",
+      description:
+        "Erfahrene und ehrenamtliche Hundetrainer mit jahrelanger Expertise in der Hundeerziehung.",
       type: "website",
     },
   };
@@ -69,9 +70,9 @@ const andrea: Member = {
       Seit 2022 bin ich mit meinem Welpen Louie zu den Hundefreunden gekommen
       und habe Feuer gefangen! Nachdem ich mit meinem Hund erfolgreich die BGVP
       bestanden habe, wollte ich auch einmal die andere Seite der Medaillie
-      kennen lernen und bin seit Mai 2025 nun ebenfalls Trainerin. Solltet ihr nach einer
-      unserer Stunden ebenfalls Lust und Laune verspüren, so macht mir dies doch
-      gerne &quot;nach&quot;.
+      kennen lernen und bin seit Mai 2025 nun ebenfalls Trainerin. Solltet ihr
+      nach einer unserer Stunden ebenfalls Lust und Laune verspüren, so macht
+      mir dies doch gerne &quot;nach&quot;.
     </>
   ),
 };
@@ -237,12 +238,7 @@ const ralfConstruction: Member = {
 
 // -----------------------------------------------------------------------------------
 
-const trainer: Array<Member> = [
-  andrea,
-  marianne,
-  birgit,
-  patrick,
-];
+const trainer: Array<Member> = [andrea, marianne, birgit, patrick];
 
 const judges: Array<Member> = [marianneJudge, heinzJudge, udoJudge];
 
@@ -260,7 +256,7 @@ export default function Team() {
   return (
     <>
       <Motds />
-      
+
       <ContentBox>
         <header>
           <h1>Unser Team</h1>

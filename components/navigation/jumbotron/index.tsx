@@ -30,7 +30,7 @@ export function Slide({
         {children}
       </div>
 
-      <div className="absolute left-0 top-0 -z-10 h-full w-full">
+      <div className="absolute top-0 left-0 -z-10 h-full w-full">
         {bgImage && (
           <Image
             src={bgImage}
@@ -62,7 +62,12 @@ export default function Jumbotron({
 
   return (
     <div className="relative isolate pt-16">
-      <section className="embla" data-nosnippet role="banner" aria-label="Bildkarussell">
+      <section
+        className="embla"
+        data-nosnippet
+        role="banner"
+        aria-label="Bildkarussell"
+      >
         <div className="embla__viewport h-56 lg:h-96" ref={emblaRef}>
           <div className="embla__container">
             {slides.map((slide, index) => (

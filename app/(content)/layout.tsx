@@ -27,7 +27,11 @@ export default function RootLayout({
               imageAlt="Willkommen bei den Hundefreunden Herzogenrath e.V."
               priority={true}
             >
-              <div className="text-center font-bold text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]" role="banner" aria-hidden="true">
+              <div
+                className="text-center font-bold text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]"
+                role="banner"
+                aria-hidden="true"
+              >
                 <div className="text-2xl md:text-4xl lg:text-6xl">
                   Willkommmen
                 </div>
@@ -41,16 +45,27 @@ export default function RootLayout({
       </Header>
 
       <div id="top"></div>
-      <main className="mx-auto max-w-(--breakpoint-2xl) px-6 2xl:px-0">{children}</main>
+      <main className="mx-auto max-w-(--breakpoint-2xl) px-6 2xl:px-0">
+        {children}
+      </main>
       <Footer>
-        <nav aria-label="Footer Navigation" className="flex flex-wrap gap-4 text-sm">
-          <Link href="/anfahrt" className="hover:text-white transition-colors">
+        <nav
+          aria-label="Footer Navigation"
+          className="flex flex-wrap gap-4 text-sm"
+        >
+          <Link href="/anfahrt" className="transition-colors hover:text-white">
             Anfahrt & Kontakt
           </Link>
-          <Link href="/impressum" className="hover:text-white transition-colors">
+          <Link
+            href="/impressum"
+            className="transition-colors hover:text-white"
+          >
             Impressum
           </Link>
-          <Link href="/aktuelles" className="hover:text-white transition-colors">
+          <Link
+            href="/aktuelles"
+            className="transition-colors hover:text-white"
+          >
             News
           </Link>
         </nav>

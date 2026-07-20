@@ -1,4 +1,10 @@
-import type { ChainModifiers, Entry, EntryFieldTypes, EntrySkeletonType, LocaleCode } from "contentful";
+import type {
+  ChainModifiers,
+  Entry,
+  EntryFieldTypes,
+  EntrySkeletonType,
+  LocaleCode,
+} from "contentful";
 
 /**
  * Fields type definition for content type 'TypeBackgroundImages'
@@ -7,24 +13,24 @@ import type { ChainModifiers, Entry, EntryFieldTypes, EntrySkeletonType, LocaleC
  * @memberof TypeBackgroundImages
  */
 export interface TypeBackgroundImagesFields {
-    /**
-     * Field type definition for field 'name' (Name)
-     * @name Name
-     * @localized false
-     */
-    name?: EntryFieldTypes.Symbol;
-    /**
-     * Field type definition for field 'position' (Position)
-     * @name Position
-     * @localized false
-     */
-    position: EntryFieldTypes.Symbol<"Bottom" | "Center" | "Top">;
-    /**
-     * Field type definition for field 'image' (Image)
-     * @name Image
-     * @localized false
-     */
-    image?: EntryFieldTypes.AssetLink;
+  /**
+   * Field type definition for field 'name' (Name)
+   * @name Name
+   * @localized false
+   */
+  name?: EntryFieldTypes.Symbol;
+  /**
+   * Field type definition for field 'position' (Position)
+   * @name Position
+   * @localized false
+   */
+  position: EntryFieldTypes.Symbol<"Bottom" | "Center" | "Top">;
+  /**
+   * Field type definition for field 'image' (Image)
+   * @name Image
+   * @localized false
+   */
+  image?: EntryFieldTypes.AssetLink;
 }
 
 /**
@@ -35,7 +41,10 @@ export interface TypeBackgroundImagesFields {
  * @since 2022-05-27T15:02:15.459Z
  * @version 11
  */
-export type TypeBackgroundImagesSkeleton = EntrySkeletonType<TypeBackgroundImagesFields, "backgroundImages">;
+export type TypeBackgroundImagesSkeleton = EntrySkeletonType<
+  TypeBackgroundImagesFields,
+  "backgroundImages"
+>;
 /**
  * Entry type definition for content type 'backgroundImages' (Background Images)
  * @name TypeBackgroundImages
@@ -45,4 +54,7 @@ export type TypeBackgroundImagesSkeleton = EntrySkeletonType<TypeBackgroundImage
  * @version 11
  * @link https://app.contentful.com/spaces/1hyew6sbxidu/environments/master/content_types/backgroundImages
  */
-export type TypeBackgroundImages<Modifiers extends ChainModifiers, Locales extends LocaleCode> = Entry<TypeBackgroundImagesSkeleton, Modifiers, Locales>;
+export type TypeBackgroundImages<
+  Modifiers extends ChainModifiers,
+  Locales extends LocaleCode,
+> = Entry<TypeBackgroundImagesSkeleton, Modifiers, Locales>;

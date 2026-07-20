@@ -16,7 +16,7 @@ Die offizielle Website der **Hundefreunde Herzogenrath e.V.** - ein moderner, re
 ### 🎯 Hauptfunktionen
 
 - 📝 **Content Management** - Dynamische Inhalte über Contentful CMS
-- 🖼️ **Bildergalerien** - Interaktive Galerie für Events und Aktivitäten  
+- 🖼️ **Bildergalerien** - Interaktive Galerie für Events und Aktivitäten
 - 📰 **Blog-System** - Aktuelle Nachrichten und Vereinsinformationen
 - 📅 **Kursmanagement** - Detaillierte Kursinformationen und Terminplanung
 - 👥 **Team-Profile** - Vorstellung der Trainer und Vereinsmitglieder
@@ -26,39 +26,46 @@ Die offizielle Website der **Hundefreunde Herzogenrath e.V.** - ein moderner, re
 ## 🚀 Tech Stack
 
 ### Frontend
+
 - **[Next.js 14](https://nextjs.org/)** - React Framework mit App Router
 - **[TypeScript](https://www.typescriptlang.org/)** - Typsichere Entwicklung
 - **[Tailwind CSS](https://tailwindcss.com/)** - Utility-First CSS Framework
 - **[React](https://reactjs.org/)** - UI Bibliothek
 
 ### Content Management
+
 - **[Contentful](https://www.contentful.com/)** - Headless CMS
 - **[Contentful Delivery API](https://www.contentful.com/developers/docs/references/content-delivery-api/)** - Content API
 
 ### Entwicklung & Build
+
 - **[PNPM](https://pnpm.io/)** - Package Manager
 - **[ESLint](https://eslint.org/)** - Code Linting
 - **[PostCSS](https://postcss.org/)** - CSS Processing
 
 ### Hosting & Deployment
+
 - **[Vercel](https://vercel.com/)** - Deployment Platform
 
 ## 🛠️ Installation & Entwicklung
 
 ### Voraussetzungen
-- Node.js 18+ 
+
+- Node.js 18+
 - PNPM (empfohlen) oder npm
 - Git
 
 ### Lokale Entwicklung starten
 
 1. **Repository klonen**
+
 ```bash
 git clone https://github.com/parns/next.hundefreunde-herzogenrath.de.git
 cd next.hundefreunde-herzogenrath.de
 ```
 
 2. **Abhängigkeiten installieren**
+
 ```bash
 pnpm install
 # oder
@@ -66,24 +73,26 @@ npm install
 ```
 
 3. **Umgebungsvariablen konfigurieren**
+
 ```bash
 # .env.local erstellen und Contentful API Keys hinzufügen
 cp .env.example .env.local
 ```
 
 4. **Entwicklungsserver starten**
+
 ```bash
 pnpm dev
 # oder
 npm run dev
-# oder  
+# oder
 yarn dev
 # oder
 bun dev
 ```
 
 5. **Website öffnen**  
-Öffne [http://localhost:3000](http://localhost:3000) in deinem Browser.
+   Öffne [http://localhost:3000](http://localhost:3000) in deinem Browser.
 
 ### 📝 Entwicklung
 
@@ -147,7 +156,7 @@ pnpm start
 ## 📖 Weiterführende Ressourcen
 
 - 📚 [Next.js Dokumentation](https://nextjs.org/docs) - Erfahre mehr über Next.js Features und API
-- 🎓 [Next.js Tutorial](https://nextjs.org/learn) - Interaktives Next.js Tutorial  
+- 🎓 [Next.js Tutorial](https://nextjs.org/learn) - Interaktives Next.js Tutorial
 - 🎨 [Tailwind CSS Docs](https://tailwindcss.com/docs) - Utility-First CSS Framework
 - 📝 [Contentful Docs](https://www.contentful.com/developers/docs/) - Headless CMS Dokumentation
 
@@ -176,10 +185,10 @@ Alle Rechte vorbehalten. Die Nutzung, Vervielfältigung oder Verbreitung ohne au
 ## 👨‍💻 Autor
 
 **Patrick Arns**  
-*Full-Stack Developer & Digital Solutions Architect*
+_Full-Stack Developer & Digital Solutions Architect_
 
 [![Website](https://img.shields.io/badge/Website-arns.dev-blue?style=for-the-badge&logo=safari)](https://arns.dev)
 [![GitHub](https://img.shields.io/badge/GitHub-PatrickArns-black?style=for-the-badge&logo=github)](https://github.com/PArns)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/patrick-arns)
 
-*Spezialisiert auf Rust & VPN Technik*
+_Spezialisiert auf Rust & VPN Technik_

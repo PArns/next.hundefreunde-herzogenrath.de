@@ -88,7 +88,7 @@ export default async function BlogArticle({
             <RichTextRenderer document={article.body} />
           </div>
         </article>
-        <div className="pb-2 pt-6">
+        <div className="pt-6 pb-2">
           <Button href="/aktuelles">Zurück zur Übersicht</Button>
         </div>
       </ContentBox>
