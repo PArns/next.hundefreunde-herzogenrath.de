@@ -5,7 +5,7 @@ import Kurse from "@/sections/kurse";
 import Motds from "@/sections/motd";
 import News from "@/sections/neuigkeiten";
 import FAQ from "@/sections/faq";
-import { YouTubeEmbed } from '@next/third-parties/google';
+import { YouTubeEmbed } from "@next/third-parties/google";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -28,16 +28,21 @@ export function generateMetadata(): Readonly<Metadata> {
       "Städteregion Aachen",
     ],
     openGraph: {
-      title: "Hundefreunde Herzogenrath e.V. - Die Hundeschule in der Städteregion Aachen",
-      description: "Seit 1996 bieten wir professionelle Hundeausbildung mit erfahrenen Trainern. Besucht uns für eine kostenlose Probestunde!",
+      title:
+        "Hundefreunde Herzogenrath e.V. - Die Hundeschule in der Städteregion Aachen",
+      description:
+        "Seit 1996 bieten wir professionelle Hundeausbildung mit erfahrenen Trainern. Besucht uns für eine kostenlose Probestunde!",
       type: "website",
+    },
+    alternates: {
+      canonical: "/",
     },
   };
 }
 
 export default function Home() {
   return (
-    <>      
+    <>
       <Motds />
 
       <ContentBox>
@@ -45,7 +50,7 @@ export default function Home() {
           <h1>Willkommen bei den Hundefreunden Herzogenrath e.V.</h1>
           <h2>Die Hundeschule in der StädteRegion Aachen</h2>
         </header>
-        
+
         <section>
           <p>
             Herzlich willkommen auf der offiziellen Webseite der Hundefreunde
@@ -82,8 +87,8 @@ export default function Home() {
                 wir arbeiten zusammen mit Euch auf das Semesterende hin!
               </p>
               <p>
-                Beachtet bitte, aufgrund dessen, dass wir ein Verein sind und alle
-                unsere{" "}
+                Beachtet bitte, aufgrund dessen, dass wir ein Verein sind und
+                alle unsere{" "}
                 <Link href="/team" className="text-sky-700">
                   Trainer und Helfer
                 </Link>{" "}
@@ -97,7 +102,7 @@ export default function Home() {
                 </Link>
               </p>
             </article>
-            <aside className="flex justify-start items-start pt-2 md:pt-12 md:ml-4">
+            <aside className="flex items-start justify-start pt-2 md:ml-4 md:pt-12">
               <Image
                 src={"/team/trainer.jpg"}
                 className="rounded-xl drop-shadow-lg"
@@ -108,10 +113,10 @@ export default function Home() {
               />
             </aside>
           </div>
-          <div className="flex justify-center items-center pt-4">
+          <div className="flex items-center justify-center pt-4">
             <div className="w-full max-w-2xl">
-              <YouTubeEmbed 
-                videoid="aaQPQfe_b2E" 
+              <YouTubeEmbed
+                videoid="aaQPQfe_b2E"
                 height={400}
                 params="controls=1&start=0&end=0&loop=0&playsinline=0&rel=0&enablejsapi=1"
               />
