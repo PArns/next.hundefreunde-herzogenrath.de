@@ -93,7 +93,12 @@ function renderOptions(links: any) {
         const target = external ? "_blank" : "";
 
         return (
-          <Link href={uri} target={target} className="external">
+          <Link
+            href={uri}
+            target={target}
+            rel={external ? "noopener noreferrer" : undefined}
+            className="external"
+          >
             {content.value}
           </Link>
         );
