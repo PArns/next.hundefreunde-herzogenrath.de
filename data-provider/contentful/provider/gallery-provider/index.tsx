@@ -37,7 +37,9 @@ export async function GetGalleries(
 
   const variables = { limit: limit, skip: skip };
   const data = await fetchGraphQL(query, variables);
-  const collection = data.data.imageGalleryCollection;
+  const collection = data?.data?.imageGalleryCollection;
+
+  if (!collection) return [];
 
   const galleries: ImageGallery[] = collection.items.map(
     (galleryEntry: any) => {
@@ -114,7 +116,9 @@ export async function GetAllGallerySlugs(): Promise<GallerySlug[]> {
     }`;
 
   const data = await fetchGraphQL(query);
-  const collection = data.data.imageGalleryCollection;
+  const collection = data?.data?.imageGalleryCollection;
+
+  if (!collection) return [];
 
   const posts: GallerySlug[] = collection.items.map((postEntry: any) => {
     return {

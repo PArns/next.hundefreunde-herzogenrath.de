@@ -37,7 +37,7 @@ function PageLink({
   return (
     <Link
       href={getLinkForPage(baseUrl, paginationSlug, pageNumber)}
-      aria-current="page"
+      aria-current={current ? "page" : undefined}
       className={className}
     >
       {pageNumber}
