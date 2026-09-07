@@ -42,7 +42,7 @@ function renderOptions(links: any) {
           case "ImageGallery": {
             let galleryImages: GalleryPhoto[] = [];
 
-            entry.imagesCollection.items.map((image: any, index: number) => {
+            entry.imagesCollection.items.forEach((image: any) => {
               if (image.width && image.height) {
                 galleryImages.push({
                   src: getImageSource(image, 400),

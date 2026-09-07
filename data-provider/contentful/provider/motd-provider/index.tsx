@@ -22,7 +22,9 @@ export async function GetMotds(): Promise<Motd[]> {
       }`,
   );
 
-  const collection = data.data.motdCollection;
+  const collection = data?.data?.motdCollection;
+
+  if (!collection) return [];
 
   const motds: Motd[] = collection.items.map((motd: any) => {
     return {
