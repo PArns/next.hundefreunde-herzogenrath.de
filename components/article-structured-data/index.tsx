@@ -1,5 +1,3 @@
-import Script from "next/script";
-
 interface ArticleStructuredDataProps {
   title: string;
   description: string;
@@ -62,11 +60,11 @@ export default function ArticleStructuredData({
   };
 
   return (
-    <Script
+    <script
       id="article-structured-data"
       type="application/ld+json"
       dangerouslySetInnerHTML={{
-        __html: JSON.stringify(structuredData, null, 2),
+        __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
       }}
     />
   );

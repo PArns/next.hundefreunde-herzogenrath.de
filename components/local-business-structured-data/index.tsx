@@ -1,5 +1,3 @@
-import Script from "next/script";
-
 interface LocalBusinessStructuredDataProps {
   name: string;
   description: string;
@@ -79,11 +77,11 @@ export default function LocalBusinessStructuredData({
   };
 
   return (
-    <Script
+    <script
       id="local-business-structured-data"
       type="application/ld+json"
       dangerouslySetInnerHTML={{
-        __html: JSON.stringify(structuredData, null, 2),
+        __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
       }}
     />
   );
