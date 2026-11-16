@@ -1,5 +1,3 @@
-import Script from "next/script";
-
 interface GalleryStructuredDataProps {
   name: string;
   description: string;
@@ -60,11 +58,11 @@ export default function GalleryStructuredData({
   };
 
   return (
-    <Script
+    <script
       id="gallery-structured-data"
       type="application/ld+json"
       dangerouslySetInnerHTML={{
-        __html: JSON.stringify(structuredData, null, 2),
+        __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
       }}
     />
   );

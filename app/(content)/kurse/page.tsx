@@ -2,7 +2,6 @@ import ContentBox from "@/components/layout/default-box";
 import Link from "next/link";
 import Kurs from "@/components/kurs";
 import Calendar from "@/components/calendar";
-import Script from "next/script";
 import PageBaseConfiguration from "@/configuration";
 
 import { kursData } from "@/configuration/kursData";
@@ -66,10 +65,12 @@ export default function Kurse() {
 
   return (
     <>
-      <Script
+      <script
         id="course-structured-data"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
+        }}
       />
       <Motds />
       <ContentBox>
