@@ -7,15 +7,26 @@ import {
   GetBlogPosts,
 } from "@/data-provider/contentful/provider/blog-post-provider";
 import Motds from "@/sections/motd";
+import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 export const dynamic = "force-static";
 
-export function generateMetadata() {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ pageNr: string }>;
+}): Promise<Metadata> {
+  const { pageNr } = await params;
+
   return {
     title: "Aktuelles rund um die Hundefreunde",
     description:
       "Hier findet ihr alle aktuellen Neuigkeiten rund um die Hundefreunde Herzogenrath e.V.",
+    alternates: {
+      // Seite 1 ist inhaltsgleich mit /aktuelles
+      canonical: +pageNr > 1 ? `/aktuelles/seite/${pageNr}` : "/aktuelles",
+    },
   };
 }
 
@@ -42,11 +53,13 @@ export async function generateStaticParams(): Promise<PostPageParams[]> {
 export default async function Aktuelles({
   params,
 }: {
-  params: Promise<{ pageNr: number }>;
+  params: Promise<{ pageNr: string }>;
 }) {
   const { pageNr } = await params;
   const postsPerPage = PageBaseConfiguration().blogPostsPerPage;
   const activePage = +pageNr - 1;
+
+  if (!Number.isInteger(activePage) || activePage < 0) notFound();
 
   const posts = await GetBlogPosts(activePage * postsPerPage, postsPerPage);
 

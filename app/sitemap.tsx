@@ -92,16 +92,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const postsPerPage = config.blogPostsPerPage;
   const totalPages = Math.ceil(totalBlogPosts / postsPerPage);
 
+  // Seite 1 ist bereits als /aktuelles enthalten
   const blogPaginationPages: MetadataRoute.Sitemap = Array.from(
-    { length: totalPages },
+    { length: Math.max(totalPages - 1, 0) },
     (_, index) => {
-      const pageNumber = index + 1;
+      const pageNumber = index + 2;
       return {
         url: `${baseUrl}aktuelles/seite/${pageNumber}`,
         lastModified: new Date(),
         changeFrequency: "daily" as const,
-        priority:
-          pageNumber === 1 ? 0.6 : Math.max(0.3, 0.6 - pageNumber * 0.1),
+        priority: Math.max(0.3, 0.6 - pageNumber * 0.1),
       };
     },
   );
