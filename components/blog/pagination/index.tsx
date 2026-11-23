@@ -61,8 +61,8 @@ export default function Pagination({
   let previousLink: string = "";
   let nextLink: string = "";
 
-  const firstPage = currentPage == 0;
-  const lastPage = currentPage == pageCount;
+  const firstPage = currentPage <= 1;
+  const lastPage = currentPage >= pageCount;
 
   if (!firstPage) {
     previousLink = getLinkForPage(baseUrl, paginationSlug, currentPage - 1);
@@ -72,7 +72,7 @@ export default function Pagination({
     nextLink = getLinkForPage(
       baseUrl,
       paginationSlug,
-      currentPage == 0 ? 2 : currentPage + 1,
+      Math.max(currentPage, 1) + 1,
     );
   }
 
@@ -94,14 +94,14 @@ export default function Pagination({
     <div className={className}>
       <nav
         className="isolate inline-flex -space-x-px rounded-md shadow-xs"
-        aria-label="Pagination"
+        aria-label="Seitennavigation"
       >
         <Link
           href={previousLink}
           className="aria-disabled:hover-none relative inline-flex items-center rounded-l-md bg-gray-50/60 px-2 py-2 text-neutral-400 ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus:z-20 focus:outline-offset-0 aria-disabled:pointer-events-none"
           aria-disabled={firstPage}
         >
-          <span className="sr-only">Previous</span>
+          <span className="sr-only">Vorherige Seite</span>
           <ChevronLeftIcon className="h-5 w-5" aria-hidden="true" />
         </Link>
 
@@ -112,7 +112,7 @@ export default function Pagination({
           className="aria-disabled:hover-none relative inline-flex items-center rounded-r-md bg-gray-50/60 px-2 py-2 text-neutral-400 ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus:z-20 focus:outline-offset-0 aria-disabled:pointer-events-none"
           aria-disabled={lastPage}
         >
-          <span className="sr-only">Next</span>
+          <span className="sr-only">Nächste Seite</span>
           <ChevronRightIcon className="h-5 w-5" aria-hidden="true" />
         </Link>
       </nav>
